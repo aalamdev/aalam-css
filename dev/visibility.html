@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Visibility Demo</title>
+        <link rel="stylesheet" href="../src/visibility.scss"/>
+    </head>
+    <body>
+        <style>
+            .danger {color: red;}
+            .success {color: green;}
+            .block {border: 1px solid #ccc;margin:10px;padding:4px}
+            .block:nth-child(even) {background-color: #f1f1fe;}
+            h4 {font-weight:bold;margin-bottom:15px;}
+        </style>
+        <h1>Visiblity Demo</h1>
+        <div>
+            <p>Display attribute</p>
+            <div class="block v-hd@m">
+                <h4>.v-hd@m</h4>
+                <p><span class="danger">Hidden</span> on <b>MEDIUM+</b> screens and <span class="success">Shown</span> on <b>SMALL</b> screens</p>
+            </div>
+            <div class="block v-hd@l">
+                <h4>.v-hd@l</h4>
+                <p><span class="danger">Hidden</span> on <b>LARGE+</b> screens and <span class="success">Shown</span> on <b>SMALL, MEDIUM</b> screens</p>
+             </div>
+            <div class="block v-hd@xl">
+                <h4>.v-hd@xl</h4>
+                <p><span class="danger">Hidden</span> on <b>XLARGE+</b> screens and <span class="success">Shown</span> on <b>SMALL, MEDIUM, LARGE</b> screens</p>
+            </div>
+            <div class="block v-hd@2xl">
+                <h4>.v-hd@2xl</h4>
+                <p><span class="danger">Hidden</span> on <b>XXLARGE+</b> screens and <span class="success">Shown</span> on all other sizes</p>
+            </div>
+            <div class="block v-sh@m">
+                <h4>.v-sh@m</h4>
+                <p><span class="danger">Hidden</span> on <b>SMALL</b> screens and <span class="success">Shown</span> on <b>MEDIUM+</b> screens</p>
+            </div>
+            <div class="block v-sh@l">
+                <h4>.v-sh@l</h4>
+                <p><span class="danger">Hidden</span> on <b>SMALL, MEDIUM</b> screens and <span class="success">Shown</span> on <b>LARGE+</b> screens</p>
+             </div>
+            <div class="block v-sh@xl">
+                <h4>.v-sh@xl</h4>
+                <p><span class="danger">Hidden</span> on <b>SMALL, MEDIUM, LARGE</b> screens and <span class="success">Shown</span> on <b>XLARGE+</b> screens</p>
+            </div>
+            <div class="block v-sh@2xl">
+                <h4>.v-sh@2xl</h4>
+                <p><span class="danger">Hidden</span> on <b>SMALL, MEDIUM, LARGE, XLARGE</b> screens and <span class="success">Shown</span> on <b>XXLARGE</b> screens</p>
+            </div>
+        </div>
+    </body>
+</html>

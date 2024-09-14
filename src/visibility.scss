@@ -1,0 +1,49 @@
+
+@import "./mixins/breakpoints.scss";
+
+/*
+ * Visibility classes
+ * Componnent code : v
+ * Modifier 1      : hd (display:none)
+                     sh (display:none on other screens)
+                     vh (visibility:hidden)
+                     vs (visibility:hideen on other screens)
+ *
+ */
+
+.v-hd {display:none;}
+.v-vh {visibility: hidden;}
+
+@include media-bp-min(m) {
+    .v-hd\@m {display: none;}
+    .v-vh\@m {visibility: hidden;}
+}
+@include media-bp-min(l) {
+    .v-hd\@l {display: none;}
+    .v-vh\@m {visibility: hidden;}
+}
+@include media-bp-min(xl) {
+    .v-hd\@xl {display: none;}
+    .v-vh\@m {visibility: hidden;}
+}
+@include media-bp-min(2xl) {
+    .v-hd\@2xl {display: none;}
+    .v-vh\@2xl {visibility: hidden;}
+}
+
+@include media-bp-max(s) {
+    .v-sh\@m {display: none;}
+    .v-vs\@m {visibility: hidden;}
+}
+@include media-bp-max(m) {
+    .v-sh\@l {display: none;}
+    .v-vs\@l {visibility: hidden;}
+}
+@include media-bp-max(l) {
+    .v-sh\@xl {display: none;}
+    .v-vs\@xl {visibility: hidden;}
+}
+@include media-bp-max(xl) {
+    .v-sh\@2xl {display: none;}
+    .v-vs\@2xl {visibility: hidden;}
+}

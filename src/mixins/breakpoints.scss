@@ -1,0 +1,24 @@
+@use 'sass:list';
+@import "../variables/breakpoints.scss";
+
+@function get-screen-val($n) {
+    $val: map-get($screen-size-map, $n);
+    @if not $n {
+        @error "breakpoint `#{$n}` not found in `#{$screen-size-map}`";
+    }
+    @return $val;
+}
+@mixin media-bp-max($screen-name) {
+    $val: get-screen-val($screen-name);
+    $wd: list.nth($val, 2);
+    @media (max-width: $wd) {
+        @content;
+    }
+}
+@mixin media-bp-min($screen-name) {
+    $val: get-screen-val($screen-name);
+    $wd: list.nth($val, 1);
+    @media (min-width: $wd) {
+        @content;
+    }
+}
