@@ -1,0 +1,8 @@
+@mixin pad-vert($val) {
+    padding-top:$val;
+    padding-bottom:$val;
+}
+@mixin pad-horz($val) {
+    padding-left:$val;
+    padding-right:$val;
+}

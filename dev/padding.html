@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/padding.scss"/>
+        <title>Aalam Padding</title>
+        <style>
+            a {font-weight:bold;display:inline-block;background:#F2CFB3;
+                margin:20px;border:2px red solid;}
+            div {padding:50px;background:#AEAFB1;border:2px black solid}
+            fieldset {margin-bottom:10px;margin-top:10px;
+                background:#D8C2B5;border:2px }
+        </style>
+      </head>
+      <body style="--p-cus:15px;">
+        <div style="background:#90A19D;color;black;
+                    font-size:xx-large;font-weight:bold;
+                    padding-bottom:15px">
+                    This is a demo for aalam css
+        </div>
+        <fieldset>
+            <h3>pad 0 s m l</h3>
+            <div>
+                <a class="p-0">p-0</a>
+                <a class="p-s">p-s</a>
+                <a class="p-m">p-m</a>
+                <a class="p-l">p-l</a>
+                <a class="p-xl">p-l</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>vertical</h3>
+            <div>
+                <a class="p-0-v">p-0-v</a>
+                <a class="p-s-v">p-s-v</a>
+                <a class="p-m-v">p-m-v</a>
+                <a class="p-l-v">p-l-v</a>
+                <a class="p-xl-v">p-xl-v</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>horizontal</h3>
+            <div>
+                <a class="p-0-h">p-0-h</a>
+                <a class="p-s-h">p-s-h</a>
+                <a class="p-m-h">p-m-h</a>
+                <a class="p-l-h">p-l-h</a>
+                <a class="p-xl-h">p-xl-h</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>top</h3>
+            <div>
+                <a class="p-0-t">p-0-t</a>
+                <a class="p-s-t">p-s-t</a>
+                <a class="p-m-t">p-m-t</a>
+                <a class="p-l-t">p-l-t</a>
+                <a class="p-xl-t">p-xl-t</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>bottom</h3>
+            <div>
+                <a class="p-0-b">p-0-b</a>
+                <a class="p-s-b">p-ts</a>
+                <a class="p-m-b">p-tm</a>
+                <a class="p-l-b">p-tl</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>left</h3>
+            <div>
+                <a class="p-0-l">p-0-l</a>
+                <a class="p-s-l">p-s-l</a>
+                <a class="p-m-l">p-m-l</a>
+                <a class="p-l-l">p-l-l</a>
+                <a class="p-xl-l">p-xl-l</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>right</h3>
+            <div>
+                <a class="p-0-r">p-0-r</a>
+                <a class="p-s-r">p-s-r</a>
+                <a class="p-m-r">p-m-r</a>
+                <a class="p-l-r">p-l-r</a>
+                <a class="p-xl-r">p-xl-r</a>
+            </div>
+        </fieldset>
+        <fieldset>
+            <h3>custom</h3>
+            <div style="margin:40px">
+                <a class="p-cus">p-cus</a>
+                <a class="p-cus" style="--p-cus-m:30px;--p-cus-l:40px">
+                    p-cus--m:30--l:40
+                </a>
+                <a class="p-cus" style="--p-cus-2xl:35px;--p-cus-xl:25px">
+                    p-cus--2xl:35--xl:25
+                </a>
+                <a class="p-cus"
+                    style="--p-cus-m:10px;--p-cus-l:20px;
+                        --p-cus-xl:30px;--p-cus-2xl:40px">
+                    p-cus--m:10--l:20--xl:30--2xl:40
+                </a>
+            </div>
+        </fieldset>
+      </body>
+</html>
