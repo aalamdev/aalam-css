@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/margin.scss">
+        <title>Aalam CSS components</title>
+
+        <style>
+            div {
+            border: 2px solid black;
+            }
+            .txtbg {
+                border-width:2px;
+                background: #BAD2DE;
+            }
+            div .txtbg {
+                display:flex;
+                height: fit-content;
+            }
+            fieldset {
+                gap: 10px;
+                background: #F2EFDF;
+                display: flex;
+                height: fit-content;
+            }
+            fieldset .color {
+                background:#B4B36D;
+            }
+            div .size{
+                height: fit-content;
+                background:#F29B88;
+            }
+            h5 {
+                display: contents;
+            }
+            div {
+                background:#F29B88
+            }
+        </style>
+    </head>
+    <body style="display:grid; gap:10px;">
+
+        <!--default margin class-->
+        <div>
+            <fieldset>
+                <h5> Margin Default </h5>
+                <div class="size">
+                    <span class ="txtbg m-0">
+                        m-0
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-xs">
+                        m-xs
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-s">
+                        m-s
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-m">
+                        m-m
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-l">
+                        m-l
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-xl">
+                        m-xl
+                    </span>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--custom margin class-->
+        <div>
+            <fieldset>
+                <h5>Margin Custom </h5>
+                <div class="size">
+                    <span class ="txtbg m-cus" style="--m-cus-m:20px;">
+                        20px
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-cus" style="--m-cus-l: 50px;">
+                        50px
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-cus" style="--m-cus-xl: 80px;">
+                        80px
+                    </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-cus" style="--m-cus-2xl: 120px;">
+                        120px
+                    </span>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--right margin class-->
+        <div>
+            <fieldset>
+                <h5> Margin Right </h5>
+                <div class="size"> 
+                    <span class ="txtbg m-0 m-0-r"> m-0-r </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-xs-r"> m-xs-r </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-s-r">m-s-r</span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-m-r">m-m-r</span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-l-r">m-l-r</span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-xl-r">m-xl-r</span>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--left margin class-->
+        <div>
+            <fieldset>
+                <h5> Margin Left </h5>
+                <div class="size">
+                    <span class ="txtbg m-0 m-0-l"> m-0-l </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-xs-l"> m-xs-l </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-s-l"> m-s-l </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-m-l"> m-m-l </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-l-l"> m-l-l </span>
+                </div>
+                <div class="size">
+                    <span class ="txtbg m-0 m-xl-l"> m-xl-l </span>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--horinzontal margin class-->
+        <div>
+            <fieldset>
+                <h5> Margin Horinzontal </h5>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-0-h"> m-0-h </span>
+                    </div>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-xs-h"> m-xs-h </span>
+                    </div>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-s-h"> m-s-h </span>
+                    </div>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-m-h"> m-m-h </span>
+                    </div>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-l-h"> m-l-h </span>
+                    </div>
+                    <div class="size">
+                        <span class ="txtbg m-0 m-xl-h"> m-xl-h </span>
+                    </div>
+            </fieldset>
+        </div>
+
+        <!--vertical margin class-->
+        <div>
+            <fieldset>
+                <h5> Margin Vertical </h5>
+                <fieldset class="color">
+                    <div class ="txtbg">
+                        <div class ="m-0 m-0-v"> m-0-v </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xs-v"> m-xs-v </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-s-v"> m-s-v </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-m-v"> m-m-v </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-l-v"> m-l-v </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xl-v"> m-xl-v </div>
+                    </div>
+                </fieldset>
+
+                <!--top margin class-->
+                <h5> Margin Top </h5>
+                <fieldset class="color">
+                    <div class ="txtbg">
+                        <div class ="m-0 m-0-t"> m-0-t </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xs-t"> m-xs-t </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-s-t"> m-s-t </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-m-t"> m-m-t </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-l-t"> m-l-t </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xl-t"> m-xl-t </div>
+                    </div>
+                </fieldset>
+
+                <!--bottom margin class-->
+                <h5> Margin Bottom </h5>
+                <fieldset class="color">
+                    <div  class ="txtbg">
+                        <div class ="m-0 m-0-b"> m-0-b </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xs-b"> m-xs-b </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-s-b"> m-s-b </div>
+                    </div>
+                    <div class ="txtbg">
+                       <div class ="m-0 m-m-b"> m-m-b </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-l-b"> m-l-b </div>
+                    </div>
+                    <div class ="txtbg">
+                        <div class ="m-0 m-xl-b"> m-xl-b </div>
+                    </div>
+                </fieldset>
+
+            </fieldset>
+        </div>
+    </body>
+</html>
