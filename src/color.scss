@@ -1,0 +1,27 @@
+@import './variables/color.scss';
+
+/*
+ *  Color classes
+ *  Component code : clr
+ *  Modifier 1 :
+ *      bg      : background color
+ *      txt    : body text color
+ *
+ *  Modifier 2 :
+ *      background color :
+ *          d1  - dark shade 1
+ *          d2  - dark shade 2
+ *
+ *      body text color :
+ *          l1  - light shade 1
+ *          l2  - light shade 2
+ *          d1  - dark shade 1
+ *          d2  - dark shade 2
+ */
+
+.clr-bg-d1  {background:$clr-bg-d1}
+.clr-bg-d2  {background:$clr-bg-d2}
+.clr-txt-d1 {color:$clr-txt-d1}
+.clr-txt-d2 {color:$clr-txt-d2}
+.clr-txt-l1 {color:$clr-txt-l1}
+.clr-txt-l2 {color:$clr-txt-l2}
