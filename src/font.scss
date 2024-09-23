@@ -1,0 +1,101 @@
+@import './src/variables/color.scss';
+
+/*
+ * Font classes
+ * Component code : t
+ * Modifier 1 :
+ *      sz  - size
+ *      wt  - weight
+ *      tf  - text-transform
+ *      of  - overflow
+ *      al  - alignment
+ *      clr - color
+ *
+ * Modifier 2 :
+ *  size :
+ *      xs  - extra small font
+ *      s   - small font
+ *      l   - large font
+ *      xl  - extral large font
+ *
+ *  weight :
+ *      b   - bold
+ *      sb  - semi bold
+ *
+ *  text-transform :
+ *      c   - capitalize
+ *      u   - uppercase
+ *      l   - lowercase
+ *
+ *  alignment :
+ *      l   - left
+ *      c   - center
+ *      r   - right
+ *      j   - justify
+ *
+ *  overflow :
+ *      w   - wrap
+ *      nw  - nowrap
+ *      tc  - truncate
+ *      tcm - truncate multiple line
+ *
+ *  color :
+ *      py  - primary color
+ *      suc - success color
+ *      wrn - warning color
+ *      dng - danger color
+ *
+ * Modifier 3:
+ *  truncate multiple line :
+ *      2   - line 2
+ *      3   - line 3
+ *      cus - custom line
+ *
+ */
+
+@mixin tcm($line) {
+    width:100%;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:$line;
+    -webkit-box-orient:vertical;
+}
+
+html, body {
+    font-size:var(--t, 14px);
+    line-height:1.5em;
+}
+
+.t-sz-xs {font-size:0.714rem;}
+.t-sz-s  {font-size:0.857rem;}
+.t-sz-l  {font-size:1.142rem;}
+.t-sz-xl {font-size:1.428rem;}
+
+.t-wt-b  {font-weight:700;}
+.t-wt-sb {font-weight:600;}
+
+.t-tf-c  {text-transform:capitalize;}
+.t-tf-u  {text-transform:uppercase;}
+.t-tf-l  {text-transform:lowercase;}
+
+.t-al-l  {text-align:left;}
+.t-al-c  {text-align:center;}
+.t-al-r  {text-align:right;}
+.t-al-j  {text-align:justify;}
+
+.t-of-w  {text-wrap:wrap;}
+.t-of-nw {text-wrap:nowrap;}
+.t-of-tc {
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.t-of-tcm-2   {@include tcm(2);}
+.t-of-tcm-3   {@include tcm(3);}
+.t-of-tcm-cus {@include tcm(var(--t-of-tcm));}
+
+.t-clr-py  {color:$clr-txt-py}
+.t-clr-suc {color:$clr-suc}
+.t-clr-wrn {color:$clr-wrn}
+.t-clr-dng {color:$clr-dng}

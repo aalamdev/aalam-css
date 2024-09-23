@@ -1,0 +1,22 @@
+/*
+ *  Text Variables
+ *  Variable code : t
+ *
+ *  Modifier 1 :
+ *      sz  - size
+ *      lh  - line height
+ *
+ *  Modifier 2 :
+ *      size :
+ *          xs  - extra small
+ *          s   - small
+ *          l   - large
+ *          xl  - extra large
+ */
+
+$t-sz:var(--t-sz, 14px);
+$t-sz-xs:0.714rem;
+$t-sz-s:0.857rem;
+$t-sz-l:1.142rem;
+$t-sz-xl:1.428rem;
+$t-lh:1.5em;

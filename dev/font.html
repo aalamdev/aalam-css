@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" style="--t:20px">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/font.scss"/>
+        <title>Aalam Font</title>
+        <style>
+            span {display:block;}
+            #wrap span {margin:20px;}
+            h3 {text-decoration:underline}
+            .tcm {color:red;}
+            div {
+                margin:20px;
+                border:5px solid #C96868;
+                padding:20px;
+                background:#DEE5D4
+            }
+            .tc {
+                background:#F3D0D7;
+                border:2px solid blue;
+                width:300px;
+                display:inline-block;
+            }
+            .tc span {
+                border:2px solid #401F71;
+                background:#DDDDDD;
+                width:150px;
+            }
+            #tc-par {
+                background:#A8CD9F;
+                border:2px solid red;
+            }
+
+        </style>
+    </head>
+    <body style="background:#8EACCD;">
+        <h1>Font Examples here</h1>
+        <div>
+            <h3>Font sizes</h3>
+            <span class="t-sz-xs">s2 text</span>
+            <span class="t-sz-s">s1 text</span>
+            <span class="t">normal text</span>
+            <span class="t-sz-l">l1 text</span>
+            <span class="t-sz-xl">l2 text</span>
+        </div>
+        <div>
+            <h3>Font weight</h3>
+            <span class="t-wt-b">bold text</span>
+            <span class="t-wt-sb">semi bold text</span>
+        </div>
+        <div>
+            <h3>Text transform</h3>
+            <span class="t-tf-c">this is a capitalize words</span>
+            <span class="t-tf-u">UpperCase</span>
+            <span class="t-tf-l">LowerCase</span>
+        </div>
+        <div id='wrap'>
+            <h3>overflow</h3>
+            <span class="t-of-w" style="width:200px;border:2px solid blue">
+                this is <b>wrap</b>ped element and we test this
+            </span>
+            <span class="t-of-nw" style="width:200px;border:2px solid green">
+                this is <b>nowrap</b>ped element and we test this also
+            </span>
+            <div id="tc-par" style="display:flex">
+                <div class='tc'>
+                    <h4 class="tcm">tc</h4>
+                    <span>
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit.
+                    </span>
+                    <span class="t-of-tc">
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit.
+                    </span>
+                </div>
+                <div class='tc'>
+                    <h4 class='tcm'>tcm-2</h4>
+                    <span>
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit.
+                    </span>
+                    <span class="t-of-tcm-2">
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit”.
+                    </span>
+                </div>
+                <div class='tc'>
+                    <h4 class='tcm'>tcm-3</h4>
+                    <span>
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit”.
+                    </span>
+                    <span class="t-of-tcm-3">
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit”.
+                    </span>
+                </div>
+                <div class='tc'>
+                    <h4 class='tcm'>tcm-cus:5</h4>
+                    <span>
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit”.
+                    </span>
+                    <span class="t-of-tcm-cus" style="--t-of-tcm:5">
+                        A paragraph is defined as “a group of sentences or a
+                        single sentence that forms a unit”.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom:200px">
+            <h3>Text alignment</h3>
+            <span class='t-al-c'>center</span>
+            <span class="t-al-l">left</span>
+            <span class="t-al-r">right</span>
+            <span class="t-al-j" style="width:600px;border:2px solid green">
+                <span class="t-wt-b t-sz-l">justify content.</span>
+                I finally found a solution to do what I want.
+                As p a paragraphe and article the wrapper. If you want to
+                apply ellipsis to p depending on article height (which also
+                depends on window height), you need to get the height of the
+                article, the line-height of the p and then
+                articleHeight/lineHeight to find the number of line-clamp
+                that can be added dynamically then.
+            </span>
+        </div>
+        <div>
+            <h3>Color text</h3>
+            <span class='t-clr-py'>t-clr-py</span>
+            <span class='t-clr-suc'>t-clr-suc</span>
+            <span class='t-clr-wrn'>t-clr-wrn</span>
+            <span class='t-clr-dng'>t-clr-dng</span>
+        </div>
+    </body>
+</html>
