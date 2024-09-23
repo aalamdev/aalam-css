@@ -1,0 +1,81 @@
+@import "./variables/button.scss";
+
+/*
+ * Button classes
+ * Component code : bt
+ *
+ * Modifier 1     : s   ( small size  button )
+ *                  m   ( normal size button )
+ *                  l   ( large size button )
+ *                  py  ( primary button )
+ *                  sy  ( secondary button )
+ *                  ol  ( outline button )
+ *                  tx  ( text button )
+ *                  gy  ( grey button )
+ *                  dis ( disable button )
+ */
+
+.bt-s { padding: 2.5px 7.5px; }
+.bt-m { padding: 5px 15px; }
+.bt-l { padding: 10px 30px; }
+
+.bt-py {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $clr-primary;
+  color: $clr-text;
+  border: 1px solid $clr-primary;
+}
+.bt-py:hover { filter: brightness(0.9); }
+.bt-py:active { transform: scale(0.95); }
+
+.bt-sy {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $clr-secondary;
+  border: 1px solid $clr-secondary;
+  color: $clr-secondary-text;
+}
+.bt-sy:hover { filter: brightness(0.9); }
+.bt-sy:active { transform: scale(0.95); }
+
+.bt-ol {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $clr-text;
+  border: 1px solid #4E5A63;
+}
+.bt-ol:hover { background-color: $clr-hover; }
+.bt-ol:active { transform: scale(0.95); }
+
+.bt-tx {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $clr-text;
+  border: 1px solid transparent;
+}
+.bt-tx:hover { background-color: $clr-hover; border: 1px solid $clr-hover; }
+.bt-tx:active { transform: scale(0.95); }
+
+.bt-gy {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $clr-text;
+  background-color: $clr-grey;
+  border: 1px solid $clr-grey;
+}
+.bt-gy:active { transform: scale(0.95); }
+
+.bt-dis {
+  display:inline-block;
+  border-radius: 5px;
+  cursor: not-allowed;
+  color: $clr-disable-text;
+  background-color: $clr-hover;
+  border: 1px solid $clr-hover;
+}
