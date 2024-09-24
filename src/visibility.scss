@@ -20,11 +20,11 @@
 }
 @include media-bp-min(l) {
     .v-hd\@l {display: none;}
-    .v-vh\@m {visibility: hidden;}
+    .v-vh\@l {visibility: hidden;}
 }
 @include media-bp-min(xl) {
     .v-hd\@xl {display: none;}
-    .v-vh\@m {visibility: hidden;}
+    .v-vh\@xl {visibility: hidden;}
 }
 @include media-bp-min(2xl) {
     .v-hd\@2xl {display: none;}
