@@ -1,0 +1,119 @@
+@import "./mixins/breakpoints.scss";
+@import "./variables/grid.scss";
+
+/*
+ * Grid classes
+ * Component code   : gd
+ *
+ * Modifier 1       : gap   ( grid gap modifier )
+ *                    col   ( grid column modifier )
+ *                    cols  ( grid columns template modifier )
+ *
+ * Modifier 2       : eq ( grid with equal sized cols ) [Modifier 1: cols]
+
+ *                      Variables used:
+ *                          --gd-cols-eq     ( num cols )
+ *                          --gd-cols-eq-m   ( num cols @m )
+ *                          --gd-cols-eq-l   ( num cols @l )
+ *                          --gd-cols-eq-xl  ( num cols @xl )
+ *                          --gd-cols-eq-2xl ( num cols @2xl )
+ *
+ *                    cus ( grid with custom cols size ) [Modifier 1: cols,col,gap]
+ *
+ *                      Variables used:
+ *                        [Modifier 1: cols]
+ *                          --gd-cols-cus     (num of cus cols )
+ *                          --gd-cols-cus-m   (num of cus cols @m )
+ *                          --gd-cols-cus-l   (num of cus cols @l )
+ *                          --gd-cols-cus-xl  (num of cus cols @xl )
+ *                          --gd-cols-cus-2xl (num of cus cols @2xl )
+ *
+ *                        [Modifier 1: gap]
+ *                          --gd-gap-cus     ( custom gap size )
+ *                          --gd-gap-cus-m   ( gap size m )
+ *                          --gd-gap-cus-l   ( gap size l )
+ *                          --gd-gap-cus-xl  ( gap size xl )
+ *                          --gd-gap-cus-2xl ( gap size 2xl )
+ *
+ *                    subgrid (subgrid within col)
+ *
+ *                      Variables used:
+ *                        [Modifier 1: col]
+ *                          --gd-col-cus ( for cus subgrid within a col )
+ *
+ */
+
+.gd-gap-cus { gap: var(--gd-gap-cus, repeat( $gd-max-cols, 1fr)); }
+.gd-gap-cus-m { gap: $gd-gap-s; }
+.gd-gap-cus-l { gap: $gd-gap-m; }
+.gd-gap-cus-xl { gap: $gd-gap-l; }
+.gd-gap-cus-2xl { gap: $gd-gap-xl; }
+
+@mixin gd {
+    display: grid;
+}
+@mixin gap($row, $col) {
+    row-gap: $row;
+    column-gap: $col;
+}
+
+.gd-cols-eq { @include gd;
+              grid-template-columns: repeat(var(--gd-cols-eq, $gd-max-cols), 1fr);
+}
+.gd-cols-cus { @include gd;
+               grid-template-columns: var(--gd-cols-cus, repeat( $gd-max-cols, 1fr));
+}
+.gd-col-subgrid { @include gd;
+                  grid-template-columns: subgrid;
+                  grid-column: var(--gd-col-cus, span 1);
+}
+
+
+@include media-bp-min(m) {
+    .gd-cols-eq { grid-template-columns: repeat(var(--gd-cols-eq-m,
+                                         var(--gd-cols-eq, $gd-max-cols)), 1fr);
+    }
+    .gd-cols-cus { grid-template-columns: var(--gd-cols-cus-m,
+                                          var(--gd-cols-cus,
+                                          repeat( $gd-max-cols, 1fr)));
+    }
+}
+@include media-bp-min(l) {
+    .gd-cols-eq { grid-template-columns: repeat(var(--gd-cols-eq-l,
+                                         var(--gd-cols-eq-m,
+                                         var(--gd-cols-eq, $gd-max-cols))), 1fr);
+    }
+    .gd-cols-cus { grid-template-columns: var(--gd-cols-cus-l,
+                                          var(--gd-cols-cus-m,
+                                          var(--gd-cols-cus,
+                                          repeat( $gd-max-cols, 1fr))));
+    }
+}
+@include media-bp-min(xl) {
+    .gd-cols-eq { grid-template-columns: repeat(var(--gd-cols-eq-xl,
+                                         var(--gd-cols-eq-l,
+                                         var(--gd-cols-eq-m,
+                                         var(--gd-cols-eq, $gd-max-cols)))), 1fr);
+    }
+    .gd-cols-cus { grid-template-columns: var(--gd-cols-cus-xl,
+                                          var(--gd-cols-cus-l,
+                                          var(--gd-cols-cus-m, 
+                                          var(--gd-cols-cus,
+                                          repeat( $gd-max-cols, 1fr)))));
+    }
+}
+@include media-bp-min(2xl) {
+    .gd-cols-eq { grid-template-columns: repeat(var(--gd-cols-eq-2xl,
+                                         var(--gd-cols-eq-xl,
+                                         var(--gd-cols-eq-l,
+                                         var(--gd-cols-eq-m,
+                                         var(--gd-cols-eq, $gd-max-cols))))), 1fr);
+    }
+    .gd-cols-cus { grid-template-columns: var(--gd-cols-cus-2xl,
+                                          var(--gd-cols-cus-xl,
+                                          var(--gd-cols-cus-l,
+                                          var(--gd-cols-cus-m,
+                                          var(--gd-cols-cus, 
+                                          repeat( $gd-max-cols, 1fr))))));
+    }
+}
