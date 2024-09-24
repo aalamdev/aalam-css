@@ -1,0 +1,114 @@
+@import "./mixins/breakpoints.scss";
+@import "./variables/margin.scss";
+
+/*
+ * Margin classes
+ * Component code   : m
+ * Modifier 1       : cus (custom margin )
+ *                      Variables used:
+ *                      --m-cus     ( default value)
+ *                      --m-cus-m   ( margin @m )
+ *                      --m-cus-l   ( margin @l )
+ *                      --m-cus-xl  ( margin @xl )
+ *                      --m-cus-2xl ( margin @2xl )
+ *                    0  ( remove margin )
+ *                    xs ( extra small margin )
+ *                    s  ( small margin )
+ *                    m  ( medium margin )
+ *                    l  ( large margin )
+ *                    xl ( extra large margin )
+ *
+ *  Modifier 2      : v ( vertical margin )
+ *                    h ( horizontal margin )
+ *                    t ( top margin )
+ *                    b ( bottom margin )
+ *                    l ( left margin )
+ *                    r ( right margin )
+ */
+
+.m-0 { margin: $m-0; }
+.m-xs { margin: $m-xs; }
+.m-s { margin: $m-s; }
+.m-m { margin: $m-m; }
+.m-l { margin: $m-l; }
+.m-xl { margin: $m-xl; }
+
+@mixin hor($val) {
+    margin-left: $val;
+    margin-right: $val;
+}
+
+@mixin ver($val) {
+    margin-top: $val;
+    margin-bottom: $val;
+}
+
+.m-0-v { @include ver($m-0); }
+.m-xs-v { @include ver($m-xs); }
+.m-s-v { @include ver($m-s); }
+.m-m-v { @include ver($m-m); }
+.m-l-v { @include ver($m-l); }
+.m-xl-v { @include ver($m-xl); }
+
+.m-0-h { @include hor($m-0); }
+.m-xs-h { @include hor($m-xs); }
+.m-s-h { @include hor($m-s); }
+.m-m-h { @include hor($m-m); }
+.m-l-h { @include hor($m-l); }
+.m-xl-h { @include hor($m-xl); }
+
+.m-0-t { margin-top: $m-0; }
+.m-xs-t { margin-top: $m-xs; }
+.m-s-t { margin-top: $m-s; }
+.m-m-t { margin-top: $m-m; }
+.m-l-t { margin-top: $m-l; }
+.m-xl-t { margin-top: $m-xl; }
+
+.m-0-b { margin-bottom: $m-0; }
+.m-xs-b { margin-bottom: $m-xs; }
+.m-s-b { margin-bottom: $m-s; }
+.m-m-b { margin-bottom: $m-m; }
+.m-l-b { margin-bottom: $m-l; }
+.m-xl-b { margin-bottom: $m-xl; }
+
+.m-0-l { margin-left: $m-0; }
+.m-xs-l { margin-left: $m-xs; }
+.m-s-l { margin-left: $m-s; }
+.m-m-l { margin-left: $m-m; }
+.m-l-l { margin-left: $m-l; }
+.m-xl-l { margin-left: $m-xl; }
+
+.m-0-r { margin-right: $m-0; }
+.m-xs-r { margin-right: $m-xs; }
+.m-s-r { margin-right: $m-s; }
+.m-m-r { margin-right: $m-m; }
+.m-l-r { margin-right: $m-l; }
+.m-xl-r { margin-right: $m-xl; }
+
+.m-cus {
+ margin: var(--m-cus);
+}
+
+@include media-bp-min(m) {
+    .m-cus {
+        margin: var(--m-cus-m, var(--m-cus));
+    }
+}
+@include media-bp-min(l) {
+    .m-cus {
+        margin: var(--m-cus-l, var(--m-cus-m,
+                var(--m-cus)));
+    }
+}
+@include media-bp-min(xl) {
+    .m-cus {
+        margin: var(--m-cus-xl, var(--m-cus-l,
+                var(--m-cus-m, var(--m-cus))));
+    }
+}
+@include media-bp-min(2xl) {
+    .m-cus {
+        margin: var(--m-cus-2xl, var(--m-cus-xl,
+                var(--m-cus-l, var(--m-cus-m, var(--m-cus)))));
+    }
+}
