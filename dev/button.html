@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button Demo</title>
+        <link rel="stylesheet" href="./../src/button.scss">
+    </head>
+    <style>
+         h4  {
+             text-align: center;
+         }
+         fieldset.d {
+            display: flex;
+            width: fit-content;
+            background: #F2EFDF;
+            position: fixed;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+         }
+         fieldset{
+            background: white;
+         }
+         div.out fieldset{
+            background: lightyellow;
+         }
+     </style>
+    <body>
+        <fieldset class="d" style="gap:10px;">
+            <div>
+                <h4> Primary </h4>
+                <fieldset>
+                    <p class="bt bt-s bt-py"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-py"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-py"> Buttons </p>
+                </fieldset>
+            </div>
+            <div>
+                <h4> Secondary </h4>
+                <fieldset>
+                    <p class="bt bt-s bt-sy"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-sy"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-sy"> Buttons </p>
+                </fieldset>
+            </div>
+            <div class='out'>
+                <h4> Outline </h4>
+                <fieldset class="g">
+                    <p class="bt bt-s bt-ol"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-ol"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-ol"> Buttons </p>
+                </fieldset>
+            </div>
+            <div class="out">
+                <h4> Text </h4>
+                <fieldset>
+                    <p class="bt bt-s bt-txt"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-txt"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-txt"> Buttons </p>
+                </fieldset>
+            </div>
+            <div>
+                <h4> Grey </h4>
+                <fieldset>
+                    <p class="bt bt-s bt-gy"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-gy"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-gy"> Buttons </p>
+                </fieldset>
+            </div>
+            <div>
+                <h4> Disabled </h4>
+                <fieldset>
+                    <p class="bt bt-s bt-dis"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-dis"> Buttons </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <p class="bt bt-l bt-dis"> Buttons </p>
+                </fieldset>
+            </div>
+        </fieldset>
+    </body>
+</html>
