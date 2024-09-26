@@ -5,6 +5,8 @@
  *  Modifier 1 :
  *      sz  - size
  *      lh  - line height
+ *      wt  - weight
+ *      ic  - icon
  *
  *  Modifier 2 :
  *      size :
@@ -12,6 +14,14 @@
  *          s   - small
  *          l   - large
  *          xl  - extra large
+ *
+ *      weight :
+ *          b   - bold
+ *          sb  - semi-bold
+ *
+ *      icon :
+ *          gap - margin gap
+ *          sz  - size
  */
 
 $t-sz:var(--t-sz, 14px);
@@ -19,4 +29,9 @@ $t-sz-xs:0.714rem;
 $t-sz-s:0.857rem;
 $t-sz-l:1.142rem;
 $t-sz-xl:1.428rem;
+$t-sz-sm:calc($t-sz * 13 / 14);
 $t-lh:1.5em;
+$t-wt-b:700;
+$t-wt-sb:600;
+$t-ic-gap:6px;
+$t-ic-sz:calc(1em + 2px);

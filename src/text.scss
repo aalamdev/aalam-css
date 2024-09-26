@@ -1,5 +1,6 @@
 @import './src/variables/color.scss';
 @import './src/variables/text.scss';
+@import './src/mixins/breakpoints.scss';
 
 /*
  * Font classes
@@ -11,6 +12,7 @@
  *      of  - overflow
  *      al  - alignment
  *      clr - color
+ *      ic  - icon
  *
  * Modifier 2 :
  *  size :
@@ -65,15 +67,19 @@
 html, body {
     font-size:$t-sz;
     line-height:$t-lh;
+    @include media-bp-max(l) {
+        font-size:$t-sz-sm;
+    }
 }
+
 
 .t-sz-xs {font-size:$t-sz-xs}
 .t-sz-s  {font-size:$t-sz-s}
 .t-sz-l  {font-size:$t-sz-l}
 .t-sz-xl {font-size:$t-sz-xl}
 
-.t-wt-b  {font-weight:700;}
-.t-wt-sb {font-weight:600;}
+.t-wt-b  {font-weight:$t-wt-b}
+.t-wt-sb {font-weight:$t-wt-sb}
 
 .t-tf-c  {text-transform:capitalize;}
 .t-tf-u  {text-transform:uppercase;}
@@ -100,3 +106,16 @@ html, body {
 .t-clr-suc {color:$clr-suc}
 .t-clr-wrn {color:$clr-wrn}
 .t-clr-dng {color:$clr-dng}
+
+.t-ic {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    > .ic:first-child {margin-right:$t-ic-gap}
+    > .ic:last-child {margin-left:$t-ic-gap}
+    svg {
+        width:$t-ic-sz !important;
+        height:$t-ic-sz !important;
+        vertical-align:text-bottom;
+    }
+}
