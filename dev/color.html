@@ -20,7 +20,6 @@
             const btn = document.getElementById('theme-toggle');
             const bdy = document.querySelector('html');
             btn.addEventListener('click', () => {
-                console.log("documentElement ", document.documentElement.classList.contains('clr-light'));
                  if (!window.matchMedia("(prefer-color-scheme: dark)") ||
                         document.documentElement.classList.contains('clr-light')) {
                     document.documentElement.classList.add('clr-dark')

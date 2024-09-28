@@ -4,29 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Button Demo</title>
+        <link rel="stylesheet" href="./../src/color.scss">
         <link rel="stylesheet" href="./../src/button.scss">
     </head>
     <style>
-         h4  {
-             text-align: center;
-         }
+         h4 {text-align: center;}
          fieldset.d {
             display: flex;
             width: fit-content;
-            background: #F2EFDF;
             position: fixed;
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);
          }
-         fieldset{
-            background: white;
+         html.clr-light {
+            fieldset.d {background:#F2EFDF}
+            fieldset {background:white}
+            div.out fieldset {background:lightyellow;}
          }
-         div.out fieldset{
-            background: lightyellow;
-         }
+        #toggle {
+            float:right;
+            margin-top:40px;
+            margin-right:50px;
+        }
      </style>
     <body>
+        <button id="toggle" class='bt bt-l bt-py'>change theme</button>
         <fieldset class="d" style="gap:10px;">
             <div>
                 <h4> Primary </h4>
@@ -113,5 +116,23 @@
                 </fieldset>
             </div>
         </fieldset>
+        <script>
+            const btn = document.getElementById('toggle');
+            const bdy = document.querySelector('html');
+            let scrn = window.matchMedia(
+                '(prefers-color-scheme: dark)').matches?'clr-dark':'clr-light';
+            document.documentElement.classList.add(scrn);
+            console.log('scrn : ', scrn);
+            btn.addEventListener('click', () => {
+                 if (document.documentElement.classList.contains('clr-light')) {
+                    document.documentElement.classList.add('clr-dark')
+                    document.documentElement.classList.remove("clr-light");
+                } else if(
+                    document.documentElement.classList.contains('clr-dark')) {
+                    document.documentElement.classList.remove('clr-dark')
+                    document.documentElement.classList.add("clr-light");
+                }
+            })
+        </script>
     </body>
 </html>
