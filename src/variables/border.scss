@@ -1,0 +1,18 @@
+@import './color.scss';
+
+/*  Border variable
+ *  Variable code - bdr
+ *
+ *  Modifier 1 :
+ *      r   - radius
+ *      clr - border color
+ *
+ *  Modifier 2 :
+ *      radius :
+ *          s - small radius
+ *          l - large radius
+ */
+
+$bdr-r-s:4px;
+$bdr-r-l:8px;
+$bdr-clr:$clr-bg-l2
