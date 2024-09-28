@@ -1,5 +1,6 @@
 @import "./mixins/breakpoints.scss";
 @import "./variables/grid.scss";
+@import "./variables/color.scss";
 
 /*
  * Grid classes
@@ -9,8 +10,16 @@
  *                    col   ( grid column modifier )
  *                    cols  ( grid columns template modifier )
  *
- * Modifier 2       : eq ( grid with equal sized cols ) [Modifier 1: cols]
-
+ * Modifier 2       : [Modiier 1: gap ]
+ *                      s  ( gap size s )
+ *                      m  ( gap size m )
+ *                      l  ( gap size l )
+ *                      xl ( gap size 2xl )
+ *
+ *                    dvd ( a line which divide the cols )
+ *
+ *                    eq ( grid with equal sized cols ) [Modifier 1: cols]
+ *
  *                      Variables used:
  *                          --gd-cols-eq     ( num cols )
  *                          --gd-cols-eq-m   ( num cols @m )
@@ -28,26 +37,53 @@
  *                          --gd-cols-cus-xl  (num of cus cols @xl )
  *                          --gd-cols-cus-2xl (num of cus cols @2xl )
  *
- *                        [Modifier 1: gap]
- *                          --gd-gap-cus     ( custom gap size )
- *                          --gd-gap-cus-m   ( gap size m )
- *                          --gd-gap-cus-l   ( gap size l )
- *                          --gd-gap-cus-xl  ( gap size xl )
- *                          --gd-gap-cus-2xl ( gap size 2xl )
- *
- *                    subgrid (subgrid within col)
+ *                    subgrid (subgrid within a col)
  *
  *                      Variables used:
  *                        [Modifier 1: col]
- *                          --gd-col-cus ( for cus subgrid within a col )
+ *                          --gd-col-cus      ( for cus subgrid within a col )
  *
+ *                      Variables used:
+ *                        [Modifier 1: gap]
+ *                          --gd-gap-cus      ( for cus gap size )
+ *                          --gd-gap-cus-col  ( to extract the cus col size)
  */
 
 .gd-gap-cus { gap: var(--gd-gap-cus, repeat( $gd-max-cols, 1fr)); }
-.gd-gap-cus-m { gap: $gd-gap-s; }
-.gd-gap-cus-l { gap: $gd-gap-m; }
-.gd-gap-cus-xl { gap: $gd-gap-l; }
-.gd-gap-cus-2xl { gap: $gd-gap-xl; }
+.gd-gap-s { gap: $gd-gap-s; }
+.gd-gap-m { gap: $gd-gap-m; }
+.gd-gap-l { gap: $gd-gap-l; }
+.gd-gap-xl { gap: $gd-gap-xl; }
+
+.gd-dvd{
+    * {
+    position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: $dvd-width;
+            background-color: $clr-bg-l2;
+            height: 100%;
+            right: calc(-1 * (var(--gd-gap-cus-col, var(--gd-gap-cus))) /2);
+        }
+        &:last-child::before {
+            display:none;
+        }
+    }
+}
+
+.gd-dvd.gd-gap-s *::before {
+    right: calc(-1 * $gd-gap-s /2);
+}
+.gd-dvd.gd-gap-m *::before {
+    right: calc(-1 * $gd-gap-m /2);
+}
+.gd-dvd.gd-gap-l *::before {
+    right: calc(-1 * $gd-gap-l /2);
+}
+.gd-dvd.gd-gap-xl *::before {
+    right: calc(-1 * $gd-gap-xl /2);
+}
 
 @mixin gd {
     display: grid;
@@ -67,7 +103,6 @@
                   grid-template-columns: subgrid;
                   grid-column: var(--gd-col-cus, span 1);
 }
-
 
 @include media-bp-min(m) {
     .gd-cols-eq { grid-template-columns: repeat(var(--gd-cols-eq-m,
