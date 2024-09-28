@@ -1,6 +1,7 @@
 @import './src/variables/color.scss';
 @import './src/variables/text.scss';
 @import './src/mixins/breakpoints.scss';
+@import './src/variables/margin.scss';
 
 /*
  * Font classes
@@ -13,6 +14,8 @@
  *      al  - alignment
  *      clr - color
  *      ic  - icon
+ *      lbl - label
+ *      lbls- label container
  *
  * Modifier 2 :
  *  size :
@@ -47,6 +50,7 @@
  *      suc - success color
  *      wrn - warning color
  *      dng - danger color
+ *      meta- descriptive text color
  *
  * Modifier 3:
  *  truncate multiple line :
@@ -102,10 +106,11 @@ html, body {
 .t-of-tcm-3   {@include tcm(3);}
 .t-of-tcm-cus {@include tcm(var(--t-of-tcm));}
 
-.t-clr-py  {color:$clr-txt-py}
-.t-clr-suc {color:$clr-suc}
-.t-clr-wrn {color:$clr-wrn}
-.t-clr-dng {color:$clr-dng}
+.t-clr-py   {color:$clr-txt-py}
+.t-clr-suc  {color:$clr-suc}
+.t-clr-wrn  {color:$clr-wrn}
+.t-clr-dng  {color:$clr-dng}
+.t-clr-meta {color:$clr-txt-meta}
 
 .t-ic {
     display:inline-flex;
@@ -118,4 +123,15 @@ html, body {
         height:$t-ic-sz !important;
         vertical-align:text-bottom;
     }
+}
+
+.t-lbl {
+    padding:2px 8px;
+    background:$clr-lbl
+}
+.t-lbls {
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:$m-s;
+    row-gap:$m-m;
 }

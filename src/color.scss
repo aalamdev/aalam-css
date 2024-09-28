@@ -1,27 +1,86 @@
 @import './variables/color.scss';
+@import './mixins/color.scss';
 
 /*
  *  Color classes
  *  Component code : clr
  *  Modifier 1 :
- *      bg      : background color
- *      txt    : body text color
+ *      bg  : background color
  *
  *  Modifier 2 :
  *      background color :
- *          d1  - dark shade 1
- *          d2  - dark shade 2
- *
- *      body text color :
- *          l1  - light shade 1
- *          l2  - light shade 2
- *          d1  - dark shade 1
- *          d2  - dark shade 2
+ *          l1  - level-1 color
+ *          l2  - level-2 color
+ *          py  - primary color
  */
 
-.clr-bg-d1  {background:$clr-bg-d1}
-.clr-bg-d2  {background:$clr-bg-d2}
-.clr-txt-d1 {color:$clr-txt-d1}
-.clr-txt-d2 {color:$clr-txt-d2}
-.clr-txt-l1 {color:$clr-txt-l1}
-.clr-txt-l2 {color:$clr-txt-l2}
+$_clr-txt:#2E3A43;
+$_clr-txt-py:#125FAC;
+$_clr-bg:#FCFFFF;
+$_clr-bg-py:#FFDD42;
+$_clr-suc:#037E23;
+$_clr-wrn:#B35F00;
+$_clr-dng:#9A1900;
+$_clr-lbl:#F2F5F5;
+$_clr-op-bg:0.1;
+
+$_Dclr-txt:#DCF0FF;
+$_Dclr-txt-py:#5DA6EE;
+$_Dclr-txt-bg-py:#00111E;
+$_Dclr-bg:#00111E;
+$_Dclr-bg-py:#FFD20A;
+$_Dclr-suc:#57DD84;
+$_Dclr-wrn:#F5AC5A;
+$_Dclr-dng:#F58475;
+$_Dclr-lbl:#0A1B28;
+$_Dclr-op-bg: 0.15;
+
+@mixin light-theme-colors() {
+    --clr-txt:#{$_clr-txt};
+    --clr-txt-py:$_clr-txt-py;
+    --clr-bg:#{$_clr-bg};
+    --clr-bg-py:#{$_clr-bg-py};
+    --clr-suc:#{$_clr-suc};
+    --clr-wrn:#{$_clr-wrn};
+    --clr-dng:#{$_clr-dng};
+    --clr-lbl:#{$_clr-lbl};
+    --clr-op-bg: #{$_clr-op-bg};
+    --clr-txt-meta:rgb(from var(--clr-txt) calc(r + 64) calc(g + 64) calc(b + 64));
+    --clr-bg-l1:rgb(from var(--clr-bg) calc(r - 16) calc(g - 16) calc(b - 16));
+    --clr-bg-l2:rgb(from var(--clr-bg) calc(r - 32) calc(g - 32) calc(b - 32));
+}
+@mixin dark-theme-colors() {
+    --clr-txt:#{$_Dclr-txt};
+    --clr-txt-py:#{$_Dclr-txt-py};
+    --clr-txt-bg-py:#{$_Dclr-txt-bg-py};
+    --clr-bg:#{$_Dclr-bg};
+    --clr-bg-py:#{$_Dclr-bg-py};
+    --clr-suc:#{$_Dclr-suc};
+    --clr-wrn:#{$_Dclr-wrn};
+    --clr-dng:#{$_Dclr-dng};
+    --clr-lbl:#{$_Dclr-lbl};
+    --clr-op-bg: #{$_Dclr-op-bg};
+    --clr-txt-meta:rgb(from var(--clr-txt) calc(r - 64) calc(g - 64) calc(b - 64));
+    --clr-bg-l1:rgb(from var(--clr-bg) calc(r + 16) calc(g + 16) calc(b + 16));
+    --clr-bg-l2:rgb(from var(--clr-bg) calc(r + 32) calc(g + 32) calc(b + 32));
+}
+
+:root, html.clr-light {
+    @include light-theme-colors()
+}
+html.clr-dark {
+    @include dark-theme-colors()
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-theme-colors()
+    }
+}
+body {
+    background-color: $clr-bg;
+    color: $clr-txt;
+}
+
+.clr-bg-l1 {background:$clr-bg-l1}
+.clr-bg-l2 {background:$clr-bg-l2}
+.clr-bg-py {background:$clr-bg-py}

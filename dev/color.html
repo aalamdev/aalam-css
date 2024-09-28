@@ -7,15 +7,30 @@
         <link rel="stylesheet" href="./../src/color.scss"/>
         <title>Aalam Colors</title>
         <style>
+            :root, html.clr-dark, html.clr-light {--clr-txt:green;}
             span {display:block;}
         </style>
     </head>
-    <body style="--clr-txt:green">
-        <span class='clr-bg-d1'>bg-1</span>
-        <span class='clr-bg-d2'>bg-2</span>
-        <span class='clr-txt-d2'>d2</span>
-        <span class='clr-txt-d1'>d1</span>
-        <span class='clr-txt-l1'>l1</span>
-        <span class='clr-txt-l2'>l2</span>
+    <body>
+        <button id="theme-toggle">switch Theme</button>
+        <span class='clr-bg-l1'>bg-1</span>
+        <span class='clr-bg-l2'>bg-2</span>
+        <span class='clr-bg-py'>bg-py</span>
+        <script>
+            const btn = document.getElementById('theme-toggle');
+            const bdy = document.querySelector('html');
+            btn.addEventListener('click', () => {
+                console.log("documentElement ", document.documentElement.classList.contains('clr-light'));
+                 if (!window.matchMedia("(prefer-color-scheme: dark)") ||
+                        document.documentElement.classList.contains('clr-light')) {
+                    document.documentElement.classList.add('clr-dark')
+                    document.documentElement.classList.remove("clr-light");
+                } else if(window.matchMedia("(prefer-color-scheme: dark)") ||
+                   document.documentElement.classList.contains('clr-dark')) {
+                    document.documentElement.classList.remove('clr-dark')
+                    document.documentElement.classList.add("clr-light");
+                }
+            })
+        </script>
     </body>
 </html>

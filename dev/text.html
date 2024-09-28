@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" href="/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/color.scss"/>
         <link rel="stylesheet" href="./../src/text.scss"/>
         <title>Aalam Text</title>
         <style>
@@ -31,6 +32,15 @@
             #tc-par {
                 background:#A8CD9F;
                 border:2px solid red;
+            }
+            :root {
+                --clr-txt:black;
+                --clr-lbl:grey;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --clr-lbl:red;
+                }
             }
 
         </style>
@@ -133,6 +143,16 @@
             <span class='t-clr-suc'>t-clr-suc</span>
             <span class='t-clr-wrn'>t-clr-wrn</span>
             <span class='t-clr-dng'>t-clr-dng</span>
+            <span class='t-clr-meta'>t-clr-meta</span>
+        </div>
+        <div>
+            <h3>Label text</h3>
+            <div class="t-lbls">
+                <span class='t-lbl'>t-lbl</span>
+                <span class='t-lbl'>t-lbl</span>
+                <span class='t-lbl'>t-lbl</span>
+                <span class='t-lbl'>t-lbl</span>
+            </div>
         </div>
         <div>
             <h3>Icon with text</h3>
