@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Demo</title>
     <link rel="stylesheet" href="./../src/grid.scss">
+    <link rel="stylesheet" href="./../src/button.scss">
+    <link rel="stylesheet" href="./../src/color.scss">
     <style>
         span {
             display: block;
             border: 1px solid black;
-            background-color: #BAD2DE;
+            background-color:  #BAD2DE;
+            color:  #000;
             text-align: center;
             padding: 10px;
-            font-size: 1.2em;
+            font-size: 14px;
         }
        .gr span {
            background: #B4B36D;
@@ -25,13 +28,13 @@
             background: #F29B88;
             border: 3px solid black;
             margin: 2px;
-
+            color: #000;
         }
         fieldset.color {
             background: #F2EDDF;
             height: 100%;
             box-sizing: border-box;
-
+            color: #000;
         }
     </style>
 </head>
@@ -42,7 +45,7 @@
             <h4> @media screen </h4>
             <h5> @2xl:10; @xl:8; @l:6; @m:2 </h5>
             <fieldset>
-                    <div class="gd-cols-eq gd-gap-cus-s"
+                    <div class="gd-cols-eq gd-gap-s"
                             style="--gd-cols-eq: 4;
                                    --gd-cols-eq-2xl: 10;
                                    --gd-cols-eq-xl: 8;
@@ -71,8 +74,8 @@
             <fieldset class="color">
                 <h4> Equal sized cols with diff. gap </h4>
                 <fieldset>
-                    <h5> gd-cols-eq , gd-gap-cus-s </h5>
-                    <div class="gd-cols-eq gd-gap-cus-s"
+                    <h5> gd-cols-eq , gd-gap-s </h5>
+                    <div class="gd-cols-eq gd-gap-s"
                             style="--gd-cols-eq:3;">
                         <span> cell 1 </span>
                         <span> cell 2 </span>
@@ -81,8 +84,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5> gd-cols-eq , gd-gap-cus-m </h5>
-                    <div class="gd-cols-eq gd-gap-cus-m"
+                    <h5> gd-cols-eq , gd-gap-m </h5>
+                    <div class="gd-cols-eq gd-gap-m"
                             style="--gd-cols-eq:3;">
                         <span> cell 1 </span>
                         <span> cell 2 </span>
@@ -91,8 +94,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5> gd-cols-eq , gd-gap-cus-l </h5>
-                    <div class="gd-cols-eq gd-gap-cus-l"
+                    <h5> gd-cols-eq , gd-gap-l </h5>
+                    <div class="gd-cols-eq gd-gap-l"
                             style="--gd-cols-eq:3;">
                         <span> cell 1 </span>
                         <span> cell 2 </span>
@@ -101,8 +104,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5> gd-cols-eq , gd-gap-cus-xl </h5>
-                    <div class="gd-cols-eq gd-gap-cus-xl"
+                    <h5> gd-cols-eq , gd-gap-xl </h5>
+                    <div class="gd-cols-eq gd-gap-xl"
                             style="--gd-cols-eq:3;">
                         <span> cell 1 </span>
                         <span> cell 2 </span>
@@ -134,8 +137,8 @@
             <fieldset class="color">
                 <h4> Custom sized cols with diff. gaps </h4>
                 <fieldset>
-                    <h5> gd-cols-cus , gd-gap-cus-m </h5>
-                    <div class="gd-cols-cus gd-gap-cus-m"
+                    <h5> gd-cols-cus , gd-gap-m </h5>
+                    <div class="gd-cols-cus gd-gap-m"
                             style="--gd-cols-cus:2fr 3fr 4fr;">
                         <span>cell 1</span>
                         <span>cell 2</span>
@@ -144,8 +147,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5> gd-cols-cus , gd-gap-cus-l </h5>
-                    <div class="gd-cols-cus gd-gap-cus-l"
+                    <h5> gd-cols-cus , gd-gap-l </h5>
+                    <div class="gd-cols-cus gd-gap-l"
                             style="--gd-cols-cus:4fr 3fr 5fr;">
                         <span>cell 1</span>
                         <span>cell 2</span>
@@ -154,8 +157,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5>  gd-cols-cus , gd-gap-cus-xl </h5>
-                    <div class="gd-cols-cus gd-gap-cus-xl"
+                    <h5>  gd-cols-cus , gd-gap-xl </h5>
+                    <div class="gd-cols-cus gd-gap-xl"
                             style="--gd-cols-cus:4fr 5fr 3fr;">
                         <span>cell 1</span>
                         <span>cell 2</span>
@@ -164,8 +167,8 @@
                 </fieldset>
 
                 <fieldset>
-                    <h5> gd-cols-cus , gd-gap-cus-2xl </h5>
-                    <div class="gd-cols-cus gd-gap-cus-2xl"
+                    <h5> gd-cols-cus , gd-gap-2xl </h5>
+                    <div class="gd-cols-cus gd-gap-2xl"
                             style="--gd-cols-cus:3fr 7fr 7fr;">
                         <span>cell 1</span>
                         <span>cell 2</span>
@@ -197,12 +200,12 @@
         <div>
             <fieldset class="color">
                 <h4>Subgrid</h4>
-                <h4> gd-cols-eq , gd-gap-cus-l </h4>
-                <h4> gd-col-subgrid , gd-gap-cus-m </h4>
+                <h4> gd-cols-eq , gd-gap-l </h4>
+                <h4> gd-col-subgrid , gd-gap-m </h4>
                 <fieldset>
-                    <div class="gd-cols-eq gd-gap-cus-l"
+                    <div class="gd-cols-eq gd-gap-l"
                             style="--gd-cols-eq:3;">
-                        <span class=" gr gd-col-subgrid gd-gap-cus-m"
+                        <span class=" gr gd-col-subgrid gd-gap-m"
                                 style="--gd-col-cus: span 3">
                             <span>cell 1.1 </span>
                             <span>cell 1.2 </span>
@@ -210,7 +213,7 @@
                             <span>cell 1.4 </span>
                         </span>
                         <span>cell 2</span>
-                        <span class=" gr gd-col-subgrid gd-gap-cus-m"
+                        <span class=" gr gd-col-subgrid gd-gap-m"
                                 style="--gd-col-cus: span 4">
                             <span>cell 3.1 </span>
                             <span>cell 3.2 </span>
@@ -220,6 +223,51 @@
                         <span>cell 3</span>
                         <span>cell 4</span>
                         <span>cell 5</span>
+                    </div>
+                </fieldset>
+
+                <!--divide line -->
+                <h4>Divide line</h4>
+                <fieldset>
+                    <h5> gd-dvd , gd-gap-l</h5>
+                    <div class="gd-cols-eq gd-gap-l gd-dvd"
+                         style="--gd-cols-eq:3;">
+                        <div>
+                            <span>
+                                cell 1
+                            </span>
+                        </div>
+                        <div>
+                            <span style="display:block; height:50px;">
+                                Cell 2
+                            </span>
+                        </div>
+                        <div>
+                            <span style="display:block; height:100px;">
+                                Cell 3
+                            </span>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h5>gd-dvd , gd-gap-cus: 10px 30px;</h5>
+                    <div class="gd-cols-eq gd-gap-m gd-dvd"
+                         style="--gd-cols-eq:3;">
+                        <div>
+                            <span>
+                                cell 1
+                            </span>
+                        </div>
+                        <div>
+                            <span style="display:block; height:50px;">
+                                Cell 2
+                            </span>
+                        </div>
+                        <div>
+                            <span style="display:block; height:100px;">
+                                Cell 3
+                            </span>
+                        </div>
                     </div>
                 </fieldset>
             </fieldset>
