@@ -1,0 +1,43 @@
+@import "./variables/padding.scss";
+@import "./variables/color.scss";
+@import "./mixins/color.scss";
+
+/*
+ * Table class
+ * Component code   : tb
+ *
+ * Modifier 1       : stripe ( for stripe pattern )
+ */
+
+.tb-stripe tbody  tr:nth-child(even) {
+    background-color: $clr-lbl;
+}
+.tb {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        border-bottom: 1px solid $clr-bg-l2;
+        border-top: 1px solid $clr-bg-l2;
+
+        th {
+            padding: $pad-m  $pad-l;
+            text-align: left;
+        }
+    }
+    tbody {
+        border-bottom: 1px solid $clr-bg-l2;
+
+        tr {
+            &:hover {
+                background-color: $clr-bg-l1;
+            }
+            &.selected {
+                @include bg-op($clr-txt-py);
+            }
+            td {
+                padding: $pad-m $pad-l;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Demo</title>
+    <link rel="stylesheet" href="./../src/table.scss">
+    <link rel="stylesheet" href="./../src/color.scss">
+    <link rel="stylesheet" href="./../src/text.scss">
+</head>
+    <style>
+        span {
+            color :green;
+        }
+        input {
+            cursor: pointer;
+        }
+    </style>
+<body>
+    <table class="tb tb-stripe">
+        <thead>
+            <tr>
+                <th> <input type="checkbox" id="all">  </th>
+                <th>Acc. No</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td><div>xxxxxxxxxxxxxxx </div>
+                    <div>
+                        <span class="t-ic">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="5.625" stroke="#037E23" stroke-width="0.75"/>
+                            <path d="M5.99991 8.17453L7.03695 9.54908L9.99991 6.79999" stroke="#037E23" stroke-width="0.75" stroke-linecap="round"/>
+                            </svg> Successfully registered
+                        </span>
+                    </div>
+                </td>
+                <td> Ram Kumar </td>
+                <td> 22-03-2024 | 16:22 </td>
+                <td> $25 </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td><div>xxxxxxxxxxxxxxx </div>
+                    <div>
+                        <span class="t-ic">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="5.625" stroke="#037E23" stroke-width="0.75"/>
+                            <path d="M5.99991 8.17453L7.03695 9.54908L9.99991 6.79999" stroke="#037E23" stroke-width="0.75" stroke-linecap="round"/>
+                            </svg> Successfully registered
+                        </span>
+                    </div>
+                <td> Ram Kumar </td>
+                <td> 22-03-2024 | 16:22 </td>
+                <td> $25 </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td><div>xxxxxxxxxxxxxxx </div>
+                    <div>
+                        <span class="t-ic">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="5.625" stroke="#037E23" stroke-width="0.75"/>
+                            <path d="M5.99991 8.17453L7.03695 9.54908L9.99991 6.79999" stroke="#037E23" stroke-width="0.75" stroke-linecap="round"/>
+                            </svg> Successfully registered
+                        </span>
+                    </div>
+                <td> Ram Kumar </td>
+                <td> 22-03-2024 | 16:22 </td>
+                <td> $25 </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td><div>xxxxxxxxxxxxxxx </div>
+                    <div>
+                        <span class="t-ic">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="5.625" stroke="#037E23" stroke-width="0.75"/>
+                            <path d="M5.99991 8.17453L7.03695 9.54908L9.99991 6.79999" stroke="#037E23" stroke-width="0.75" stroke-linecap="round"/>
+                            </svg> Successfully registered
+                        </span>
+                    </div>
+                <td> Ram Kumar </td>
+                <td> 22-03-2024 | 16:22 </td>
+                <td> $25 </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+            checkbox.addEventListener('change', function () {
+                const row = this.closest('tr');
+                if (this.checked) {
+                row.classList.add('selected');
+                } else {
+                    row.classList.remove('selected');
+                }
+            });
+        });
+
+        function clickall() {
+           var ele = document.querySelectorAll('input[type="checkbox"]:not(#all)');
+           var sa = document.querySelector('#all');
+            for(var i=0; i<ele.length; i++) {
+               const  row = ele[i].closest('tr');
+                if(sa.checked == true ) {
+                    ele[i].checked=true;
+                    row.classList.add('selected');
+                } else {
+                    ele[i].checked=false;
+                    row.classList.remove('selected');
+                }
+            }
+        }
+        var el = document.getElementById("all");
+        el.onclick = clickall;
+    </script>
+</body>
+</html>
