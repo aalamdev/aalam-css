@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/form.scss"/>
+        <link rel="stylesheet" href="./../src/color.scss"/>
+        <link rel="stylesheet" href="./../src/text.scss"/>
+        <link rel="stylesheet" href="./../src/icon.scss"/>
+        <title>Aalam Forms-Input</title>
+        <style>
+            BODY {padding-bottom:200px;}
+            div {
+                border:2px solid #9CDBA6;
+                margin-bottom:10px;
+                padding:10px;
+                @media screen and (prefers-color-scheme: dark) {
+                    border:2px solid #D6BD98;
+                }
+            }
+            div.fc-fi {
+                padding:0px;
+                border:none;
+            }
+            .empty {border:none;}
+            div.ic-par {
+                display:flex;
+                position:relative;
+                max-width:100%;
+                align-items:center;
+                -webkit-backface-visibility:hidden;
+                padding:0px;
+            }
+            .ic-par .ic {
+                position:absolute;
+                left:0;
+                line-height:0;
+            }
+            .ic-par input {padding-left:25px;}
+            .ic.end {left:auto;right:0;}
+            label {margin-top:20px;}
+        </style>
+    </head>
+    <body>
+        <h3>Form demo</h3>
+        <div>
+            <h3>checkbox</h3>
+            <input id='check1' type='checkbox'/>
+            <label for='check1'>checkbox</label>
+            <input id='check2' type='checkbox'/>
+            <label for='check2'>checkbox</label>
+            <input id='check3' type='checkbox'/>
+            <label for='check3'>checkbox</label>
+            <input id='check4' type='checkbox'/>
+            <label for='check4'>checkbox</label>
+            <input id='check5' type='checkbox'/>
+            <label for='check5'>checkbox</label>
+            <input id='check6' type='checkbox'/>
+            <label for='check6'>checkbox</label>
+        </div>
+        <div>
+            <h3>radio button</h3>
+            <input name='rad' id='rad1' type='radio'/>
+            <label for='rad1'>radio</label>
+            <input name='rad' id='rad2' type='radio'/>
+            <label for='rad2'>radio</label>
+            <input name='rad' id='rad3' type='radio'/>
+            <label for='rad3'>radio</label>
+            <input name='rad' id='rad4' type='radio'/>
+            <label for='rad4'>radio</label>
+            <input name='rad' id='rad5' type='radio'/>
+            <label for='rad5'>radio</label>
+            <input name='rad' id='rad6' type='radio'/>
+            <label for='rad6'>radio</label>
+        </div>
+        <div>
+            <h3>text input</h3>
+            <label for='txt' class="fc-lbl">text</label>
+            <input id='txt' placeholder="enter text" type='text'/>
+            <label for='sz-s' class="fc-lbl">fc-sz-s</label>
+            <input class='fc-sz-s' id='sz-s'
+                placeholder="enter text" type='text'/>
+            <label for='sz-l' class="fc-lbl">fc-sz-l</label>
+            <input class='fc-sz-l' id='sz-l'
+                placeholder="enter text" type='text'/>
+            <label for='naked' class="fc-lbl">naked</label>
+            <input id='naked' class='fc-inp-n'
+                placeholder="enter text" type='text'/>
+            <label for='top-naked' class="fc-lbl">top-naked</label>
+            <input class='fc-inp-tn' id='top-naked'
+                placeholder="enter text" type='text'/>
+        </div>
+        <div>
+            <h3>text input with icon</h3>
+            <div class="fc-fi fc-sz-s">
+                <span class="ic fc-ic-l">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="none">
+                        <path stroke-linecap="round" d="M11.885 16H7m9.055 0H17.5a.5.5 0 0 0 .5-.5v-3.385a.5.5 0 0 0-.05-.218l-1.71-3.521a.5.5 0 0 0-.45-.282h-3.167M3 16H2m10.623-7.906L12.624 3a1 1 0 0 0-1-1H2m10.623 6.094v6.358M2.94 5h5.172M4.351 7.5h3.761M2 10h3.761"/>
+                        <circle cx="14" cy="16" r="2"/>
+                        <circle cx="5" cy="16" r="2"/>
+                    </svg>
+                </span>
+                <input class='fc-sz-s' placeholder="enter" type='text'/>
+            </div>
+            <div class="fc-fi">
+                <span class="ic fc-ic-l">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="none">
+                        <path stroke-linecap="round" d="M11.885 16H7m9.055 0H17.5a.5.5 0 0 0 .5-.5v-3.385a.5.5 0 0 0-.05-.218l-1.71-3.521a.5.5 0 0 0-.45-.282h-3.167M3 16H2m10.623-7.906L12.624 3a1 1 0 0 0-1-1H2m10.623 6.094v6.358M2.94 5h5.172M4.351 7.5h3.761M2 10h3.761"/>
+                        <circle cx="14" cy="16" r="2" />
+                        <circle cx="5" cy="16" r="2"/>
+                    </svg>
+                </span>
+                <input placeholder="enter" type='text'/>
+            </div>
+            <div class="fc-fi fc-sz-l">
+                <span class="ic fc-ic-r">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="none">
+                        <path stroke-linecap="round" d="M11.885 16H7m9.055 0H17.5a.5.5 0 0 0 .5-.5v-3.385a.5.5 0 0 0-.05-.218l-1.71-3.521a.5.5 0 0 0-.45-.282h-3.167M3 16H2m10.623-7.906L12.624 3a1 1 0 0 0-1-1H2m10.623 6.094v6.358M2.94 5h5.172M4.351 7.5h3.761M2 10h3.761"/>
+                        <circle cx="14" cy="16" r="2"/>
+                        <circle cx="5" cy="16" r="2" />
+                    </svg>
+                </span>
+                <input class='fc-sz-l' placeholder="entr" type='text'/>
+            </div>
+            <div class="fc-fi">
+                <span class="ic fc-ic-r">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="none">
+                        <path stroke-linecap="round" d="M11.885 16H7m9.055 0H17.5a.5.5 0 0 0 .5-.5v-3.385a.5.5 0 0 0-.05-.218l-1.71-3.521a.5.5 0 0 0-.45-.282h-3.167M3 16H2m10.623-7.906L12.624 3a1 1 0 0 0-1-1H2m10.623 6.094v6.358M2.94 5h5.172M4.351 7.5h3.761M2 10h3.761"/>
+                        <circle cx="14" cy="16" r="2"/>
+                        <circle cx="5" cy="16" r="2" />
+                    </svg>
+                </span>
+                <input class='fc-sz-l fc-inp-tn' placeholder="enter text"
+                    type='text'/>
+            </div>
+        </div>
+    </body>
+</html>

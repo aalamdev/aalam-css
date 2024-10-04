@@ -76,7 +76,6 @@ html, body {
     }
 }
 
-
 .t-sz-xs {font-size:$t-sz-xs}
 .t-sz-s  {font-size:$t-sz-s}
 .t-sz-l  {font-size:$t-sz-l}
@@ -118,11 +117,7 @@ html, body {
     justify-content:center;
     > .ic:first-child {margin-right:$t-ic-gap}
     > .ic:last-child {margin-left:$t-ic-gap}
-    svg {
-        width:$t-ic-sz !important;
-        height:$t-ic-sz !important;
-        vertical-align:text-bottom;
-    }
+    > .ic:only-child {margin:0px}
 }
 
 .t-lbl {

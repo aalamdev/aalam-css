@@ -32,7 +32,7 @@
                 background-color: $clr-bg-l1;
             }
             &.selected {
-                @include bg-op($clr-txt-py);
+                @include clr-bg-op($clr-txt-py);
             }
             td {
                 padding: $pad-m $pad-l;

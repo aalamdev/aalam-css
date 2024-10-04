@@ -1,0 +1,18 @@
+@import './src/variables/text.scss';
+
+/*
+ *  Icon classes
+ *  Component code : ic
+ *
+ */
+
+.ic {
+    line-height:0;
+    svg {
+        width:$t-ic-sz !important;
+        height:$t-ic-sz !important;
+        vertical-align:text-bottom;
+        stroke: currentColor;
+        stroke-width: 1.3;
+    }
+}
