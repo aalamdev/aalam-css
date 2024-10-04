@@ -1,0 +1,150 @@
+@import './src/variables/color.scss';
+@import './src/variables/button.scss';
+@import './src/variables/text.scss';
+@import './src/mixins/breakpoints.scss';
+
+/*
+ *  Form classes
+ *  Component code : fc - form control
+ *  Modifier 1 :
+ *      lbl - label
+ *      inp - input
+ *      sz  - size
+ *      fi  - form icon
+ *      ic  - icon
+ *
+ *  Modifier 2 :
+ *      input :
+ *          tn  - top naked
+ *          n   - naked
+ *
+ *      size :
+ *          s   - small
+ *          l   - large
+ *
+ *      icon :
+ *          l   - left
+ *          r   - right
+ *
+ */
+
+$fc-inp-pad-h:10px;
+
+input[type="text"],
+input[type="select"],
+input[type='num'],
+input[type='tel'],
+input[type='email'],
+input[type="password"],
+input[type="search"],
+textarea, select {
+    padding:$bt-m-v $fc-inp-pad-h;
+    border:1px solid $clr-bg-l2;
+    background:transparent;
+    color:$clr-txt;
+    font:inherit;
+    flex:1;
+    &:hover {border:1px solid $clr-txt}
+    &:focus {border:1px solid $clr-txt-py;}
+}
+*:focus {outline: none;}
+.fc-lbl {
+    margin-bottom:6px;
+    color:$clr-txt-meta;
+    display:block;
+    @include media-bp-max(l) {
+        margin-bottom:4px;
+    }
+}
+input.fc-inp-tn {
+    border: 0;
+    outline:none;
+    border-bottom:1px solid $clr-bg-l2;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+}
+input.fc-inp-n {
+    border:0;
+    outline:none;
+}
+.fc-sz-s {
+    font-size:$t-sz-s;
+    input {padding:$bt-s;}
+}
+.fc-sz-l {
+    font-size:$t-sz-l;
+    input {padding:$bt-l;}
+}
+input.fc-sz-s {
+    padding:$bt-s-v $fc-inp-pad-h;
+    font-size:$t-sz-s;
+}
+input.fc-sz-l {
+    padding:$bt-l-v $fc-inp-pad-h;
+    font-size:$t-sz-l;
+}
+input[type="checkbox"], input[type="radio"] {
+    appearance: none;
+    background-color:$clr-bg;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: calc(1rem + 2px);
+    height: calc(1rem + 2px);
+    border: 1px solid currentColor;
+    display: inline-grid;
+    place-content: center;
+}
+input[type="checkbox"] {border-radius: 1px;}
+input[type="checkbox"]:checked,input[type="radio"]:checked {
+    color:$clr-txt-py;
+    transform: scale(1) translate(0);
+}
+input[type="checkbox"]::before {
+    content: " ";
+    background-color:$clr-txt-py;
+    clip-path:polygon( 3.011% 49.107%,31.663% 83.167%,99% 18.5%, 94.44% 7.5%, 32.393% 66.167%, 12.111% 43.107%);
+    width: calc(0.65em + 1px);
+    height:calc(0.65em + 1px);
+    transform: scale(0) translate(-50%);
+    transition: 120ms transform ease-in-out;
+}
+input[type="checkbox"]:checked::before,input[type="radio"]:checked::before {
+    color:$clr-txt-py;
+    transform: scale(1);
+}
+input[type="checkbox"]:disabled,input[type="radio"]:disabled {
+    color:$clr-bg-l2;
+}
+input[type="checkbox"]:disabled::before,input[type="radio"]:disabled::before {
+    background:$clr-bg-l2;
+}
+input[type="radio"] {border-radius: 50%;}
+input[type="radio"]::before {
+    content: " ";
+    background-color:$clr-txt-py;
+    border-radius:50%;
+    width: calc(0.55em + 1px);
+    height:calc(0.55em + 1px);
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+}
+
+.fc-fi {
+    position:relative;
+    display:flex;
+    align-items:center;
+    max-width:100%;
+}
+.fc-ic-l {
+    left:0;
+    position:absolute;
+    padding-left:$fc-inp-pad-h;
+    + input {padding-left:calc(1em + 16px);}
+}
+.fc-ic-r {
+    right:0;
+    position:absolute;
+    padding-right:$fc-inp-pad-h;
+    + input {padding-right:calc(1em + 16px);}
+}

@@ -1,4 +1,14 @@
+$bt-s-v:2.5px;
+$bt-s-h:7.5px;
+$bt-m-v:5px;
+$bt-m-h:15px;
+$bt-l-v:10px;
+$bt-l-h:30px;
+
+//button border-radius
+$bt-br: 5px;
+
 //button padding values
-$bt-s: 5px 10px;
-$bt-m: 5px 14px;
-$bt-l: 10px 15px;
+$bt-s:$bt-s-v $bt-s-h;
+$bt-m:$bt-m-v $bt-m-h;
+$bt-l:$bt-l-v $bt-l-h;
