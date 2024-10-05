@@ -1,0 +1,110 @@
+@import './mixins/breakpoints.scss';
+
+/*
+ *  Flex classes
+ *  Component code  : flx
+ *
+ *  Modifier 1 :
+ *      inl - inline
+ *      exp - expand
+ *      dir - direction
+ *      h   - horizontal
+ *      v   - vertical
+ *      w   - wrap
+ *      nw  - nowrap
+ *
+ *  Modifier 2 :
+ *      horizontal :
+ *          c   - center
+ *          l   - left
+ *          r   - right
+ *          sb  - space between
+ *          sa  - space around
+ *
+ *      vertical :
+ *          t   - top
+ *          m   - middle
+ *          b   - bottom
+ *
+ *      direction :
+ *          r   - row
+ *          c   - column
+ *
+ */
+
+.flx       {display:flex;}
+.flx-inl   {display:inline-flex;}
+.flx-h-c   {justify-content:center;}
+.flx-h-l   {justify-content:left;}
+.flx-h-r   {justify-content:right;}
+.flx-h-sb  {justify-content:space-between;}
+.flx-h-sa  {justify-content:space-around;}
+.flx-exp   {flex-grow:1;}
+.flx-v-t   {align-items:flex-start;}
+.flx-v-b   {align-items:flex-end;}
+.flx-v-m   {align-items:center;}
+.flx-dir-c {flex-direction:column;}
+.flx-dir-r {flex-direction:row;}
+.flx-w     {flex-wrap:wrap;}
+.flx-nw    {flex-wrap:nowrap;}
+
+@include media-bp-min(m) {
+    .flx-h-c\@m   {justify-content:center;}
+    .flx-h-l\@m   {justify-content:center;}
+    .flx-h-r\@m   {justify-content:right;}
+    .flx-h-sb\@m  {justify-content:space-between;}
+    .flx-h-sa\@m  {justify-content:space-around;}
+    .flx-exp\@m   {flex-grow:1;}
+    .flx-v-t\@m   {align-items:flex-start;}
+    .flx-v-b\@m   {align-items:flex-end;}
+    .flx-v-m\@m   {align-items:center;}
+    .flx-dir-c\@m {flex-direction:column;}
+    .flx-dir-r\@m {flex-direction:row;}
+    .flx-w\@m     {flex-wrap:wrap;}
+    .flx-nw\@m    {flex-wrap:nowrap;}
+}
+@include media-bp-min(l) {
+    .flx-h-c\@l   {justify-content:center;}
+    .flx-h-l\@l   {justify-content:left;}
+    .flx-h-r\@l   {justify-content:right;}
+    .flx-h-sb\@l  {justify-content:space-between;}
+    .flx-h-sa\@l  {justify-content:space-around;}
+    .flx-exp\@l   {flex-grow:1;}
+    .flx-v-t\@l   {align-items:flex-start;}
+    .flx-v-b\@l   {align-items:flex-end;}
+    .flx-v-m\@l   {align-items:center;}
+    .flx-dir-c\@l {flex-direction:column;}
+    .flx-dir-r\@l {flex-direction:row;}
+    .flx-w\@l     {flex-wrap:wrap;}
+    .flx-nw\@l    {flex-wrap:nowrap;}
+}
+@include media-bp-min(xl) {
+    .flx-h-c\@xl   {justify-content:center;}
+    .flx-h-l\@xl   {justify-content:left;}
+    .flx-h-r\@xl   {justify-content:right;}
+    .flx-h-sb\@xl  {justify-content:space-between;}
+    .flx-h-sa\@xl  {justify-content:space-around;}
+    .flx-exp\@xl   {flex-grow:1;}
+    .flx-v-t\@xl   {align-items:flex-start;}
+    .flx-v-b\@xl   {align-items:flex-end;}
+    .flx-v-m\@xl   {align-items:center;}
+    .flx-dir-c\@xl {flex-direction:column;}
+    .flx-dir-r\@xl {flex-direction:row;}
+    .flx-w\@xl     {flex-wrap:wrap;}
+    .flx-nw\@xl    {flex-wrap:nowrap;}
+}
+@include media-bp-min(2xl) {
+    .flx-h-c\@2xl   {justify-content:center;}
+    .flx-h-l\@2xl   {justify-content:left;}
+    .flx-h-r\@2xl   {justify-content:right;}
+    .flx-h-sb\@2xl  {justify-content:space-between;}
+    .flx-h-sa\@2xl  {justify-content:space-around;}
+    .flx-exp\@2xl   {flex-grow:1;}
+    .flx-v-t\@2xl   {align-items:flex-start;}
+    .flx-v-b\@2xl   {align-items:flex-end;}
+    .flx-v-m\@2xl   {align-items:center;}
+    .flx-dir-c\@2xl {flex-direction:column;}
+    .flx-dir-r\@2xl {flex-direction:row;}
+    .flx-w\@2xl     {flex-wrap:wrap;}
+    .flx-nw\@2xl    {flex-wrap:nowrap;}
+}

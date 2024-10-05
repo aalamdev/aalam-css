@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../src/flex.scss"/>
+        <title>Aalam Flex</title>
+        <style>
+            div.par {
+                border:1px solid blue;
+                background:none;
+                margin-bottom:40px;
+                > div {
+                    width:100px;
+                    height:40px;
+                    border:1px solid red;
+                    margin-left:20px;
+                    background:#FFD09B;
+                }
+            }
+            h3 {
+                margin-right:20px;
+            }
+            .flx-dir-c {
+                height:400px;
+                > * {
+                    margin-bottom:20px;
+                }
+            }
+            .gr {color:#BF2EF0;}
+        </style>
+    </head>
+    <body>
+        <div class="flx par">
+            <h3>flx</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+            <div>item 05</div>
+            <div>item 06</div>
+            <div>item 07</div>
+            <div>item 08</div>
+            <div>item 09</div>
+            <div>item 10</div>
+            <div>item 11</div>
+            <div>item 12</div>
+            <div>item 13</div>
+            <div>item 14</div>
+            <div>item 15</div>
+            <div>item 16</div>
+            <div>item 17</div>
+            <div>item 18</div>
+            <div>item 19</div>
+            <div>item 20</div>
+            <div>item 21</div>
+            <div>item 22</div>
+            <div>item 23</div>
+            <div>item 24</div>
+        </div>
+        <div class="flx-inl par">
+            <h3>flx-inline</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+            <div>item 05</div>
+            <div>item 06</div>
+            <div>item 07</div>
+            <div>item 08</div>
+            <div>item 09</div>
+            <div>item 10</div>
+            <div>item 11</div>
+            <div>item 12</div>
+            <div>item 13</div>
+            <div>item 14</div>
+            <div>item 15</div>
+            <div>item 16</div>
+            <div>item 17</div>
+            <div>item 18</div>
+            <div>item 19</div>
+            <div>item 20</div>
+            <div>item 21</div>
+            <div>item 22</div>
+            <div>item 23</div>
+            <div>item 24</div>
+        </div>
+        <div class="flx par flx-h-c">
+            <h3>flx flx-h-c</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-h-l">
+            <h3>flx flx-h-l</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-h-r">
+            <h3>flx flx-h-r</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-h-sb">
+            <h3>flx flx-h-sb</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-h-sa">
+            <h3>flx flx-h-sa</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+                </div>
+        <div class="flx par">
+            <h3>flx flx-exp</h3>
+            <div>item 01</div>
+            <div class="flx-exp">item 02 <span class="gr">flx-exp</span></div>
+            <div>item 03</div>
+            <div>item 04</div>
+            <div>item 05</div>
+            <div>item 06</div>
+        </div>
+        <div class="flx par flx-v-t">
+            <h3>flx flx-v-t</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-v-b">
+            <h3>flx flx-v-b</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-v-m">
+            <h3>flx flx-v-m</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-dir-c">
+            <h3>flx flx-dir-c</h3>
+            <div>item 01</div>
+            <div class="flx-exp">item 02 <span class="gr">flx-exp</span></div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-dir-r">
+            <h3>flx flx-dir-r</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+        </div>
+        <div class="flx par flx-w">
+            <h3>flx flx-w</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div>item 04</div>
+            <div>item 05</div>
+            <div>item 06</div>
+            <div class="flx-exp">item 07 <span class='gr'>flx-exp</span></div>
+            <div>item 08</div>
+            <div>item 09</div>
+            <div>item 10</div>
+            <div>item 11</div>
+            <div>item 12</div>
+            <div>item 13</div>
+            <div class="flx-exp">item 14 <span class='gr'> flx-exp</span></div>
+            <div>item 15</div>
+        </div>
+        <div class="flx par flx-nw">
+            <h3>flx flx-nw</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+            <div class="flx-exp">item 04</div>
+            <div>item 05</div>
+            <div>item 06</div>
+            <div>item 07</div>
+            <div>item 08</div>
+            <div>item 09</div>
+            <div>item 10</div>
+            <div>item 11</div>
+            <div>item 12</div>
+            <div>item 13</div>
+            <div>item 14</div>
+            <div>item 15</div>
+            <div>item 16</div>
+            <div>item 17</div>
+            <div>item 18</div>
+            <div>item 19</div>
+            <div>item 20</div>
+            <div>item 21</div>
+            <div>item 22</div>
+            <div>item 23</div>
+            <div>item 24</div>
+        </div>
+        <div class="par flx flx-h-c@m">
+            <h3>flx-h-c@m</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-c@l">
+            <h3>flx-h-c@l</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-c@xl">
+            <h3>flx-h-c@xl</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-c@2xl">
+            <h3>flx-h-c@2xl</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-r@m">
+            <h3>flx-h-r@m</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-r@l">
+            <h3>flx-h-r@l</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-r@xl">
+            <h3>flx-h-r@xl</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+        <div class="par flx flx-h-r@2xl">
+            <h3>flx-h-r@2xl</h3>
+            <div>item 01</div>
+            <div>item 02</div>
+            <div>item 03</div>
+        </div>
+    </body>
+</html>
