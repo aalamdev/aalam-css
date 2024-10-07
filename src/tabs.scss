@@ -1,0 +1,74 @@
+@import "./variables/padding.scss";
+@import "./variables/text.scss";
+@import "./variables/color.scss";
+@import "./variables/grid.scss";
+@import "./variables/border.scss";
+@import "./mixins/color.scss";
+@import "./mixins/breakpoints.scss";
+
+$tabs-s: 2px;
+
+/*
+ * Tabs class
+ * Component code   : tabs
+ *
+ * Modifier 1       : wr (for wraping the tabs )
+ */
+
+aalam-tabs::part(tab-title) {
+    border-bottom: 2px solid $clr-bg-l2;
+    gap: $gd-gap-s;
+    text-wrap: nowrap;
+    display: inline-flex;
+    min-width: 100%;
+}
+
+aalam-tabs:not(.tabs-wr)::part(tab-title-holder) {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+[slot='tab-title'] {
+    padding: $pad-s $pad-m;
+    color: $clr-txt-meta;
+    cursor: pointer;
+    font-size: $t-sz;
+    flex-shrink: 0;
+    position: relative;
+
+    &:hover {
+        background: $clr-bg-l1;
+        border-top-left-radius: $bdr-r-s;
+        border-top-right-radius: $bdr-r-s;
+    }
+
+    &.tab-active {
+        color: $clr-txt;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -$tabs-s;
+            left: 0px;
+            right: 0px;
+            height: $tabs-s;
+            background-color: $clr-txt-py;
+        }
+    }
+}
+
+[slot='tab-body'] {
+    padding: $pad-s $pad-m;
+}
+
+aalam-tabs.tabs-wr {
+    &::part(tab-title) {
+        flex-wrap: wrap;
+    }
+}
+
+@include media-bp-min(m) {
+    aalam-tabs::part(tab-title) {
+        gap: $gd-gap-m;
+    }
+}
