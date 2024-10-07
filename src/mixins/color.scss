@@ -1,3 +1,7 @@
-@mixin bg-op($clr) {
+/*
+ *  bg-op   - background opacity
+ */
+
+@mixin clr-bg-op($clr) {
     background:rgb(from $clr r g b / var(--clr-op-bg));
 }
