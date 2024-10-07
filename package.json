@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "aalam-wc": "^0.0.8",
+    "aalam-wc": "^0.0.9",
     "browserslist": "^4.23.3",
     "lightningcss": "^1.27.0",
     "lightningcss-cli": "^1.27.0",

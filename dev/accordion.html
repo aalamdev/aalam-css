@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="../node_modules/aalam-wc/dist/accordion.js"></script>
+        <script type="module" src="../node_modules/aalam-wc/dist/toggle-switch.js"></script>
+        <title>Accordion Demo</title>
+        <link rel="stylesheet" href="../src/accordion.scss">
+        <link rel="stylesheet" href="../src/color.scss">
+        <link rel="stylesheet" href="../src/listgroup.scss">
+        <link rel="stylesheet" href="../src/toggle.scss">
+        <script>
+            var first = true;
+            function invert() {
+                if (first) {
+                    document.querySelector(".icon").setAttribute("d","M7 11L10 8L13 11");
+                    first= false;
+                } else {
+                    document.querySelector(".icon").setAttribute("d", "M7 9L10 12L13 9");
+                    first = true;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <aalam-accordion id="accordion" activecls="ac" nocloseall nomultiple>
+                <H3 style="text-align:center;">  Demo for FAQ type accordion </H3>
+                <article class="container ac">
+                    <div class="acc-title">
+                        <span>What is Machine Learning?</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8.5" stroke="#2E3A43"/>
+                        <path d="M7 9L10 12L13 9" stroke="#2E3A43" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="acc-body">
+                        <p>
+                            Machine Learning is a subset of AI that provides systems
+                            the ability to automatically learn and improve from
+                            experience without being explicitly programmed. It
+                            focuses on the development of computer programs that can
+                            access data and use it to learn for themselves.
+                        </p>
+                    </div>
+                </article>
+
+                <div class="container ac">
+                    <div class="acc-title">
+                        <span>What is Blockchain?</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8.5" stroke="#2E3A43"/>
+                        <path d="M7 9L10 12L13 9" stroke="#2E3A43" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="acc-body">
+                        <p>
+                            Blockchain is a decentralized, distributed ledger
+                            technology that records the provenance of a digital
+                            asset. By decentralizing the data, blockchain eliminates
+                            the need for intermediaries, reduces the risk of fraud,
+                            and enhances transparency.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container ac">
+                    <div class="acc-title">
+                        <span>What is cloud?</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8.5" stroke="#2E3A43"/>
+                        <path d="M7 9L10 12L13 9" stroke="#2E3A43" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="acc-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, cum!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container ac">
+                    <div class="acc-title">
+                        <span>What is big data?</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8.5" stroke="#2E3A43"/>
+                        <path d="M7 9L10 12L13 9" stroke="#2E3A43" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="acc-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, cum!
+                        </p>
+                    </div>
+                </div>
+            </aalam-accordion>
+            </br>
+            </br>
+            <div style="text-align:center;">
+                <label>
+                    <input type="checkbox" id="nocloseall" /> No Close All
+                </label>
+                <label>
+                    <input type="checkbox" id="nomultiple" /> No Multiple
+                </label>
+            </div>
+        </div>
+            <script>
+                const accordion = document.getElementById("accordion");
+                const noCloseAllCheckbox = document.getElementById("nocloseall");
+                const noMultipleCheckbox = document.getElementById("nomultiple");
+
+                noCloseAllCheckbox.addEventListener("change", (event) => {
+                    if (event.target.checked) {
+                        accordion.setAttribute("nocloseall", event.target.checked);
+                    } else {
+                        accordion.removeAttribute("nocloseall");
+                    }
+                });
+
+                noMultipleCheckbox.addEventListener("change", (event) => {
+                    if (event.target.checked) {
+                        accordion.setAttribute("nomultiple", event.target.checked);
+                    } else {
+                        accordion.removeAttribute("nomultiple");
+                    }
+                });
+            </script>
+    </body>
+</html>
