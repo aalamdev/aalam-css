@@ -1,0 +1,84 @@
+/*
+ *  Position classes
+ *  Component code : pos
+ *  Modifier 1 :
+ *      t   - top
+ *      b   - bottom
+ *      l   - left
+ *      r   - right
+ *
+ *      tl  - top-left
+ *      tr  - top-right
+ *      bl  - bottom-left
+ *      br  - bottom-right
+ *
+ *      fill- position cover
+ *      c   - center
+ *      tc  - top-center
+ *      bc  - bottom-center
+ *      hc  - horizontal center
+ *      vc  - vertical center
+ *
+ *      rel - relative position
+ *      fix - fixed position
+ */
+
+.pos-t {position:absolute;top:0;left:0;right:0;}
+.pos-l {position:absolute;left:0;top:0;bottom:0;}
+.pos-b {position:absolute;bottom:0;left:0;right:0;}
+.pos-r {position:absolute;right:0;top:0;bottom:0;}
+
+.pos-tl {position:absolute;top:0;left:0;}
+.pos-tr {position:absolute;top:0;right:0;}
+.pos-bl {position:absolute;bottom:0;left:0;}
+.pos-br {position:absolute;bottom:0;right:0;}
+
+.pos-fill {position:absolute;left:0;right:0;top:0;bottom:0;}
+.pos-c  {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.pos-tc  {
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.pos-bc {
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.pos-lc {
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+.pos-rc {
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.pos-hc {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.pos-vc {
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.pos-rel {position:relative;}
+.pos-fix {position:fixed;}

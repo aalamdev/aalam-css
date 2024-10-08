@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" style="--clr-txt:black">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position Demo</title>
+        <link rel="stylesheet" href="./../src/position.scss">
+        <link rel="stylesheet" href="./../src/text.scss">
+        <style>
+            body {background:white;}
+            div {padding:10px;}
+            .pos-rel {
+                display:inline-block;
+                margin:10px;
+                border:2px solid red;
+                width:500px;
+                height:300px;
+                background:grey;
+            }
+            .pos-fill {
+                margin:20px;
+            }
+            .pos-fill.pos-fix {
+                margin-bottom:150px;
+            }
+            .par {
+                margin:70px 90px;
+            }
+            .pos-t, .pos-tl {background:#ECDFCC;}
+            .pos-l, .pos-tr {background:#A5B68D;}
+            .pos-b, .pos-bl {background:#DA8359;}
+            .pos-r, .pos-br {background:#257180;}
+            .pos-c, .pos-tc, .pos-bc, .pos-lc, .pos-rc {background:#D2FF72;}
+            .pos-vc {background:#DA8359;}
+            .pos-hc {background:#A5B68D;}
+            .pos-fill {background:#ECDFCC;}
+            label {padding-right:25px;padding-bottom:20px;}
+            .chng-pos {border:2px solid red;display:inline-block}
+        </style>
+    </head>
+    <body>
+        <div class='par'>
+            <div id='l1' class="pos-rel t-al-c">
+                <div class="pos-t">pos-t</div>
+                <div class="pos-b">pos-b</div>
+                <div class="pos-r">pos-r</div>
+                <div class="pos-l">pos-l</div>
+            </div>
+            <div class='chng-pos'>
+                <input type='checkbox' name='pos-1' id='pos1'/>
+                <label for='pos1'>fixed</label>
+            </div>
+            <div id='l2' class="pos-rel">
+                <div class="pos-tl">pos-tl</div>
+                <div class="pos-tr">pos-tr</div>
+                <div class="pos-bl">pos-bl</div>
+                <div class="pos-br">pos-br</div>
+                <div class="pos-c">pos-c</div>
+                <div class="pos-tc">pos-tc</div>
+                <div class="pos-bc">pos-bc</div>
+                <div class="pos-lc">pos-lc</div>
+                <div class="pos-rc">pos-rc</div>
+            </div>
+            <div class='chng-pos'>
+                <input type='checkbox' name='pos-2' id='pos2'/>
+                <label for='pos2'>fixed</label>
+            </div>
+            <div id='l3' class="pos-rel">
+                <div class="pos-vc">pos-vc</div>
+                <div class="pos-hc">pos-hc</div>
+            </div>
+            <div class='chng-pos'>
+                <input type='checkbox' name='pos-3' id='pos3'/>
+                <label for='pos3'>fixed</label>
+            </div>
+            <div id='l4' class="pos-rel">
+                <div class="pos-fill">pos-fill</div>
+            </div>
+            <div class='chng-pos'>
+                <input type='checkbox' name='pos-4' id='pos4'/>
+                <label for='pos4'>fixed</label>
+            </div>
+        </div>
+        <script>
+            const l1 = document.querySelector('#l1');
+            const pos_1 = document.querySelector('input[name="pos-1"]');
+            pos_1.addEventListener('change', () => {
+                if(event.target.checked) {
+                    for(let i = 0; i < l1.children.length; i++)
+                        l1.children[i].classList.add('pos-fix');
+                } else {
+                    for(let i = 0; i < l1.children.length; i++)
+                        l1.children[i].classList.remove('pos-fix');
+                }
+            });
+
+            const l2 = document.querySelector('#l2');
+            const pos_2 = document.querySelector('input[name="pos-2"]');
+            pos_2.addEventListener('change', () => {
+                if(event.target.checked) {
+                    for(let i = 0; i < l2.children.length; i++)
+                        l2.children[i].classList.add('pos-fix');
+                } else {
+                    for(let i = 0; i < l2.children.length; i++)
+                        l2.children[i].classList.remove('pos-fix');
+                }
+            });
+
+            const l3 = document.querySelector('#l3');
+            const pos_3 = document.querySelector('input[name="pos-3"]');
+            pos_3.addEventListener('change', () => {
+                if(event.target.checked) {
+                    for(let i = 0; i < l3.children.length; i++)
+                        l3.children[i].classList.add('pos-fix');
+                } else {
+                    for(let i = 0; i < l3.children.length; i++)
+                        l3.children[i].classList.remove('pos-fix');
+                }
+            });
+            const l4 = document.querySelector('#l4');
+            const pos_4 = document.querySelector('input[name="pos-4"]');
+            pos_4.addEventListener('change', () => {
+                if(event.target.checked) {
+                    for(let i = 0; i < l4.children.length; i++)
+                        l4.children[i].classList.add('pos-fix');
+                } else {
+                    for(let i = 0; i < l4.children.length; i++)
+                        l4.children[i].classList.remove('pos-fix');
+                }
+            });
+        </script>
+    </body>
+</html>
