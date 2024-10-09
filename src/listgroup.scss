@@ -1,0 +1,10 @@
+@import './src/variables/color.scss';
+@import './src/variables/text.scss';
+@import './src/variables/padding.scss';
+@import './src/variables/margin.scss';
+
+.lg > * {padding:$pad-m $pad-l;display:block}
+.lg-stripe > *:nth-child(even) {background:$clr-lbl;}
+.lg-line > * {border-bottom:1px solid $clr-bg-l2;}
+.lg-b {color:$clr-txt-meta;font-size:$t-sz-s}
+.lg-h {color:$clr-txt;margin-bottom:$m-txt;}
