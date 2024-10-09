@@ -1,6 +1,31 @@
-$m-0: 0px;
-$m-xs: 5px;
-$m-s: 10px;
-$m-m: 20px;
-$m-l: 25px;
-$m-xl: 30px;
+@import '../mixins/breakpoints.scss';
+
+/*
+ *  Margin variables
+ *  Variable code : m
+ *  Modifier 1 :
+ *      0   - remove margin
+ *      xs  - extra small
+ *      s   - small
+ *      m   - medium
+ *      l   - large
+ *      xl  - extra large
+ *      txt - text margin
+ *      blk - block margin
+ *
+ */
+
+body {
+    --m-txt:2px;
+    --m-blk:6px;
+    @include media-bp-max(m) {--m-txt:0px;--m-blk:4px;}
+}
+
+$m-0    : 0px;
+$m-xs   : 5px;
+$m-s    : 10px;
+$m-m    : 15px;
+$m-l    : 20px;
+$m-xl   : 30px;
+$m-txt  : var(--m-txt);
+$m-blk  : var(--m-blk);
