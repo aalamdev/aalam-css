@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Tabs Demo</title>
+        <script type="module" src="../node_modules/aalam-wc/dist/tabs.js"></script>
+        <link rel="stylesheet" href="../src/tabs.scss">
+        <link rel="stylesheet" href="../src/color.scss">
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            h3 {
+                height: 5px;
+            }
+
+            div.size {
+                width: 30%;
+                border-right: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Tabs Style Demo</h1>
+        <script>
+            let index = 3;
+            let wrindex =3;
+            function addNewTab() {
+                let el = document.getElementById("tab2");
+                index += 1;
+                let title = document.createElement("div")
+                title.classList.add("title-tab")
+                title.classList.add("tab-active")
+                title.slot = "tab-title"
+                title.innerText = "title " + index;
+
+                let div = document.createElement("div");
+                div.classList.add("tab-active");
+                div.slot = "tab-body";
+                div.innerText = "body " + index;
+                el.appendChild(title)
+                el.appendChild(div);
+            }
+
+            function NewTab() {
+                let el = document.getElementById("tab3");
+                wrindex += 1;
+                let title = document.createElement("div")
+                title.classList.add("title-tab")
+                title.classList.add("tab-active")
+                title.slot = "tab-title"
+                title.innerText = "title " + wrindex;
+
+                let div = document.createElement("div");
+                div.classList.add("tab-active");
+                div.slot = "tab-body";
+                div.innerText = "body " + wrindex;
+                el.appendChild(title)
+                el.appendChild(div);
+            }
+        </script>
+        <div>
+            <h3> Normal Tabs Style </h3>
+            <aalam-tabs class="tab1 sty" colsize="title:40%;body:60%" animation="b2t">
+                <div id="tabslot" slot="tab-title">title 1</div>
+                <div slot="tab-body">body 1</div>
+
+                <div slot="tab-title">title 2</div>
+                <div slot="tab-body">body 2</div>
+
+                <div slot="tab-title">title 3</div>
+                <div slot="tab-body">body 3</div>
+            </aalam-tabs>
+        </div>
+
+        <h3> Tabs in rows </h3>
+        <div class="size">
+            <aalam-tabs id="tab2" class="tab1 sty " animation="show:l2r;hide:r2l">
+                <div slot="tab-title">title 1</div>
+                <div class="tab-active" slot="tab-body">body 1</div>
+
+                <div slot="tab-title" class="tab-active">title 2</div>
+                <div class="tab-active" slot="tab-body">body 2</div>
+
+                <div slot="tab-title" class="tab-active">title 3</div>
+                <div slot="tab-body">body 3</div>
+            </aalam-tabs>
+        </div>
+        <br>
+        <button onclick="addNewTab()">New tab item</button>
+        <br>
+        <br>
+
+        <h3> Tabs in wrap (tabs.wr) </h3>
+        <div class="size">
+            <aalam-tabs id="tab3" class="tab1 sty tabs-wr" animation="show:l2r;hide:r2l">
+                <div slot="tab-title">title 1</div>
+                <div class="tab-active" slot="tab-body">body 1</div>
+
+                <div slot="tab-title" class="tab-active">title 2</div>
+                <div class="tab-active" slot="tab-body">body 2</div>
+
+                <div slot="tab-title" class="tab-active">title 3</div>
+                <div slot="tab-body">body 3</div>
+            </aalam-tabs>
+        </div>
+        <br>
+        <button onclick="NewTab()">New tab item</button>
+    </body>
+<html>
