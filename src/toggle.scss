@@ -1,0 +1,21 @@
+@import "./variables/color.scss";
+@import "./mixins/color.scss";
+
+/*
+ * Toggle class
+ *
+ * offcolor box-shadow    : --clr-txt ( To change the box-shadow for offcolor )
+ *
+ * oncolor box-shadow     : --clr-bg-py ( To change the box-shadow for oncolor )
+ *
+ */
+
+aalam-switch {
+    &::part(switch-container) {
+        box-shadow: inset 0 0 0 2px $clr-txt;
+    }
+    &[status='on']::part(switch-container) {
+        box-shadow: inset 0 0 0 2px $clr-bg-py;
+    }
+}
+
