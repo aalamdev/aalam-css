@@ -1,0 +1,53 @@
+@import "./variables/padding.scss";
+@import "./variables/color.scss";
+@import "./variables/text.scss";
+@import "./variables/margin.scss";
+@import "./mixins/color.scss";
+
+$pad-acc-bdy: 30px;
+
+/*
+ * Accordion classes
+ *
+ * classes            : acc-title ( for accordion title)
+ *                      acc-body (for accordion body )
+ *                      ac ( for active title background color)
+ */
+
+.acc-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $pad-m $pad-l;
+    cursor: pointer;
+    border-bottom: 1px solid $clr-bg-l2;
+
+    & * {
+        font-size: $t-sz;
+        color: $clr-txt;
+    }
+}
+
+.acc-body {
+    display: none;
+    color: $clr-txt;
+    background-color: $clr-lbl;
+
+    & * {
+        padding: $pad-l;
+        margin: $m-0;
+        color: $clr-txt;
+        padding-left:$pad-acc-bdy;
+    }
+}
+
+.ac {
+
+    & .acc-title {
+       @include clr-bg-op($clr-txt-py);
+    }
+
+    & .acc-body {
+        border-bottom: 1px solid $clr-txt-py;
+    }
+}
