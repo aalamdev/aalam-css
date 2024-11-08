@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <style>
+            .content {padding:20px;}
+            .content > * {padding:10px;}
+            .hd {display:flex;justify-content:space-between}
+            .paret {width:400px;display:block}
+            .hd > * {display:inline-block;}
+            .hd > button {margin:20px}
+            .bdy-el {padding:10px;}
+            .cnt > span {display:block;padding-top:10px;padding-bottom:10px}
+            .cnt >  * {display:block;padding-top:10px;padding-bottom:10px}
+            .bdy-el > button {align-items:center;}
+            label {margin-left:4px;}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Modal Demo</title>
+        <script type="module" src="../node_modules/aalam-wc/dist/modal.js"></script>
+        <link rel='stylesheet' href='./../src/modal.scss' />
+        <link rel='stylesheet' href='./../src/color.scss' />
+        <link rel='stylesheet' href='./../src/button.scss' />
+    </head>
+    <body>
+        <h1>Modal Demo</h1>
+        <button onclick="openOuter()">open outer</button>
+        <button onclick="openOut()">open out</button>
+        <aalam-modal  guidesel="top:.top-guide, 15"
+                      id="modal-outer" animate="xs:r2l" pos="xs:right">
+            <div slot="modal-dialog" class="modal-body">
+                <span class='top-guide mdl-gd'></span>
+                <div class='content'>
+                    <h1>outer</h1>
+                    <div style="height:300px;width:200px;background:grey"></div>
+                    <div style="height:400px;width:500px;background:yellow">
+                    </div>
+                </div>
+            </div>
+        </aalam-modal>
+        <div class="paret">
+            <aalam-modal pos="xs:bottom;m:bottom" guidesel="top:.top" id="modal">
+                <div slot="modal-dialog" class="rm">
+                    <span class="top mdl-gd"></span>
+                    <div class="bdy-el">
+                        <div class="hd">
+                            <h2>New Payment</h2>
+                            <button onclick="closemdl()">X</button>
+                        </div>
+                        <div class="cnt">
+                            <h4 style="padding:0px">Payment method</h4>
+                            <div>
+                                <input type="radio" id="cash" name="pay"/>
+                                <label for="cash">cash</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="netbanking" name="pay"/>
+                                <label for="netbanking">net banking</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="debitcard" name="pay"/>
+                                <label for="debitcard">debit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="creditcard" name="pay"/>
+                                <label for="creditcard">credit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="qr" name="pay"/>
+                                <label for="qr">qr</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cheque" name="pay"/>
+                                <label for="cheque">cheque</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cash" name="pay"/>
+                                <label for="cash">cash</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="netbanking" name="pay"/>
+                                <label for="netbanking">net banking</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="debitcard" name="pay"/>
+                                <label for="debitcard">debit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="creditcard" name="pay"/>
+                                <label for="creditcard">credit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="qr" name="pay"/>
+                                <label for="qr">qr</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cheque" name="pay"/>
+                                <label for="cheque">cheque</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cash" name="pay"/>
+                                <label for="cash">cash</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="netbanking" name="pay"/>
+                                <label for="netbanking">net banking</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="debitcard" name="pay"/>
+                                <label for="debitcard">debit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="creditcard" name="pay"/>
+                                <label for="creditcard">credit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="qr" name="pay"/>
+                                <label for="qr">qr</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cheque" name="pay"/>
+                                <label for="cheque">cheque</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cash" name="pay"/>
+                                <label for="cash">cash</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="netbanking" name="pay"/>
+                                <label for="netbanking">net banking</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="debitcard" name="pay"/>
+                                <label for="debitcard">debit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="creditcard" name="pay"/>
+                                <label for="creditcard">credit card</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="qr" name="pay"/>
+                                <label for="qr">qr</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cheque" name="pay"/>
+                                <label for="cheque">cheque</label>
+                            </div>
+                        </div>
+                        <div style="display:flex;justify-content:center">
+                            <button class="bt-py">add</button>
+                        </div>
+                    </div>
+                </div>
+            </aalam-modal>
+        </div>
+        <script>
+            let md = document.querySelector('#modal');
+            let out = document.getElementById("modal-outer");
+            function openOuter() {md.show();}
+            function openOut() {out.show();}
+            function closemdl() {md.hide();}
+        </script>
+    </body>
+<html>

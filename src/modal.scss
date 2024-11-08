@@ -1,0 +1,31 @@
+@import './variables/border.scss';
+@import './variables/color.scss';
+@import './variables/padding.scss';
+
+/*
+ *  Modal component
+ *  Component code  - mdl
+ *  Modifier 1 :
+ *      gd  - guide
+ *
+ */
+
+aalam-modal::part(modal-dialog) {
+    border-radius:$bdr-r-l;
+    background:$clr-bg;
+    min-width:320px;
+}
+.mdl-gd {
+    position:relative;
+    padding:$pad-m;
+    display:block;
+    &::after {
+        content:'';
+        position:absolute;
+        background:$clr-bg-l2;
+        transform:translate(-50%, -50%);
+        left:50%;
+        height:2px;
+        width:30px;
+    }
+}
