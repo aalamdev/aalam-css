@@ -1,8 +1,19 @@
 {
   "name": "aalam-css",
-  "private": true,
-  "version": "0.0.0",
+  "description": "aalam-css is a scss based css library for user interface.",
+  "private": false,
+  "version": "0.0.2",
+  "keywords": [
+    "aalam-css",
+    "aalam cascading style sheet"
+    ],
+  "homepage": "https://www.aalam.io",
+  "license": "MIT",
   "type": "module",
+  "respository":{
+    "type": "git",
+    "url": "https://github.com/aalamdev"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
