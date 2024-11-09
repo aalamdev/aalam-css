@@ -43,7 +43,7 @@ textarea, select {
     background:transparent;
     color:$clr-txt;
     font:inherit;
-    flex:1;
+    width:100%;
     &:hover {border:1px solid $clr-txt;}
     &:focus {border:1px solid $clr-txt-py;}
 }

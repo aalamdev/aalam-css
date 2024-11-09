@@ -1,0 +1,88 @@
+@import "./variables/color.scss";
+
+.nav-vr {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    cursor: pointer;
+    position: relative;
+    color: $clr-txt;
+
+    &:hover {
+      background-color: $clr-bg-l1;
+    }
+
+    &.active {
+      background-color: rgb(from $clr-txt-py r g b/0.1);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: $clr-txt-py;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px 15px;
+    }
+  }
+}
+
+.nav-vr-p {
+  @extend .nav-vr;
+
+  li {
+    &.active-p {
+      background-color: rgb(from $clr-txt-py r g b/0.1);
+    }
+  }
+}
+
+.nav-hr {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  li {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    color: $clr-txt;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+
+    &.active {
+      background-color: rgb(from $clr-txt-py r g b/0.1);
+      border-bottom: 3px solid $clr-txt-py;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

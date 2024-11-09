@@ -1,4 +1,5 @@
 @import './mixins/breakpoints.scss';
+@import './variables/margin.scss';
 
 /*
  *  Flex classes
@@ -47,6 +48,9 @@
 .flx-dir-r {flex-direction:row;}
 .flx-w     {flex-wrap:wrap;}
 .flx-nw    {flex-wrap:nowrap;}
+.flx-gap-s {gap:$m-s}
+.flx-gap-m {gap:$m-m}
+.flx-gap-l {gap:$m-l}
 
 @include media-bp-min(m) {
     .flx-h-c\@m   {justify-content:center;}
