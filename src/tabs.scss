@@ -15,7 +15,7 @@ $tabs-s: 2px;
  * Modifier 1       : wr (for wraping the tabs )
  */
 
-aalam-tabs::part(tab-title) {
+aalam-tabs::part(tab-title),.tab-title {
     border-bottom: 2px solid $clr-bg-l2;
     gap: $gd-gap-s;
     text-wrap: nowrap;
@@ -23,12 +23,12 @@ aalam-tabs::part(tab-title) {
     min-width: 100%;
 }
 
-aalam-tabs:not(.tabs-wr)::part(tab-title-holder) {
+aalam-tabs:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
     overflow: auto;
     scrollbar-width: none;
 }
 
-[slot='tab-title'] {
+[slot='tab-title'],.tab-title > * {
     padding: $pad-s $pad-m;
     color: $clr-txt-meta;
     cursor: pointer;
@@ -68,7 +68,7 @@ aalam-tabs.tabs-wr {
 }
 
 @include media-bp-min(m) {
-    aalam-tabs::part(tab-title) {
+    aalam-tabs::part(tab-title),.tab-title {
         gap: $gd-gap-m;
     }
 }

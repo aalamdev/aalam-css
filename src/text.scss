@@ -93,8 +93,8 @@ html, body {
 .t-al-r  {text-align:right;}
 .t-al-j  {text-align:justify;}
 
-.t-of-w  {text-wrap:wrap;}
-.t-of-nw {text-wrap:nowrap;}
+.t-of-w  {white-space:normal;}
+.t-of-nw {white-space:nowrap;}
 .t-of-tc {
     max-width:100%;
     overflow:hidden;
@@ -122,7 +122,11 @@ html, body {
 
 .t-lbl {
     padding:2px 8px;
-    background:$clr-lbl
+    background:$clr-lbl;
+    max-width: 100%;
+    font-size:calc(1em - 1px);
+    display: inline-block;
+    border-radius: 4px;
 }
 .t-lbls {
     display:flex;

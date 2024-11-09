@@ -9,15 +9,13 @@
  * Modifier 1       : stripe ( for stripe pattern )
  */
 
-.tb-stripe tbody  tr:nth-child(even) {
+.tb-stripe tbody  tr:nth-child(odd) {
     background-color: $clr-lbl;
 }
 .tb {
     width: 100%;
     border-collapse: collapse;
     thead {
-        border-bottom: 1px solid $clr-bg-l2;
-        border-top: 1px solid $clr-bg-l2;
 
         th {
             padding: $pad-m  $pad-l;

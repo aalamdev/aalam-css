@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Demo</title>
+  <link rel="stylesheet" href="../src/nav.scss" />
+  <link rel="stylesheet" href="../src/color.scss"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      justify-content: space-between;
+    }
+
+    .nav-wrapper {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 250px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <h2>Horizontal Navigation</h2>
+      <ul class="nav-hr">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-wrapper">
+      <h2>Vertical Navigation</h2>
+      <ul class="nav-vr">
+        <li class="active"><a href="http://192.168.122.233/">Dashboard</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-wrapper">
+      <h2>Plain Vertical Navigation</h2>
+      <ul class="nav-vr-p">
+        <li class="active-p"><a href="#">Dashboard</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-vr li, .nav-hr li, .nav-vr-p li').forEach(function(item) {
+      item.addEventListener('click', function() {
+        this.parentElement.querySelectorAll('li').forEach(function(li) {
+          if (li.closest('.nav-vr')) {
+            li.classList.remove('active');
+          } else if (li.closest('.nav-vr-p')) {
+            li.classList.remove('active-p');
+          } else {
+            li.classList.remove('active');
+          }
+        });
+
+        if (this.closest('.nav-vr')) {
+          this.classList.add('active'); // For nav-vr
+        } else if (this.closest('.nav-vr-p')) {
+          this.classList.add('active-p'); // For nav-vr-p
+        } else {
+          this.classList.add('active'); // For nav-hr
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
+
