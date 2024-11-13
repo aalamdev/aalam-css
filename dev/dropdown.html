@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dropdown Example</title>
+        <script type="module" src="../node_modules/aalam-wc/dist/dropdown.js"></script>
+        <link rel='stylesheet' href='./../src/color.scss' />
+        <link rel='stylesheet' href='./../src/dropdown.scss' />
+        <link rel='stylesheet' href='./../src/button.scss' />
+    </head>
+    <body>
+        <div style="padding:20px;">
+        <aalam-dropdown id="about-dropdown" mode="hover"
+            position="bottom-left"
+            animation="hide:conceal-y" closesel='.closesel'
+            offset=20>
+            <button slot="dd-toggler" class="bt bt-ol">
+                Choose
+            </button>
+            <ul slot="dd-body" class="dd-nav">
+                <li><a>Link 1 setting</a></li>
+                <li><a class="active closesel">Link 2</a></li>
+                <li><a>Link 3</a></li>
+                <li><a class="closesel">Link 4</a></li>
+                <li><a>Link 5</a></li>
+                <li><a>Link 6</a></li>
+            </div>
+        </aalam-dropdown>
+        </div>
+    </body>
+</html>

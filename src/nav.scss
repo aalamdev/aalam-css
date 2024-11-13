@@ -17,7 +17,7 @@
     }
 
     &.active {
-      background-color: rgb(from $clr-txt-py r g b/0.1);
+      background-color: $clr-bg-active;
 
       &::before {
         content: "";
@@ -48,7 +48,7 @@
 
   li {
     &.active-p {
-      background-color: rgb(from $clr-txt-py r g b/0.1);
+      background-color: $clr-bg-active;
     }
   }
 }
@@ -72,7 +72,7 @@
     }
 
     &.active {
-      background-color: rgb(from $clr-txt-py r g b/0.1);
+      background-color: $clr-bg-active;
       border-bottom: 3px solid $clr-txt-py;
     }
 

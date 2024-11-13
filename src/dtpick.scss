@@ -98,14 +98,14 @@ aalam-dtpick::part(year-selected) {
 aalam-dtpick:not([range]) {
     &::part(month-selected),
     &::part(year-selected) {
-        background:rgb(from $clr-txt-py r g b / 0.1) !important;
+        background: $clr-bg-active !important;
         color:$clr-txt;
     }
     &::part(cal-selected) {
         color:$clr-txt;
         &:before {
-            background:rgb(from $clr-txt-py r g b / 0.1) !important;
-            border:1px solid rgb(from $clr-txt-py r g b / 0.1);
+            background: $clr-bg-active !important;
+            border:1px solid $clr-bg-active;
         }
     }
 }
@@ -146,6 +146,6 @@ aalam-dtpick::part(break-block) {
 }
 aalam-dtpick {
     box-shadow:0px -2px 10px -4px  $clr-shdw;
-    --scrl-bg:rgb(from #{$clr-txt-py} r g b / 0.1);
+    --scrl-bg:$clr-bg-active;
     --scrl-br:#{$bdr-r-s};
 }
