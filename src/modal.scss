@@ -6,7 +6,12 @@
  *  Modal component
  *  Component code  - mdl
  *  Modifier 1 :
- *      gd  - guide
+ *      gd   - guide
+ *      hdr - Title for the modal
+ *      body - Modal Body 
+ *      ftr - Modal Footer
+ *      cmn - Signifies the modal that is commonly used -
+ *            small and medium screen from botton, rest from the top
  *
  */
 
@@ -14,6 +19,9 @@ aalam-modal::part(modal-dialog) {
     border-radius:$bdr-r-l;
     background:$clr-bg;
     min-width:320px;
+}
+:root {
+    --mdl-bg: rgb(from #{$clr-txt} r g b / 0.5);
 }
 .mdl-gd {
     position:relative;
@@ -27,5 +35,44 @@ aalam-modal::part(modal-dialog) {
         left:50%;
         height:2px;
         width:30px;
+    }
+}
+.mdl-body {
+    padding: $pad-m
+}
+.mdl-ftr {
+    padding: $pad-l $pad-xl;
+}
+.mdl-hdr {
+    border-bottom:1px solid $clr-bg-l2;
+    padding:$pad-l $pad-xl;
+    font-size: $t-sz-l;
+    position:relative;
+    & > .mdl-close {
+        position:absolute;
+        display:flex;
+        right:0;
+        top:0;
+        bottom:0;
+        align-items:center;
+
+        & svg {
+            height: calc(1em + 2px) !important;
+            width:calc(1em + 2px) !important;
+        }
+    }
+}
+aalam-modal::part(mdl-dialog) {
+    border-radius: $bdr-r-l;
+}
+@include media-bp-min(l) {
+    .mdl-body {
+        padding: $pad-xl;
+    }
+    aalam-modal.mdl-cmn::part(modal-dialog) {
+        /*Top center will automatically set the top most corner radius to 0*/
+        margin-top: $m-xl;
+        border-top-right-radius: $bdr-r-l;
+        border-top-left-radius: $bdr-r-l;
     }
 }

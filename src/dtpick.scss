@@ -2,6 +2,7 @@
 @import './mixins/color.scss';
 @import './variables/border.scss';
 @import './variables/padding.scss';
+@import './variables/text.scss';
 
 aalam-dtpick::part(cal-day):hover {
     background:none;
@@ -18,14 +19,23 @@ aalam-dtpick::part(cal-day):hover {
         border-radius:$bdr-r-s;
     }
 }
+aalam-dtpick::part(nav-selector-holder) {
+    border-bottom: 1px solid $clr-bg-l2;
+}
+aalam-dtpick::part(nav-selector) {
+    color: $clr-txt-py;
+}
 aalam-dtpick::part(cal-dayhead):hover {
     background:transparent;
 }
 
+aalam-dtpick::part(cal-day),
 aalam-dtpick::part(month-in-year),
 aalam-dtpick::part(year-in-years) {
     border-radius:$bdr-r-s;
-    &:hover {background:$clr-bg-l1;}
+    color: $clr-txt-meta;
+    font-size:$t-sz-xs;
+    &:not(:empty):hover {background:$clr-bg-l1;}
 }
 
 aalam-dtpick::part(cal-title-month),
@@ -37,6 +47,7 @@ aalam-dtpick::part(cal-title) {
 }
 aalam-dtpick::part(cal-dayhead) {
     color:$clr-txt-meta;
+    font-size:$t-sz-xs
 }
 aalam-dtpick::part(cal-selected):before,
 aalam-dtpick::part(cal-selected-to):before {
@@ -64,6 +75,9 @@ aalam-dtpick::part(dt-input-box) {
     background:$clr-bg;
     border:1px solid $clr-txt-meta;
     border-radius:$bdr-r-s;
+    font-size:$t-sz-xs;
+    padding:6px 8px;
+
     &:before {
         color:$clr-txt-meta;
         background:$clr-bg;
@@ -82,6 +96,29 @@ aalam-dtpick::part(month-in-year):after {
                         calc((g * var(--selinrange)))
                         calc((b * var(--selinrange)))
                         / calc(calc(10 / 100) * (calc(var(--selinrange)))));
+}
+aalam-dtpick::part(year-in-years):before,
+aalam-dtpick::part(month-in-year):before {
+    content: " ";position:absolute;
+    left:0;right:0;top:50%;z-index: -2;
+    height: calc((var(--hovinrange)) * 30px);transform:translate(0, -50%);
+    left:calc(clamp(0, (var(--gpday) - var(--gpfrom)), 1) * calc(var(--gridgap) / -2));
+    right:calc(clamp(0, (var(--gpto) - var(--gpday)), 1) * calc(var(--gridgap) / -2));
+    background:rgb(from $clr-bg-l1
+                        calc((r * var(--hovinrange)))
+                        calc((g * var(--hovinrange)))
+                        calc((b * var(--hovinrange)))
+                        / calc(0.5 * calc(var(--hovinrange))));
+}
+aalam-dtpick::part(cal-day)::after {
+    content: " ";position:absolute;
+    left:0;right:0;top:50%;
+    background:rgb(from $clr-bg-l1
+                        calc((r * var(--hovinrange)))
+                        calc((g * var(--hovinrange)))
+                        calc((b * var(--hovinrange)))
+                        / calc(0.5 * calc(var(--hovinrange))));
+    z-index:-2;
 }
 aalam-dtpick::part(cal-week):after {
     background:rgb(from $clr-txt-py
@@ -116,6 +153,7 @@ aalam-dtpick::part(cal-break-extender-aft) {
     align-items:center;
     justify-content:space-between;
     color:$clr-txt-meta;
+    font-size: $t-sz-xs;
 }
 aalam-dtpick::part(cal-break-extender-bfr-btn),
 aalam-dtpick::part(cal-break-extender-aft-btn) {
@@ -146,6 +184,6 @@ aalam-dtpick::part(break-block) {
 }
 aalam-dtpick {
     box-shadow:0px -2px 10px -4px  $clr-shdw;
-    --scrl-bg:$clr-bg-active;
+    --scrl-bg:#{$clr-bg-active};
     --scrl-br:#{$bdr-r-s};
 }

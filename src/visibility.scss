@@ -11,39 +11,39 @@
  *
  */
 
-.v-hd {display:none;}
+.v-hd {display:none !important;}
 .v-vh {visibility: hidden;}
 
 @include media-bp-min(m) {
-    .v-hd\@m {display: none;}
+    .v-hd\@m {display: none !important;}
     .v-vh\@m {visibility: hidden;}
 }
 @include media-bp-min(l) {
-    .v-hd\@l {display: none;}
+    .v-hd\@l {display: none !important;}
     .v-vh\@l {visibility: hidden;}
 }
 @include media-bp-min(xl) {
-    .v-hd\@xl {display: none;}
+    .v-hd\@xl {display: none !important;}
     .v-vh\@xl {visibility: hidden;}
 }
 @include media-bp-min(2xl) {
-    .v-hd\@2xl {display: none;}
+    .v-hd\@2xl {display: none !important;}
     .v-vh\@2xl {visibility: hidden;}
 }
 
 @include media-bp-max(s) {
-    .v-sh\@m {display: none;}
+    .v-sh\@m {display: none !important;}
     .v-vs\@m {visibility: hidden;}
 }
 @include media-bp-max(m) {
-    .v-sh\@l {display: none;}
+    .v-sh\@l {display: none !important;}
     .v-vs\@l {visibility: hidden;}
 }
 @include media-bp-max(l) {
-    .v-sh\@xl {display: none;}
+    .v-sh\@xl {display: none !important;}
     .v-vs\@xl {visibility: hidden;}
 }
 @include media-bp-max(xl) {
-    .v-sh\@2xl {display: none;}
+    .v-sh\@2xl {display: none !important;}
     .v-vs\@2xl {visibility: hidden;}
 }
