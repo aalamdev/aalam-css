@@ -1,0 +1,12 @@
+@import "./variables/color.scss";
+
+body {
+    margin: 0;
+}
+a {
+    color: $clr-txt-py;
+    &, &:hover {
+        text-decoration: none;
+    }
+}
+

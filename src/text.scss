@@ -71,6 +71,7 @@
 html, body {
     font-size:$t-sz;
     line-height:$t-lh;
+    font-family: $t-font;
     @include media-bp-max(l) {
         font-size:$t-sz-sm;
     }

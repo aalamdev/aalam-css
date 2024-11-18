@@ -35,7 +35,9 @@ aalam-dtpick::part(year-in-years) {
     border-radius:$bdr-r-s;
     color: $clr-txt-meta;
     font-size:$t-sz-xs;
-    &:not(:empty):hover {background:$clr-bg-l1;}
+    &:not(:empty):hover {
+        background:$clr-bg-l1;
+    }
 }
 
 aalam-dtpick::part(cal-title-month),

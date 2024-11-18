@@ -89,3 +89,20 @@
 
 .bt-py:hover , .bt-sy:hover {filter: brightness(0.9);}
 .bt-py:active, .bt-sy:active, .bt-ol:active, .bt-txt:active, .bt-gy:active {transform:scale(0.95);}
+
+.bt {
+    & svg {
+        height:calc(1em + 2px) !important;
+        width:auto !important;
+        vertical-align:text-bottom;
+    }
+    & > :first-child.ic {
+        margin-right:6px;
+    }
+    & > :last-child.ic {
+        margin-left:6px;
+    }
+    & > :only-child.ic {
+        margin:0;
+    }
+}
