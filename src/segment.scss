@@ -1,0 +1,82 @@
+@import "./mixins/breakpoints.scss";
+@import "./variables/padding.scss";
+@import "./variables/color.scss";
+
+/*
+ * This is a block which when displayed on small and medium screen
+ * devices - has a clear separation between successive blocks
+ * Component code   : seg
+ * Modifier 1       : nl (No Line)
+ * Modifier 2       : series (If a block is a continuation of a another block in the series)
+
+ */
+
+$seg-gap-btm: 6px;
+
+.seg {
+    position:relative;
+}
+@include media-bp-max(m) {
+    .seg {
+        &:not(:empty) {
+            padding: $pad-m 0;
+        }
+        &:empty {
+            min-height:1px;
+        }
+        &:not(:last-child) {
+            margin-bottom: $seg-gap-btm;
+        }
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            bottom: -#{$seg-gap-btm};
+            left:var(--seg-left-offset, var(--seg-offset, -#{$pad-m}));
+            right:var(--seg-right-offset, var(--seg-offset, -#{$pad-m}));
+            background-color:$clr-bg-l1;
+            height: $seg-gap-btm;
+        }
+        &.seg-nl {
+            margin-bottom:0;
+        }
+        &.seg-nl::after {
+            content:none !important;
+        }
+        &.seg-series:not(.seg-no-line) {
+            margin-top:$seg-gap-btm;
+        }
+        &.seg-series:not(.seg-no-line)::before {
+            content: "";
+            position:absolute;
+            top: -#{$seg-gap-btm};
+            left:var(--seg-left-offset, var(--seg-offset, -#{$pad-m}));
+            right:var(--seg-right-offset, var(--seg-offset, -#{$pad-m}));
+            background-color:$clr-bg-l1;
+            height: $seg-gap-btm;
+        }
+    }
+}
+@include media-bp-min(l) {
+    .seg {
+        &:not(:empty) {
+            padding: $pad-l 0;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid $clr-bg-l2;
+            border-radius:0
+        }
+        &.seg-nl {
+            border-bottom: 0;
+        }
+        &.seg-nl\@l {
+            border-bottom:0;
+            padding: $pad-m 0;
+        }
+        &.seg-nl, &.seg-nl\@l:first-child {
+            padding-top:$pad-l;
+        }
+        &.seg-nl, &.seg-nl\@l:last-child {
+            padding-bottom:$pad-l;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segment Demo</title>
+    <link rel="stylesheet" href="./../src/grid.scss">
+    <link rel="stylesheet" href="./../src/color.scss">
+    <link rel="stylesheet" href="./../src/segment.scss">
+    <style>
+        div.empty {
+            height:20px;
+            background: var(--clr-bg-l2);
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+        div.empty:last-child {margin-bottom:0;}
+    </style>
+</head>
+<body>
+    <div class="gd gd-cols-cus gd-gap-cus" style="--gd-cols-cus: 1fr;--gd-cols-cus-l:3fr 1fr;--gd-gap-cus:0 20px">
+        <div>
+            <div class="seg">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="seg">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="seg">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="seg">
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="seg seg-series seg-nl@l">
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="seg seg-series seg-nl@l">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+            <div class="seg seg-series seg-nl@l">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
