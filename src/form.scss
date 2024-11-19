@@ -44,6 +44,7 @@ textarea, select {
     color:$clr-txt;
     font:inherit;
     width:100%;
+    box-sizing:border-box;
     &:hover {border:1px solid $clr-txt;}
     &:focus {border:1px solid $clr-txt-py;}
 }
