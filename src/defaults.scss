@@ -4,9 +4,10 @@ body {
     margin: 0;
 }
 a {
-    color: $clr-txt-py;
-    &, &:hover {
+    color:inherit;
+    &, &:hover, &:active {
         text-decoration: none;
+        color:inherit;
     }
 }
 
