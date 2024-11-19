@@ -53,6 +53,8 @@ aalam-tabs:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
             right: 0px;
             height: $tabs-s;
             background-color: $clr-txt-py;
+            border-top-left-radius: $bdr-r-s;
+            border-top-right-radius: $bdr-r-s;
         }
     }
 }
