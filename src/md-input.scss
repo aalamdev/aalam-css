@@ -6,3 +6,23 @@ aalam-md-input {
         color:$clr-txt-meta
     }
 }
+aalam-md-input[mode=normal] {
+    & > input, & > textarea {
+        border:0;
+        outline:none;
+        padding:$bt-m-v $fc-inp-pad-h;
+    }
+    & > input:focus, & > textarea:focus, & > input:hover, & > textarea:hover {
+        outline: none;
+        border:0;
+    }
+    &::part(container) {
+        border:1px solid $clr-bg-l2;
+    }
+    &::part(container):hover {
+        border:1px solid $clr-txt;
+    }
+    &::part(container):hover {
+        border:1px solid $clr-txt-py;
+    }
+}
