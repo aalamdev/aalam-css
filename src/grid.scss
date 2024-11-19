@@ -49,7 +49,7 @@
  *                          --gd-gap-cus-col  ( to extract the cus col size)
  */
 
-.gd-gap-cus { gap: var(--gd-gap-cus, repeat( $gd-max-cols, 1fr)); }
+.gd-gap-cus { gap: var(--gd-gap-cus, 0); }
 .gd-gap-s { gap: $gd-gap-s; }
 .gd-gap-m { gap: $gd-gap-m; }
 .gd-gap-l { gap: $gd-gap-l; }
