@@ -1,5 +1,5 @@
 
-@import "./mixins/breakpoints.scss";
+@use "./mixins/breakpoints" as *;
 
 /*
  * Visibility classes

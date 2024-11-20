@@ -1,4 +1,7 @@
-@import "./variables/color.scss";
+@use "./variables/color" as *;
+@use "./variables/button" as *;
+@use "./form" as *;
+
 
 aalam-md-input {
     display:block;

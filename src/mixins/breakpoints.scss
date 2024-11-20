@@ -1,8 +1,9 @@
+@use 'sass:map';
 @use 'sass:list';
-@import "../variables/breakpoints.scss";
+@use "../variables/breakpoints" as *;
 
 @function get-screen-val($n) {
-    $val: map-get($screen-size-map, $n);
+    $val: map.get($screen-size-map, $n);
     @if not $n {
         @error "breakpoint `#{$n}` not found in `#{$screen-size-map}`";
     }

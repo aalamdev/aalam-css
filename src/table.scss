@@ -1,6 +1,6 @@
-@import "./variables/padding.scss";
-@import "./variables/color.scss";
-@import "./mixins/color.scss";
+@use "./variables/padding" as *;
+@use "./variables/color" as *;
+@use "./mixins/color" as *;
 
 /*
  * Table class

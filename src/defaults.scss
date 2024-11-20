@@ -1,4 +1,4 @@
-@import "./variables/color.scss";
+@use "./variables/color" as *;
 
 body {
     margin: 0;

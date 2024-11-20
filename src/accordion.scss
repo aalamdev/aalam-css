@@ -1,8 +1,8 @@
-@import "./variables/padding.scss";
-@import "./variables/color.scss";
-@import "./variables/text.scss";
-@import "./variables/margin.scss";
-@import "./mixins/color.scss";
+@use "./variables/padding" as *;
+@use "./variables/color" as *;
+@use "./variables/text" as *;
+@use "./variables/margin" as *;
+@use "./mixins/color" as *;
 
 $pad-acc-bdy: 30px;
 

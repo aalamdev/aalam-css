@@ -1,8 +1,8 @@
-@import './variables/color.scss';
-@import './mixins/color.scss';
-@import './variables/border.scss';
-@import './variables/padding.scss';
-@import './variables/text.scss';
+@use './variables/color' as *;
+@use './mixins/color' as *;
+@use './variables/border' as *;
+@use './variables/padding' as *;
+@use './variables/text' as *;
 
 aalam-dtpick::part(cal-day):hover {
     background:none;

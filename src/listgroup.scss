@@ -1,6 +1,7 @@
-@import './src/variables/color.scss';
-@import './src/variables/text.scss';
-@import './src/variables/padding.scss';
+@use './src/variables/color' as *;
+@use './src/variables/text' as *;
+@use './src/variables/padding' as *;
+@use './src/variables/margin' as *;
 
 .lg > * {padding:$pad-m $pad-l;display:block}
 .lg-nav > * {padding: $pad-s 0; display:block;}
