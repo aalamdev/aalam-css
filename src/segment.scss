@@ -19,7 +19,8 @@ $seg-gap-btm: 6px;
 @include media-bp-max(m) {
     .seg {
         &:not(:empty) {
-            padding: $pad-m 0;
+            padding-top: $pad-m;
+            padding-bottom: $pad-m;
         }
         &:empty {
             min-height:1px;
@@ -59,7 +60,8 @@ $seg-gap-btm: 6px;
 @include media-bp-min(l) {
     .seg {
         &:not(:empty) {
-            padding: $pad-l 0;
+            padding-top: $pad-l;
+            padding-bottom: $pad-l;
         }
         &:not(:last-child) {
             border-bottom: 1px solid $clr-bg-l2;
@@ -70,7 +72,8 @@ $seg-gap-btm: 6px;
         }
         &.seg-nl\@l {
             border-bottom:0;
-            padding: $pad-m 0;
+            padding-top: $pad-m;
+            padding-bottom: $pad-m;
         }
         &.seg-nl, &.seg-nl\@l:first-child {
             padding-top:$pad-l;
