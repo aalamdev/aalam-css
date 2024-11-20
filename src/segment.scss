@@ -1,6 +1,6 @@
-@import "./mixins/breakpoints.scss";
-@import "./variables/padding.scss";
-@import "./variables/color.scss";
+@use "./mixins/breakpoints" as *;
+@use "./variables/padding" as *;
+@use "./variables/color" as *;
 
 /*
  * This is a block which when displayed on small and medium screen

@@ -1,5 +1,5 @@
-@import './mixins/breakpoints.scss';
-@import './variables/margin.scss';
+@use './mixins/breakpoints' as *;
+@use './variables/margin' as *;
 
 /*
  *  Flex classes

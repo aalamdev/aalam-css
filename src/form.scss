@@ -1,7 +1,7 @@
-@import './src/variables/color.scss';
-@import './src/variables/button.scss';
-@import './src/variables/text.scss';
-@import './src/mixins/breakpoints.scss';
+@use './src/variables/color' as *;
+@use './src/variables/button' as *;
+@use './src/variables/text' as *;
+@use './src/mixins/breakpoints' as *;
 
 /*
  *  Form classes

@@ -1,6 +1,6 @@
-@import "./mixins/breakpoints.scss";
-@import "./variables/grid.scss";
-@import "./variables/color.scss";
+@use "./mixins/breakpoints" as *;
+@use "./variables/grid" as *;
+@use "./variables/color" as *;
 
 /*
  * Grid classes

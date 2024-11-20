@@ -1,8 +1,8 @@
-@import "./variables/color.scss";
-@import "./variables/border.scss";
-@import "./variables/padding.scss";
-@import "./variables/zindex.scss";
-@import "./variables/width.scss";
+@use "./variables/color" as *;
+@use "./variables/border" as *;
+@use "./variables/padding" as *;
+@use "./variables/zindex" as *;
+@use "./variables/width" as *;
 
 /*
  * Dropdown class

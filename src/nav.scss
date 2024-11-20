@@ -1,4 +1,5 @@
-@import "./variables/color.scss";
+@use "./variables/color" as *;
+@use "./variables/padding" as *;
 
 .nav-vr {
   list-style: none;

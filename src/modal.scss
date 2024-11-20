@@ -1,6 +1,9 @@
-@import './variables/border.scss';
-@import './variables/color.scss';
-@import './variables/padding.scss';
+@use './variables/border' as *;
+@use './variables/color' as *;
+@use './variables/padding' as *;
+@use './variables/text' as *;
+@use './variables/margin' as *;
+@use './mixins/breakpoints' as *;
 
 /*
  *  Modal component

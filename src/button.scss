@@ -1,7 +1,7 @@
-@import "./variables/color.scss";
-@import "./variables/button.scss";
-@import "./variables/border.scss";
-@import "./variables/text.scss";
+@use "./variables/color" as *;
+@use "./variables/button" as *;
+@use "./variables/border" as *;
+@use "./variables/text" as *;
 
 /*
  * Button classes
