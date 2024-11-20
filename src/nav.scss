@@ -38,7 +38,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      padding: 10px 15px;
+      padding: $pad-m $pad-l;
     }
   }
 }
@@ -62,7 +62,7 @@
 
   li {
     margin: 0;
-    padding: 10px 15px;
+    padding: $pad-m $pad-l;
     cursor: pointer;
     position: relative;
     color: $clr-txt;
