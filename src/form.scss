@@ -40,13 +40,13 @@ input[type="search"],
 textarea, select {
     padding:$bt-m-v $fc-inp-pad-h;
     border:1px solid $clr-bg-l2;
-    background:transparent;
-    color:$clr-txt;
+    background:$clr-lbl;
+    color:$clr-txt-meta;
     font:inherit;
     width:100%;
     box-sizing:border-box;
-    &:hover {border:1px solid $clr-txt;}
-    &:focus {border:1px solid $clr-txt-py;}
+    &:hover {border:1px solid $clr-bg-l5;}
+    &:focus {border:1px solid $clr-bg-l5;}
 }
 *:focus {outline: none;}
 .fc-lbl {
@@ -120,7 +120,7 @@ input[type="checkbox"]:disabled,input[type="radio"]:disabled {
 input[type="checkbox"]:disabled::before,input[type="radio"]:disabled::before {
     background:$clr-bg-l2;
 }
-input[type="radio"] {border-radius: 50%;}
+input[type="radio"] {border-radius: 50%;background:$clr-lbl}
 input[type="radio"]::before {
     content: " ";
     background-color:$clr-txt-py;
