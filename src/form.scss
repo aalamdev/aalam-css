@@ -1,6 +1,7 @@
 @use './src/variables/color' as *;
 @use './src/variables/button' as *;
 @use './src/variables/text' as *;
+@use './src/variables/border' as *;
 @use './src/mixins/breakpoints' as *;
 
 /*
@@ -39,13 +40,14 @@ input[type="password"],
 input[type="search"],
 textarea, select {
     padding:$bt-m-v $fc-inp-pad-h;
-    border:1px solid $clr-bg-l2;
-    background:transparent;
-    color:$clr-txt;
+    border:1px solid $bdr-clr;
+    background:$clr-lbl;
+    color:$clr-txt-meta;
     font:inherit;
     width:100%;
     box-sizing:border-box;
-    &:hover {border:1px solid $clr-txt;}
+    border-radius:$bdr-r-s;
+    &:hover {border:1px solid $clr-bg-l5;}
     &:focus {border:1px solid $clr-txt-py;}
 }
 *:focus {outline: none;}
