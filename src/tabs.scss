@@ -60,7 +60,7 @@ aalam-tabs:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
 }
 
 [slot='tab-body'] {
-    padding: $pad-s $pad-m;
+    padding: $pad-m $pad-m;
 }
 
 aalam-tabs.tabs-wr {
