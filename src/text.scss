@@ -16,6 +16,7 @@
  *      ic  - icon
  *      lbl - label
  *      lbls- label container
+ *      lnk - Links
  *
  * Modifier 2 :
  *  size :
@@ -134,4 +135,7 @@ html, body {
     flex-wrap:wrap;
     column-gap:$m-s;
     row-gap:$m-m;
+}
+.t-lnk {
+    cursor: pointer;
 }
