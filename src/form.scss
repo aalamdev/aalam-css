@@ -13,6 +13,7 @@
  *      sz  - size
  *      fi  - form icon
  *      ic  - icon
+ *      ig  - input group
  *
  *  Modifier 2 :
  *      input :
@@ -150,4 +151,33 @@ input[type="radio"]::before {
     position:absolute;
     padding-right:$fc-inp-pad-h;
     + input {padding-right:calc(1em + 16px);}
+}
+.fc-ig {
+    display:flex;
+    flex-direction:row;
+    & > *:not(:first-child) {margin-left:-1px;}
+    & > aalam-dropdown:first-child > [slot="dd-toggler"].bt,
+    & > input:first-child,
+    & > *:first-child input,
+    & > .bt:first-child {
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    & > aalam-dropdown:last-child > [slot="dd-toggler"].bt,
+    & > input:last-child,
+    & > *:last-child input,
+    & > .bt:last-child{
+        border-bottom-left-radius:0;
+        border-top-left-radius:0;
+    }
+    & > aalam-dropdown:not(:first-child):not(:last-child) > [slot="dd-toggler"].bt,
+    & > input:not(:last-child):not(:first-child),
+    & > *:not(:last-child):not(:first-child) input,
+    & > .bt:not(:last-child):not(:first-child) {
+        border-radius: 0;
+    }
+    & > *:hover {
+        position:relative;
+        z-index: 1;
+    }
 }
