@@ -21,33 +21,21 @@ $pad-acc-bdy: 30px;
     padding: $pad-m $pad-l;
     cursor: pointer;
     border-bottom: 1px solid $clr-bg-l2;
-
-    & * {
-        font-size: $t-sz;
-        color: $clr-txt;
-    }
+    & > .ic.acc-tgl {transition: transform 0.2s ease;}
 }
 
 .acc-body {
     display: none;
-    color: $clr-txt;
-    background-color: $clr-lbl;
-
-    & * {
-        padding: $pad-l;
-        margin: $m-0;
-        color: $clr-txt;
-        padding-left:$pad-acc-bdy;
-    }
+    box-sizing: border-box;
 }
-
-.ac {
-
+.acc-active {
     & .acc-title {
-       @include clr-bg-op($clr-txt-py);
+        @include clr-bg-op($clr-txt-py);
+        & > .ic.acc-tgl {transform: rotate(180deg);}
     }
 
-    & .acc-body {
+    & .acc-body.acc-filled {
         border-bottom: 1px solid $clr-txt-py;
+        background-color: $clr-lbl;
     }
 }
