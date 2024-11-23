@@ -39,6 +39,8 @@ aalam-dropdown::part(dd-container), aalam-sgn-box::part(sgn-container) {
     padding:$pad-m 0px !important;
     list-style: none;
     margin: 0;
+    max-height: 80vh;
+    overflow: auto;
     & > * > a {
         @include nav-item;
     }
