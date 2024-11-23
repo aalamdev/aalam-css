@@ -3,6 +3,7 @@
 @use "./variables/text" as *;
 @use "./variables/margin" as *;
 @use "./mixins/color" as *;
+@use "./variables/border" as *;
 
 $pad-acc-bdy: 30px;
 
@@ -24,9 +25,21 @@ $pad-acc-bdy: 30px;
     & > .ic.acc-tgl {transition: transform 0.2s ease;}
 }
 
+
 .acc-body {
     display: none;
     box-sizing: border-box;
+}
+.acc-boxed {
+    border: 1px solid $bdr-clr;
+    margin-bottom: $m-s;
+    border-radius: $bdr-r-l;
+    & .acc-title {
+        border-bottom:0;
+    }
+    &:last-child {
+        margin-bottom:0
+    }
 }
 .acc-active {
     & .acc-title {
