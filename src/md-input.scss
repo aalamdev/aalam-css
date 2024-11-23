@@ -21,6 +21,7 @@ aalam-md-input[mode=normal] {
     }
     &::part(container) {
         border:1px solid $clr-bg-l2;
+        background-color: $clr-lbl;
     }
     &::part(container):hover {
         border:1px solid $clr-txt;
