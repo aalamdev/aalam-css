@@ -2,6 +2,7 @@
 @use './src/variables/button' as *;
 @use './src/variables/text' as *;
 @use './src/variables/border' as *;
+@use './src/variables/margin' as *;
 @use './src/mixins/breakpoints' as *;
 
 /*
@@ -31,6 +32,7 @@
  */
 
 $fc-inp-pad-h:10px;
+$ic-pad:16px;
 
 input[type="text"],
 input[type="select"],
@@ -53,7 +55,7 @@ textarea, select {
 }
 *:focus {outline: none;}
 .fc-lbl {
-    margin-bottom:6px;
+    margin-bottom: $m-blk;
     color:$clr-txt-meta;
     display:block;
     @include media-bp-max(l) {
@@ -90,7 +92,7 @@ input.fc-sz-l {
 input[type="checkbox"], input[type="radio"] {
     appearance: none;
     background-color:$clr-bg;
-    margin: 0;
+    margin: 0 $m-blk 0 0;
     font: inherit;
     color: currentColor;
     width: calc(1rem + 2px);
@@ -144,13 +146,13 @@ input[type="radio"]::before {
     left:0;
     position:absolute;
     padding-left:$fc-inp-pad-h;
-    + input {padding-left:calc(1em + 16px);}
+    + input {padding-left:calc(1em + $ic-pad);}
 }
 .fc-ic-r {
     right:0;
     position:absolute;
     padding-right:$fc-inp-pad-h;
-    + input {padding-right:calc(1em + 16px);}
+    + input {padding-right:calc(1em + $ic-pad);}
 }
 .fc-ig {
     display:flex;

@@ -2,6 +2,7 @@
 @use "./variables/text" as *;
 @use "./variables/color" as *;
 @use "./variables/grid" as *;
+@use "./variables/margin" as *;
 @use "./variables/border" as *;
 @use "./mixins/color" as *;
 @use "./mixins/breakpoints" as *;
@@ -15,20 +16,21 @@ $tabs-s: 2px;
  * Modifier 1       : wr (for wraping the tabs )
  */
 
-aalam-tabs::part(tab-title),.tab-title {
+aalam-tabs[data-fashion=row]::part(tab-title),.tab-title {
     border-bottom: 2px solid $clr-bg-l2;
     gap: $gd-gap-s;
     text-wrap: nowrap;
     display: inline-flex;
     min-width: 100%;
+    margin-bottom: $m-m;
 }
 
-aalam-tabs:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
+aalam-tabs[data-fashion=row]:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
     overflow: auto;
     scrollbar-width: none;
 }
 
-[slot='tab-title'],.tab-title > * {
+aalam-tabs[data-fashion=row] > [slot='tab-title'],.tab-title > * {
     padding: $pad-s $pad-m;
     color: $clr-txt-meta;
     cursor: pointer;
@@ -59,18 +61,33 @@ aalam-tabs:not(.tabs-wr)::part(tab-title-holder),.tab-title-holder {
     }
 }
 
-[slot='tab-body'] {
-    padding: $pad-m $pad-m;
-}
-
-aalam-tabs.tabs-wr {
+aalam-tabs[data-fashion=row].tabs-wr {
     &::part(tab-title) {
         flex-wrap: wrap;
     }
 }
 
 @include media-bp-min(m) {
-    aalam-tabs::part(tab-title),.tab-title {
+    aalam-tabs[data-fashion=row]::part(tab-title),.tab-title {
         gap: $gd-gap-m;
+    }
+}
+aalam-tabs[data-fashion=column] > [slot=tab-title] {
+    cursor: pointer;
+    position: relative;
+    color: $clr-txt-meta;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: $pad-m $pad-l;
+    box-sizing:border-box;
+
+    &:hover {
+      background-color: $clr-bg-l1;
+    }
+
+    &.tab-active {
+      background-color: $clr-bg-active;
     }
 }

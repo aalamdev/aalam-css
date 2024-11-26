@@ -28,8 +28,8 @@
         <script>
             let index = 3;
             let wrindex =3;
-            function addNewTab() {
-                let el = document.getElementById("tab2");
+            function addNewTab(id) {
+                let el = document.getElementById(id);
                 index += 1;
                 let title = document.createElement("div")
                 title.classList.add("title-tab")
@@ -64,7 +64,7 @@
         </script>
         <div>
             <h3> Normal Tabs Style </h3>
-            <aalam-tabs class="tab1 sty" colsize="title:40%;body:60%" animation="b2t">
+            <aalam-tabs class="tab1 sty" colsize="title:40%;body:60%" fashion="s:row" animation="b2t">
                 <div id="tabslot" slot="tab-title">title 1</div>
                 <div slot="tab-body">body 1</div>
 
@@ -78,7 +78,7 @@
 
         <h3> Tabs in rows </h3>
         <div class="size">
-            <aalam-tabs id="tab2" class="tab1 sty " animation="show:l2r;hide:r2l">
+            <aalam-tabs id="tab2" class="tab1 sty " fashion="s:row" animation="show:l2r;hide:r2l">
                 <div slot="tab-title">title 1</div>
                 <div class="tab-active" slot="tab-body">body 1</div>
 
@@ -90,13 +90,13 @@
             </aalam-tabs>
         </div>
         <br>
-        <button onclick="addNewTab()">New tab item</button>
+        <button onclick="addNewTab('tab2')">New tab item</button>
         <br>
         <br>
 
         <h3> Tabs in wrap (tabs.wr) </h3>
         <div class="size">
-            <aalam-tabs id="tab3" class="tab1 sty tabs-wr" animation="show:l2r;hide:r2l">
+            <aalam-tabs id="tab3" class="tab1 sty tabs-wr" fashion="s:row" animation="show:l2r;hide:r2l">
                 <div slot="tab-title">title 1</div>
                 <div class="tab-active" slot="tab-body">body 1</div>
 
@@ -108,6 +108,25 @@
             </aalam-tabs>
         </div>
         <br>
-        <button onclick="NewTab()">New tab item</button>
+        <button onclick="addNewTab('tab3')">New tab item</button>
+
+        <h3> Tabs in columns </h3>
+        <div class="size">
+            <aalam-tabs id="tab4" class="tab1 sty " fashion="s:column" animation="show:l2r;hide:r2l">
+                <div slot="tab-title">title 1</div>
+                <div class="tab-active" slot="tab-body">body 1</div>
+
+                <div slot="tab-title" class="tab-active">title 2</div>
+                <div class="tab-active" slot="tab-body">body 2</div>
+
+                <div slot="tab-title" class="tab-active">title 3</div>
+                <div slot="tab-body">body 3</div>
+            </aalam-tabs>
+        </div>
+        <br>
+        <button onclick="addNewTab('tab4')">New tab item</button>
+        <br>
+        <br>
+
     </body>
 <html>
