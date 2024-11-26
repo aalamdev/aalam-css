@@ -1,7 +1,7 @@
 @use "./variables/color" as *;
 @use "./variables/padding" as *;
 
-.nav-vr {
+.nav-vr-p {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -19,18 +19,6 @@
 
     &.active {
       background-color: $clr-bg-active;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 3px;
-        background-color: $clr-txt-py;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-      }
     }
 
     a {
@@ -44,12 +32,24 @@
   }
 }
 
-.nav-vr-p {
-  @extend .nav-vr;
+.nav-vr {
+  @extend .nav-vr-p;
 
   li {
-    &.active-p {
+    &.active {
       background-color: $clr-bg-active;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: $clr-txt-py;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
     }
   }
 }
