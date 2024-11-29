@@ -64,4 +64,7 @@ aalam-sgn-box {
     & > .sgn-item:not(.sgn-active):hover {
         background-color: $clr-bg-l1;
     }
+    & > [slot="sgn-nomatch"] {
+        @include nav-item;
+    }
 }
