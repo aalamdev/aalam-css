@@ -72,16 +72,19 @@ aalam-tabs[data-fashion=row].tabs-wr {
         gap: $gd-gap-m;
     }
 }
-aalam-tabs[data-fashion=column] > [slot=tab-title] {
+@mixin col-tabs {
     cursor: pointer;
     position: relative;
-    color: $clr-txt-meta;
     text-decoration: none;
-    display: block;
     width: 100%;
     height: 100%;
-    padding: $pad-m $pad-l;
     box-sizing:border-box;
+}
+aalam-tabs[data-fashion=column] > [slot=tab-title] {
+    @include col-tabs;
+    color: $clr-txt-meta;
+    display: block;
+    padding: $pad-m $pad-l;
 
     &:hover {
       background-color: $clr-bg-l1;
@@ -89,5 +92,26 @@ aalam-tabs[data-fashion=column] > [slot=tab-title] {
 
     &.tab-active {
       background-color: $clr-bg-active;
+    }
+}
+aalam-tabs[data-fashion=overlay]::part(tab-body-holder) {
+    background-color: $clr-bg;
+    box-sizing:border-box;
+    padding: $pad-m;
+}
+aalam-tabs[data-fashion=overlay] > [slot=tab-title] {
+    @include col-tabs;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: $pad-m 0;
+
+    &::after {
+        content: "";
+        display:inline-block;
+        width: calc(1em + 2px);
+        height: calc(1em + 2px);
+        clip-path: polygon( 35% 16%,68.6% 50%,36% 83%, 35% 76%, 61% 50%, 35% 23.5%);
+        background-color: currentColor;
     }
 }

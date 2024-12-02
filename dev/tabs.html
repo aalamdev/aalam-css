@@ -78,15 +78,24 @@
 
         <h3> Tabs in rows </h3>
         <div class="size">
-            <aalam-tabs id="tab2" class="tab1 sty " fashion="s:row" animation="show:l2r;hide:r2l">
+            <aalam-tabs id="tab2" class="tab1 sty " fashion="s:overlay;m:row" animation="show:r2l;hide:l2r">
                 <div slot="tab-title">title 1</div>
-                <div class="tab-active" slot="tab-body">body 1</div>
+                <div class="tab-active" slot="tab-body">
+                    <span class="tab-close v-hd@m">&lArr;</span>
+                    body 1
+                </div>
 
                 <div slot="tab-title" class="tab-active">title 2</div>
-                <div class="tab-active" slot="tab-body">body 2</div>
+                <div class="tab-active" slot="tab-body">
+                    <span class="tab-close v-hd@m">&lArr;</span>
+                    body 2
+                </div>
 
                 <div slot="tab-title" class="tab-active">title 3</div>
-                <div slot="tab-body">body 3</div>
+                <div slot="tab-body">
+                    <span class="tab-close v-hd@m">&lArr;</span>
+                    body 3
+                </div>
             </aalam-tabs>
         </div>
         <br>
