@@ -55,9 +55,17 @@ aalam-modal::part(modal-dialog) {
         position:absolute;
         display:flex;
         right:$pad-xl;
-        top:0;
-        bottom:0;
+        top:$pad-s;
+        bottom:$pad-s;
         align-items:center;
+        padding: $pad-m;
+
+        &:hover {
+            background: $clr-bg-l1;
+            cursor:pointer;
+            color: $clr-txt;
+            border-radius: 4px;
+        }
 
         & svg {
             height: calc(1em + 2px) !important;

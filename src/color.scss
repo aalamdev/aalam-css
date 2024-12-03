@@ -1,4 +1,5 @@
 @use './variables/color' as *;
+@use "./mixins/color" as *;
 
 /*
  *  Color classes
@@ -18,6 +19,8 @@ $_clr-txt:#2E3A43;
 $_clr-txt-py:#125FAC;
 $_clr-bg:#FCFFFF;
 $_clr-bg-py:#FFDD42;
+$_clr-bg-dng:#F2E8E6;
+$_clr-bg-suc:#E3F3E9;
 $_clr-suc:#037E23;
 $_clr-wrn:#B35F00;
 $_clr-dng:#9A1900;
@@ -40,6 +43,8 @@ $_Dclr-op-bg: 0.15;
     --clr-txt-py:#{$_clr-txt-py};
     --clr-bg:#{$_clr-bg};
     --clr-bg-py:#{$_clr-bg-py};
+    --clr-bg-dng:#{$_clr-bg-dng};
+    --clr-bg-suc:#{$_clr-bg-suc};
     --clr-suc:#{$_clr-suc};
     --clr-wrn:#{$_clr-wrn};
     --clr-dng:#{$_clr-dng};
@@ -69,6 +74,7 @@ $_Dclr-op-bg: 0.15;
     --clr-bg-l5:rgb(from var(--clr-bg) calc(r + 80 ) calc(g + 80) calc(b + 80));
 }
 
+
 :root, html.clr-light {
     @include light-theme-colors()
 }
@@ -92,3 +98,5 @@ body {
 .clr-bg-py {background:$clr-bg-py}
 .clr-bg-suc {background-color:rgb(from $clr-suc r g b/ $clr_bg_op)};
 .clr-bg-dng {background-color:rgb(from $clr-dng r g b/ $clr_bg_op)};
+.clr-bg-py {background:$clr-bg-py;}
+.clr-bg-active { @include clr-bg-op($clr-txt-py);}

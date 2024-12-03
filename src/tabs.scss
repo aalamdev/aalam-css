@@ -93,10 +93,12 @@ aalam-tabs[data-fashion=column] > [slot=tab-title] {
     &.tab-inactive {cursor:inherit;}
     &:not(.tab-inactive):hover {
       background-color: $clr-bg-l1;
+      color: $clr-txt;
     }
 
     &:not(.tab-inactive).tab-active {
       background-color: $clr-bg-active;
+      color: $clr-txt;
     }
 }
 aalam-tabs[data-fashion=column]::part(tab-body-holder) {

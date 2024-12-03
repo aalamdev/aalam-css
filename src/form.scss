@@ -53,7 +53,10 @@ textarea, select {
     box-sizing:border-box;
     border-radius:$bdr-r-s;
     &:hover {border:1px solid $clr-bg-l5;}
-    &:focus {border:1px solid $clr-txt-py;}
+    &:focus {
+        border:1px solid $clr-bg-l5;
+        background:$clr-bg;
+    }
 }
 *:focus {outline: none;}
 .fc-lbl {
