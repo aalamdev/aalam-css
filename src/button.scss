@@ -17,6 +17,7 @@
  *                  txt ( text button )
  *                  gy  ( grey button )
  *                  dis ( disable button )
+ *                  full ( Full width button )
  */
 
 
@@ -94,6 +95,9 @@
     border:1px solid $clr-bg-l1;
 }
 
+.bt-full {
+    width:100%;text-align:center;
+}
 .bt-py:hover , .bt-sy:hover {filter: brightness(0.9);}
 .bt-py:active, .bt-sy:active, .bt-ol:active, .bt-txt:active, .bt-gy:active {transform:scale(0.95);}
 
