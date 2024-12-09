@@ -1,0 +1,42 @@
+@use './variables/color' as *;
+@use './variables/text' as *;
+
+/*
+ *  Breadcrumb classes
+ *  Component code : bc
+ */
+
+.bc {
+    display:block;
+    padding:0;
+    list-style:none;
+
+    & > li {
+        list-style:none;
+        display:inline-block;
+        & > a {
+            font-size:$t-sz-s;
+            max-width:100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & > a[href] {
+            color: $clr-txt-py;
+        }
+        & > a:not([href]) {
+            color: $clr-txt-meta;
+        }
+    }
+    & > :nth-child(n+2)::before {
+        margin: 0 0.5em;
+        content: ">";
+        color: $clr-txt-meta;
+        font-size:$t-sz-s;
+    }
+    & > :last-child {
+        & > a {
+            color: $clr-txt-meta;
+        }
+    }
+}

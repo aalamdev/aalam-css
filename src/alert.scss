@@ -1,0 +1,31 @@
+@use "./variables/color" as *;
+@use "./variables/text" as *;
+@use "./variables/border" as *;
+
+/*
+ * Alert classes
+ * Componnent code : al
+ * Modifier 1      : suc (Succes messages)
+                     dng (Error messages)
+                     wrn (Warning messages)
+ *
+ */
+
+$al-pad-v: 3px;
+$al-pad-h: 8px;
+
+@mixin al-msg($clr) {
+    background-color:rgb(from $clr r g b/ $clr_bg_op);
+    color:$clr;
+    padding: $al-pad-v $al-pad-h;
+    border-radius:$bdr-r-s;
+}
+.al-suc {
+    @include al-msg($clr-suc);
+}
+.al-dng {
+    @include al-msg($clr-dng);
+}
+.al-wrn {
+    @include al-msg($clr-wrn);
+}

@@ -1,0 +1,50 @@
+@use "./variables/color" as *;
+@use "./variables/text" as *;
+@use "./variables/border" as *;
+@use "./variables/padding" as *;
+
+/*
+ * Panel classes
+ * Componnent code : pnl
+ * Modifier 1      : suc (Succes panel)
+                     dng (Error panel)
+                     wrn (Warning panel)
+                     def (Default panel)
+                     inc (Incomplete actions)
+                     fill (Fill with the context color)
+ *
+ */
+
+@mixin panel($clr) {
+    border: 1px solid $clr;
+    padding: $pad-m $pad-l;
+    border-radius: $bdr-r-s
+}
+.pnl-suc {
+    @include panel($clr-suc);
+    &.pnl-fill {
+        background-color:rgb(from $clr-suc r g b/ $clr_bg_op);
+        color: $clr-suc;
+    }
+}
+.pnl-dng {
+    @include panel($clr-dng);
+    &.pnl-fill {
+        background-color:rgb(from $clr-dng r g b/ $clr_bg_op);
+        color: $clr-dng;
+    }
+}
+.pnl-wrn {
+    @include panel($clr-wrn);
+    &.pnl-fill {
+        background-color:rgb(from $clr-wrn r g b/ $clr_bg_op);
+        color: $clr-wrn;
+    }
+}
+.pnl-def {
+    @include panel($bdr-clr);
+}
+.pnl-inc {
+    @include panel($clr-dng);
+    box-shadow: 0px 2px 10px 0px $clr-dng;
+}
