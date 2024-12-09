@@ -54,7 +54,7 @@ aalam-modal::part(modal-dialog) {
     & > .mdl-close {
         position:absolute;
         display:flex;
-        right:0;
+        right:$pad-xl;
         top:0;
         bottom:0;
         align-items:center;
