@@ -43,6 +43,9 @@
 }
 .pnl-def {
     @include panel($bdr-clr);
+    &.pnl-fill {
+        background-color:$clr-lbl;
+    }
 }
 .pnl-inc {
     @include panel($clr-dng);
