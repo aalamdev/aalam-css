@@ -99,8 +99,6 @@
     width:100%;text-align:center;
 }
 .bt-py:hover , .bt-sy:hover {filter: brightness(0.9);}
-.bt-py:active, .bt-sy:active, .bt-ol:active, .bt-txt:active, .bt-gy:active {transform:scale(0.95);}
-
 .bt {
     & svg {
         height:calc(1em + 2px) !important;
