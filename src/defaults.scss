@@ -1,4 +1,5 @@
 @use "./variables/color" as *;
+@use "./mixins/breakpoints" as *;
 
 body {
     margin: 0;
@@ -13,4 +14,12 @@ a {
 button {
     cursor: pointer;
     line-height: inherit;
+}
+
+:root {
+    @include bp-var(s);
+    @include bp-var(m);
+    @include bp-var(l);
+    @include bp-var(xl);
+    @include bp-var(2xl);
 }

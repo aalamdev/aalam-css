@@ -93,6 +93,7 @@
     color:$clr-txt-meta;
     background-color:$clr-bg-l1;
     border:1px solid $clr-bg-l1;
+    pointer-events: none;
 }
 
 .bt-full {

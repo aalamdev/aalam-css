@@ -1,5 +1,6 @@
 @use "./variables/color" as *;
 @use "./variables/button" as *;
+@use "./variables/border" as *;
 @use "./form" as *;
 
 
@@ -9,6 +10,19 @@ aalam-md-input {
         color:$clr-txt-meta
     }
 }
+aalam-md-input[mode=outline]::part(container) {
+    border:1px solid $bdr-clr;
+}
+aalam-md-input[mode=outline],aalam-md-input[mode=filled] {
+    & > [slot=input] {
+        border:0;
+        background-color: transparent;
+    }
+    & > [slot=input]:focus {
+        border: 0;
+    }
+}
+aalam-md-input[mode=outline]::part(label) {background-color:$clr-bg;}
 aalam-md-input[mode=normal] {
     & > input, & > textarea {
         border:0;

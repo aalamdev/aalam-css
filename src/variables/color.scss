@@ -42,4 +42,4 @@ $clr-txt-meta:var(--clr-txt-meta);
 $clr-txt-py:var(--clr-txt-py);
 $clr-txt-bg-py:var(--clr-txt-bg-py, var(--clr-txt));
 
-$clr-bg-active:rgb(from $clr-txt-py r g b/0.1);
+$clr-bg-active:rgb(from $clr-txt-py r g b/$clr-bg-op);

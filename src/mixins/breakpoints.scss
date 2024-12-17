@@ -23,3 +23,10 @@
         @content;
     }
 }
+@mixin bp-var($scr_name) {
+    $val: get-screen-val($scr_name);
+    $xwd: list.nth($val, 2);
+    $nwd: list.nth($val, 1);
+    --bp-min-#{$scr_name}: #{$nwd};
+    --bp-max-#{$scr_name}: #{$xwd};
+}

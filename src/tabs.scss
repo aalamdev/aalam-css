@@ -61,6 +61,10 @@ aalam-tabs[data-fashion=row] > [slot='tab-title'],.tab-title > * {
     }
 }
 
+aalam-tabs[data-fashion=column]::part(tab-title-holder) {
+    border-right: 1px solid $bdr-clr
+}
+
 aalam-tabs[data-fashion=row].tabs-wr {
     &::part(tab-title) {
         flex-wrap: wrap;
@@ -86,13 +90,18 @@ aalam-tabs[data-fashion=column] > [slot=tab-title] {
     display: block;
     padding: $pad-m $pad-l;
 
-    &:hover {
+    &.tab-inactive {cursor:inherit;}
+    &:not(.tab-inactive):hover {
       background-color: $clr-bg-l1;
     }
 
-    &.tab-active {
+    &:not(.tab-inactive).tab-active {
       background-color: $clr-bg-active;
     }
+}
+aalam-tabs[data-fashion=column]::part(tab-body-holder) {
+    padding: $pad-m;
+    box-sizing:border-box;
 }
 aalam-tabs[data-fashion=overlay]::part(tab-body-holder) {
     background-color: $clr-bg;
@@ -106,7 +115,7 @@ aalam-tabs[data-fashion=overlay] > [slot=tab-title] {
     justify-content: space-between;
     padding: $pad-m 0;
 
-    &::after {
+    &:not(.tab-inactive)::after {
         content: "";
         display:inline-block;
         width: calc(1em + 2px);
