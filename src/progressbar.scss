@@ -1,0 +1,16 @@
+@use "./variables/color" as *;
+@use "./variables/border" as *;
+
+$pg-height: 5px;
+
+progress {
+    height:$pg-height;background-color:$clr-bg-l2;border-radius:$bdr-r-l;
+    line-height:0;display:block;width:100%;
+}
+progress::-webkit-progress-bar {
+    background-color:$clr-bg-l2;
+}
+progress::-webkit-progress-value {
+    background-color: $clr-txt;
+    border-radius: $bdr-r-l;
+}

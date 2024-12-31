@@ -90,3 +90,5 @@ body {
 .clr-bg-l2 {background-color:$clr-bg-l2;}
 .clr-bg-l5 {background-color:$clr-bg-l5;}
 .clr-bg-py {background:$clr-bg-py}
+.clr-bg-suc {background-color:rgb(from $clr-suc r g b/ $clr_bg_op)};
+.clr-bg-dng {background-color:rgb(from $clr-dng r g b/ $clr_bg_op)};

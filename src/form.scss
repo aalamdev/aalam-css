@@ -1,5 +1,6 @@
 @use './src/variables/color' as *;
 @use './src/variables/button' as *;
+@use './src/variables/padding' as *;
 @use './src/variables/text' as *;
 @use './src/variables/border' as *;
 @use './src/variables/margin' as *;
@@ -15,6 +16,7 @@
  *      fi  - form icon
  *      ic  - icon
  *      ig  - input group
+ *      md  - Material design look for button
  *
  *  Modifier 2 :
  *      input :
@@ -181,5 +183,17 @@ input[type="radio"]::before {
     & > *:hover {
         position:relative;
         z-index: 1;
+    }
+}
+.bt.fc-md-outline {
+    position:relative;
+    padding-top: $pad-m;
+    & > label {
+        display:block;
+        position:absolute;
+        top:0;
+        transform-origin:left;
+        transform: translateY(-50%) scale(0.75);
+        background: $clr-bg;
     }
 }

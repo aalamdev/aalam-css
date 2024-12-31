@@ -130,6 +130,18 @@ html, body {
     display: inline-block;
     border-radius: 4px;
 }
+.t-lbl-suc {
+    background-color:rgb(from $clr-suc r g b/ $clr_bg_op);
+    color:$clr-suc;
+}
+.t-lbl-dng {
+    background-color:rgb(from $clr-dng r g b/ $clr_bg_op);
+    color:$clr-dng;
+}
+.t-lbl-py {
+    background-color:$clr-bg-active;
+    color:$clr-txt-py;
+}
 .t-lbls {
     display:flex;
     flex-wrap:wrap;

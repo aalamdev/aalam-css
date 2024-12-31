@@ -19,13 +19,16 @@
 
         th {
             padding: $pad-m  $pad-l;
-            text-align: left;
+            &:not([class^="t-al-"]) {
+                text-align: left;
+            }
         }
     }
     tbody {
         border-bottom: 1px solid $clr-bg-l2;
 
         tr {
+            vertical-align:top;
             &:hover {
                 background-color: $clr-bg-l1;
             }

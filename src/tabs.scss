@@ -100,13 +100,11 @@ aalam-tabs[data-fashion=column] > [slot=tab-title] {
     }
 }
 aalam-tabs[data-fashion=column]::part(tab-body-holder) {
-    padding: $pad-m;
     box-sizing:border-box;
 }
 aalam-tabs[data-fashion=overlay]::part(tab-body-holder) {
     background-color: $clr-bg;
     box-sizing:border-box;
-    padding: $pad-m;
 }
 aalam-tabs[data-fashion=overlay] > [slot=tab-title] {
     @include col-tabs;

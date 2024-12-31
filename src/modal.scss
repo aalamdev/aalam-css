@@ -68,6 +68,25 @@ aalam-modal::part(modal-dialog) {
 aalam-modal::part(mdl-dialog) {
     border-radius: $bdr-r-l;
 }
+aalam-modal.mdl-cmn > [slot=modal-dialog] {
+    display:flex;
+    flex-direction:column;
+    & > .mdl-body {
+        flex: 1;
+        min-height:0;
+        height:100%;
+        overflow:auto;
+    }
+}
+@include media-bp-max(m) {
+    aalam-modal.mdl-cmn::part(modal-dialog) {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    aalam-modal.mdl-cmn > [slot=modal-dialog] {
+        height:100%;
+    }
+}
 @include media-bp-min(l) {
     .mdl-body {
         padding: $pad-xl;
@@ -75,7 +94,8 @@ aalam-modal::part(mdl-dialog) {
     aalam-modal.mdl-cmn::part(modal-dialog) {
         /*Top center will automatically set the top most corner radius to 0*/
         margin-top: $m-xl;
-        border-top-right-radius: $bdr-r-l;
-        border-top-left-radius: $bdr-r-l;
+    }
+    aalam-modal.mdl-cmn > [slot=modal-dialog] > .mdl-body {
+        max-height: calc(100vh - 2 * $m-xl);
     }
 }
