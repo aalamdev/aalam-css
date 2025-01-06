@@ -15,17 +15,21 @@ $al-pad-v: 3px;
 $al-pad-h: 8px;
 
 @mixin al-msg($clr) {
-    background-color:rgb(from $clr r g b/ $clr_bg_op);
-    color:$clr;
     padding: $al-pad-v $al-pad-h;
     border-radius:$bdr-r-s;
 }
 .al-suc {
     @include al-msg($clr-suc);
+    color:$clr-suc;
+    background:$clr-bg-suc;
 }
 .al-dng {
     @include al-msg($clr-dng);
+    color:$clr-dng;
+    background:$clr-bg-dng;
 }
 .al-wrn {
     @include al-msg($clr-wrn);
+    color:$clr-wrn;
+    background:$clr-bg-wrn;
 }
