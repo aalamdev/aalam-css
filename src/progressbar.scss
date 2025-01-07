@@ -14,3 +14,12 @@ progress::-webkit-progress-value {
     background-color: $clr-txt;
     border-radius: $bdr-r-l;
 }
+progress.clr-bg-py::-webkit-progress-value {
+    background-color: $clr-bg-py;
+}
+progress.clr-bg-suc::-webkit-progress-value {
+    background-color: $clr-suc;
+}
+progress.clr-bg-dng::-webkit-progress-value {
+    background-color: $clr-dng;
+}
