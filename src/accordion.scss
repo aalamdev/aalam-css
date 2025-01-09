@@ -12,9 +12,12 @@ $pad-acc-bdy: 30px;
  *
  * classes            : acc-title ( for accordion title)
  *                      acc-body (for accordion body )
- *                      ac ( for active title background color)
+ *                      acc-active ( for active item )
+ *                      acc-boxed ( Accordion item with borders )
+ *                      acc-filled ( Active accordion item is highlighted with a background color for body )
  */
 
+aalam-accordion {display: block;}
 .acc-title {
     display: flex;
     justify-content: space-between;
@@ -42,13 +45,17 @@ $pad-acc-bdy: 30px;
     }
 }
 .acc-active {
-    & .acc-title {
-        @include clr-bg-op($clr-txt-py);
+    & > .acc-title {
         & .ic.acc-tgl {transform: rotate(180deg);}
     }
-
-    & .acc-body.acc-filled {
-        border-bottom: 1px solid $clr-txt-py;
+}
+.acc-active:not(.acc-filled) {
+    & > .acc-title {
+        @include clr-bg-op($clr-txt-py);
+    }
+}
+.acc-active.acc-filled {
+    & > .acc-body {
         background-color: $clr-lbl;
     }
 }
