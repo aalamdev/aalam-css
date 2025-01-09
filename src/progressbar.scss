@@ -15,7 +15,7 @@ progress::-webkit-progress-value {
     border-radius: $bdr-r-l;
 }
 progress.clr-bg-py::-webkit-progress-value {
-    background-color: $clr-bg-py;
+    background-color: $clr-txt-py;
 }
 progress.clr-bg-suc::-webkit-progress-value {
     background-color: $clr-suc;
