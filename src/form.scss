@@ -46,7 +46,7 @@ input[type="search"],
 textarea, select {
     padding:$bt-m-v $fc-inp-pad-h;
     border:1px solid $bdr-clr;
-    background:$clr-lbl;
+    background:$clr-bg;
     color:$clr-txt-meta;
     font:inherit;
     width:100%;
@@ -55,7 +55,7 @@ textarea, select {
     &:hover {border:1px solid $clr-bg-l5;}
     &:focus {
         border:1px solid $clr-txt-py;
-        background-color: transparent;
+        background-color: $clr-bg;
     }
 }
 *:focus {outline: none;}
