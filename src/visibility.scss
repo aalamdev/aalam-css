@@ -8,6 +8,7 @@
                      sh (display:none on other screens)
                      vh (visibility:hidden)
                      vs (visibility:hideen on other screens)
+ * Modifier 2      : pr (specific to print media)
  *
  */
 
@@ -46,4 +47,10 @@
 @include media-bp-max(xl) {
     .v-sh\@2xl {display: none !important;}
     .v-vs\@2xl {visibility: hidden;}
+}
+@media print {
+.v-hd-pr {display: none !important;}
+}
+@media screen {
+.v-sh-pr {display: none !important;}
 }

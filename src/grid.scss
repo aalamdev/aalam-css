@@ -26,6 +26,7 @@
  *                          --gd-cols-eq-l   ( num cols @l )
  *                          --gd-cols-eq-xl  ( num cols @xl )
  *                          --gd-cols-eq-2xl ( num cols @2xl )
+ *                          --gd-cols-eq-pr  ( num cols print media )
  *
  *                    cus ( grid with custom cols size ) [Modifier 1: cols,col,gap]
  *
@@ -36,6 +37,7 @@
  *                          --gd-cols-cus-l   (num of cus cols @l )
  *                          --gd-cols-cus-xl  (num of cus cols @xl )
  *                          --gd-cols-cus-2xl (num of cus cols @2xl )
+ *                          --gd-cols-cus-pr  (num of cus cols for print media)
  *
  *                    subgrid (subgrid within a col)
  *
@@ -150,5 +152,15 @@
                                           var(--gd-cols-cus-m,
                                           var(--gd-cols-cus, 
                                           repeat( $gd-max-cols, 1fr))))));
+    }
+}
+@media print {
+    .gd-cols-cus { grid-template-columns: var(--gd-cols-cus-pr,
+                                          var(--gd-cols-cus-2xl,
+                                          var(--gd-cols-cus-xl,
+                                          var(--gd-cols-cus-l,
+                                          var(--gd-cols-cus-m,
+                                          var(--gd-cols-cus,
+                                          repeat( $gd-max-cols, 1fr)))))));
     }
 }
