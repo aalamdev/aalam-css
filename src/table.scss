@@ -1,6 +1,7 @@
 @use "./variables/padding" as *;
 @use "./variables/color" as *;
 @use "./mixins/color" as *;
+@use "./mixins/breakpoints" as *;
 
 /*
  * Table class
@@ -37,7 +38,12 @@
             }
             td {
                 padding: $pad-m $pad-l;
+
+                @include media-bp-max(l) {
+                    padding: $pad-m $pad-m;
+                }
             }
+
         }
     }
 }
