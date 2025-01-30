@@ -95,7 +95,7 @@ aalam-modal.mdl-cmn > [slot=modal-dialog] {
         /*Top center will automatically set the top most corner radius to 0*/
         margin-top: $m-xl;
     }
-    aalam-modal.mdl-cmn > [slot=modal-dialog] > .mdl-body {
+    aalam-modal.mdl-cmn > [slot=modal-dialog] {
         max-height: calc(100vh - 2 * $m-xl);
     }
 }
