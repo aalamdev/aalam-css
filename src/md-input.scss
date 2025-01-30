@@ -13,9 +13,11 @@ aalam-md-input {
 aalam-md-input[mode=outline]::part(container) {
     border:1px solid $bdr-clr;
     padding: 0 $fc-inp-pad-h;
+    background-color: var(--clr-bg);
 }
 aalam-md-input[mode=filled]::part(container) {
     border-bottom: 1px solid $bdr-clr !important;
+    background-color: var(--clr-bg);
 }
 aalam-md-input[mode=outline],aalam-md-input[mode=filled] {
     & > [slot=input] {
@@ -23,7 +25,7 @@ aalam-md-input[mode=outline],aalam-md-input[mode=filled] {
         padding:0;
         background-color: transparent;
     }
-    & > [slot=input]:focus {
+    & > [slot=input]:focus, & > [slot=input]:hover {
         border: 0;
     }
 }
