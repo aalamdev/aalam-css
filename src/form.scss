@@ -52,8 +52,8 @@ textarea, select {
     width:100%;
     box-sizing:border-box;
     border-radius:$bdr-r-s;
-    &:hover {border:1px solid $clr-bg-l5;}
-    &:focus {
+    &:not(.fc-inp-tn):hover {border:1px solid $clr-bg-l5;}
+    &:not(.fc-inp-tn):focus {
         border:1px solid $clr-txt-py;
         background-color: $clr-bg;
     }
@@ -73,7 +73,13 @@ input.fc-inp-tn {
     border-bottom:1px solid $clr-bg-l2;
     border-bottom-left-radius:0;
     border-bottom-right-radius:0;
-    background: transparent;
+    background: $clr-bg;
+    &:focus {
+        border-bottom-color: $clr-txt-py;
+    }
+    &:hover {
+        border-color: $clr-bg-l5;
+    }
 }
 input.fc-inp-n {
     border:0;
