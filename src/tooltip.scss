@@ -1,0 +1,15 @@
+@use "./variables/color" as *;
+@use "./variables/border" as *;
+@use "./variables/padding" as *;
+@use "./variables/zindex" as *;
+
+aalam-tooltip::part(tt-body) {
+    background-color: $clr-txt;
+    color: $clr-bg;
+    box-shadow: 0px 2px 10px 0px $clr-shdw;
+    border-radius:$bdr-r-s;
+    z-index:$z-ix-dd;
+    border: 0;
+    padding: 3px 6px;
+    white-space:nowrap;
+}
