@@ -15,7 +15,10 @@ aalam-switch {
         box-shadow: inset 0 0 0 2px $clr-txt;
     }
     &[status='on']::part(switch-container) {
-        box-shadow: inset 0 0 0 2px $clr-bg-py;
+        box-shadow: inset 0 0 0 2px $clr-txt-py;
     }
 }
 
+aalam-switch.active::part(switch-container) {
+    box-shadow: inset 0 0 0 2px $clr-txt-py;
+}
