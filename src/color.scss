@@ -97,9 +97,9 @@ $_Dclr-bg-l1-b: 46;
 
 
     --clr-bg:#{$_clr-bg};
-    --clr-bg-r:#{$_clr-bg-r}
-    --clr-bg-g:#{$_clr-bg-g}
-    --clr-bg-b:#{$_clr-bg-b}
+    --clr-bg-r:#{$_clr-bg-r};
+    --clr-bg-g:#{$_clr-bg-g};
+    --clr-bg-b:#{$_clr-bg-b};
 
     --clr-txt-py:#{$_clr-txt-py};
     --clr-txt-py-r:#{$_clr-txt-py-r};
@@ -139,6 +139,7 @@ $_Dclr-bg-l1-b: 46;
     --clr-bg-g: #{$_Dclr-bg-g};
     --clr-bg-b: #{$_Dclr-bg-b};
 
+    --clr-txt-py:#{$_Dclr-txt-py};
     --clr-txt-py-r:#{$_Dclr-txt-py-r};
     --clr-txt-py-g:#{$_Dclr-txt-py-g};
     --clr-txt-py-b:#{$_Dclr-txt-py-b};
@@ -148,7 +149,6 @@ $_Dclr-bg-l1-b: 46;
     --clr-bg-l1-g: #{$_Dclr-bg-l1-g};
     --clr-bg-l1-b: #{$_Dclr-bg-l1-b};
 
-    --clr-txt-py:#{$_Dclr-txt-py};
     --clr-txt-bg-py:#{$_Dclr-txt-bg-py};
     --clr-bg:#{$_Dclr-bg};
     --clr-bg-py:#{$_Dclr-bg-py};
