@@ -1,10 +1,10 @@
-@use './src/variables/color' as *;
-@use './src/variables/button' as *;
-@use './src/variables/padding' as *;
-@use './src/variables/text' as *;
-@use './src/variables/border' as *;
-@use './src/variables/margin' as *;
-@use './src/mixins/breakpoints' as *;
+@use './variables/color' as *;
+@use './variables/button' as *;
+@use './variables/padding' as *;
+@use './variables/text' as *;
+@use './variables/border' as *;
+@use './variables/margin' as *;
+@use './mixins/breakpoints' as *;
 
 /*
  *  Form classes

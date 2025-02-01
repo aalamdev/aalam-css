@@ -1,7 +1,7 @@
-@use './src/variables/color' as *;
-@use './src/variables/text' as *;
-@use './src/mixins/breakpoints' as *;
-@use './src/variables/margin' as *;
+@use './variables/color' as *;
+@use './variables/text' as *;
+@use './mixins/breakpoints' as *;
+@use './variables/margin' as *;
 
 /*
  * Font classes
@@ -132,11 +132,11 @@ html, body {
     border-radius: 4px;
 }
 .t-lbl-suc {
-    background-color:rgb(from $clr-suc r g b/ $clr_bg_op);
+    background-color:$clr-bg-suc;
     color:$clr-suc;
 }
 .t-lbl-dng {
-    background-color:rgb(from $clr-dng r g b/ $clr_bg_op);
+    background-color:$clr-bg-dng;
     color:$clr-dng;
 }
 .t-lbl-py {

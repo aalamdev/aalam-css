@@ -4,7 +4,6 @@
 @use "./variables/grid" as *;
 @use "./variables/margin" as *;
 @use "./variables/border" as *;
-@use "./mixins/color" as *;
 @use "./mixins/breakpoints" as *;
 
 $tabs-s: 2px;

@@ -2,7 +2,6 @@
 @use "./variables/color" as *;
 @use "./variables/text" as *;
 @use "./variables/margin" as *;
-@use "./mixins/color" as *;
 @use "./variables/border" as *;
 
 $pad-acc-bdy: 30px;
@@ -51,7 +50,7 @@ aalam-accordion {display: block;}
 }
 .acc-active:not(.acc-filled) {
     & > .acc-title {
-        @include clr-bg-op($clr-txt-py);
+        background: $clr-bg-active;
     }
 }
 .acc-active.acc-filled {
