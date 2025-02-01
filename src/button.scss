@@ -1,5 +1,4 @@
 @use "./variables/color" as *;
-@use "./mixins/color" as *;
 @use "./variables/button" as *;
 @use "./variables/border" as *;
 @use "./variables/text" as *;
@@ -67,8 +66,8 @@
         border:1px solid $clr-bg-l5;
     }
     &:active {
-        @include clr-bg-op($clr-txt-py);
-        border: 1px solid rgba(from $clr-txt-py / var(--clr-op-bg));
+        background: $clr-bg-active;
+        border: 1px solid $clr-bg-active;
     }
 }
 

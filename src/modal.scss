@@ -24,7 +24,7 @@ aalam-modal::part(modal-dialog) {
     min-width:320px;
 }
 :root {
-    --mdl-bg: rgb(from #{$clr-txt} r g b / 0.5);
+    --mdl-bg: rgba(var(--clr-txt-r),var(--clr-txt-g),var(--clr-txt-b),0.5);
 }
 .mdl-gd {
     position:relative;

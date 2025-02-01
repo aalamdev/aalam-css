@@ -1,7 +1,7 @@
-@use './src/variables/color' as *;
-@use './src/variables/text' as *;
-@use './src/variables/padding' as *;
-@use './src/variables/margin' as *;
+@use './variables/color' as *;
+@use './variables/text' as *;
+@use './variables/padding' as *;
+@use './variables/margin' as *;
 
 .lg > * {padding:$pad-m $pad-l;display:block}
 .lg-nav > * {padding: $pad-s 0; display:block;}

@@ -23,21 +23,21 @@
 .pnl-suc {
     @include panel($clr-suc);
     &.pnl-fill {
-        background-color:rgb(from $clr-suc r g b/ $clr_bg_op);
+        background-color:$clr-bg-suc;
         color: $clr-suc;
     }
 }
 .pnl-dng {
     @include panel($clr-dng);
     &.pnl-fill {
-        background-color:rgb(from $clr-dng r g b/ $clr_bg_op);
+        background-color:$clr-bg-dng;
         color: $clr-dng;
     }
 }
 .pnl-wrn {
     @include panel($clr-wrn);
     &.pnl-fill {
-        background-color:rgb(from $clr-wrn r g b/ $clr_bg_op);
+        background-color:$clr-bg-wrn;
         color: $clr-wrn;
     }
 }

@@ -1,5 +1,4 @@
 @use './variables/color' as *;
-@use './mixins/color' as *;
 @use './variables/border' as *;
 @use './variables/padding' as *;
 @use './variables/text' as *;
@@ -15,7 +14,7 @@ aalam-dtpick::part(cal-day):hover {
         height:30px;
         width:30px;
         z-index:-1;
-        background:rgb(from $clr-bg-l1 r g b / calc(clamp(0, var(--gpday), 1)));
+        background:rgba(var(--clr-bg-l1-r), var(--clr-bg-l1-g), var(--clr-bg-l1-b), calc(clamp(0, var(--gpday) , 1)));
         border-radius:$bdr-r-s;
     }
 }
@@ -93,11 +92,10 @@ aalam-dtpick::part(year-in-years):after,
 aalam-dtpick::part(month-in-year):after {
     left:calc(clamp(0, (var(--gpday) - var(--gpfrom)), 1) * calc(var(--gridgap) / -2));
     right:calc(clamp(0, (var(--gpto) - var(--gpday)), 1) * calc(var(--gridgap) / -2));
-    background:rgb(from $clr-txt-py
-                        calc((r * var(--selinrange)))
-                        calc((g * var(--selinrange)))
-                        calc((b * var(--selinrange)))
-                        / calc(calc(10 / 100) * (calc(var(--selinrange)))));
+    background:rgba($clr-txt-py-r,
+                    $clr-txt-py-g,
+                    $clr-txt-py-b,
+                    calc(0.1 * var(--selinwrange)));
 }
 aalam-dtpick::part(year-in-years):before,
 aalam-dtpick::part(month-in-year):before {
@@ -106,28 +104,25 @@ aalam-dtpick::part(month-in-year):before {
     height: calc((var(--hovinrange)) * 30px);transform:translate(0, -50%);
     left:calc(clamp(0, (var(--gpday) - var(--gpfrom)), 1) * calc(var(--gridgap) / -2));
     right:calc(clamp(0, (var(--gpto) - var(--gpday)), 1) * calc(var(--gridgap) / -2));
-    background:rgb(from $clr-bg-l1
-                        calc((r * var(--hovinrange)))
-                        calc((g * var(--hovinrange)))
-                        calc((b * var(--hovinrange)))
-                        / calc(0.5 * calc(var(--hovinrange))));
+    background:rgba($clr-bg-l1-r,
+                    $clr-bg-l1-g,
+                    $clr-bg-l1-b,
+                    calc(0.5 * var(--hovinrange)));
 }
 aalam-dtpick::part(cal-day)::after {
     content: " ";position:absolute;
     left:0;right:0;top:50%;
-    background:rgb(from $clr-bg-l1
-                        calc((r * var(--hovinrange)))
-                        calc((g * var(--hovinrange)))
-                        calc((b * var(--hovinrange)))
-                        / calc(0.5 * calc(var(--hovinrange))));
+    background:rgba($clr-bg-l1-r,
+                    $clr-bg-l1-g,
+                    $clr-bg-l1-b,
+                    calc(0.5 * var(--hovinrange)));
     z-index:-2;
 }
 aalam-dtpick::part(cal-week):after {
-    background:rgb(from $clr-txt-py
-                        calc((r * var(--selinwrange)))
-                        calc((g * var(--selinwrange)))
-                        calc((b * var(--selinwrange)))
-                        / calc(calc(10 / 100) * (calc(var(--selinwrange)))));
+    background:rgba($clr-txt-py-r,
+                    $clr-txt-py-g,
+                    $clr-txt-py-b,
+                    calc(0.1 * var(--selinwrange)));
 }
 aalam-dtpick::part(month-selected),
 aalam-dtpick::part(year-selected) {
