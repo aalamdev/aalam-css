@@ -51,7 +51,6 @@ $_clr-bg-l1-g: 239;
 $_clr-bg-l1-b: 239;
 
 
-
 //dark theme
 $_Dclr-txt-bg-py:#00111E;
 $_Dclr-bg-py:#FFD20A;
@@ -106,10 +105,10 @@ $_Dclr-bg-l1-b: 46;
     --clr-txt-py-g:#{$_clr-txt-py-g};
     --clr-txt-py-b:#{$_clr-txt-py-b};
 
-    --clr-bg-l1: #{$_clr-bg-l1};
-    --clr-bg-l1-r: #{$_clr-bg-l1-r};
-    --clr-bg-l1-g: #{$_clr-bg-l1-g};
-    --clr-bg-l1-b: #{$_clr-bg-l1-b};
+    --clr-bg-l1:#{$_clr-bg-l1};
+    --clr-bg-l1-r:#{$_clr-bg-l1-r};
+    --clr-bg-l1-g:#{$_clr-bg-l1-g};
+    --clr-bg-l1-b:#{$_clr-bg-l1-b};
 
     --clr-bg-py:#{$_clr-bg-py};
     --clr-bg-suc:#{$_clr-bg-suc};
