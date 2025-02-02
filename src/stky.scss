@@ -1,0 +1,17 @@
+/*
+ * Sticky classes
+ * Componnent code : stky
+ * Modifier 1      : b (For bottom)
+ *                   t (For top)
+ *
+ */
+
+.stky-b {
+    position: sticky;
+    bottom: 0px;
+}
+
+.stky-t {
+    position: sticky;
+    top: 0px;
+}
