@@ -33,9 +33,9 @@ $seg-gap-btm: 6;
         &:empty {
             min-height:1px;
         }
-        &:not(:last-child) {
+        /*&:not(:last-child) {
             margin-bottom: $seg-gap-btm;
-        }
+        }*/
         &:not(:last-child)::after, &.seg-series:not(.seg-nl)::before {
             @include seg-thick-line;
         }
@@ -45,9 +45,9 @@ $seg-gap-btm: 6;
         &.seg-nl::after {
             content:none !important;
         }
-        &.seg-series:not(.seg-nl) {
+        /*&.seg-series:not(.seg-nl) {
             margin-top:$seg-gap-btm;
-        }
+        }*/
     }
 }
 @include media-bp-min(l) {
