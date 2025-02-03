@@ -6,7 +6,8 @@
 .lg > * {padding:$pad-m $pad-l;display:block}
 .lg-nav > * {padding: $pad-s 0; display:block;}
 .lg-stripe > *:nth-child(even) {background:$clr-lbl;}
-.lg-line > * {border-bottom:1px solid $clr-bg-l2;}
+.lg-line > *:not(:last-child) {border-bottom:1px solid $clr-bg-l2;}
+.lg-line > *:last-child {padding-bottom:0;}
 .lg-b {color:$clr-txt-meta;font-size:$t-sz-s}
 .lg-h {color:$clr-txt;margin-bottom:$m-txt;}
 .lg-active {background-color: $clr-bg-active !important;}
