@@ -11,15 +11,15 @@
 
  */
 
-$seg-gap-btm: 6px;
+$seg-gap-btm: 6;
 @mixin seg-thick-line() {
     content: "";
     position: absolute;
-    bottom: -#{$seg-gap-btm};
+    bottom: calc(#{$seg-gap-btm} * -0.5px);
     left:var(--seg-left-offset, var(--seg-offset, -#{$pad-m}));
     right:var(--seg-right-offset, var(--seg-offset, -#{$pad-m}));
     background-color:$clr-bg-l1;
-    height: $seg-gap-btm;
+    height: calc($seg-gap-btm * 1px);
 }
 .seg {
     position:relative;
