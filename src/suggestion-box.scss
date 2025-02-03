@@ -1,0 +1,17 @@
+@use "./mixins/breakpoints" as *;
+
+$sgn-box-hgt-l:350px;
+$sgn-box-hgt-s:300px;
+
+@include media-bp-min(m) {
+    aalam-sgn-box::part(sgn-container) {
+        overflow:auto;
+        max-height:$sgn-box-hgt-l;
+    }
+}
+@include media-bp-max(m) {
+    aalam-sgn-box::part(sgn-container) {
+        overflow:auto;
+        max-height:$sgn-box-hgt-s;
+    }
+}
