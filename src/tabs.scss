@@ -96,6 +96,7 @@ aalam-tabs[data-fashion=column] > [slot=tab-title] {
 
     &:not(.tab-inactive).tab-active {
       background-color: $clr-bg-active;
+      color: $clr-txt;
     }
 }
 aalam-tabs[data-fashion=column]::part(tab-body-holder) {
