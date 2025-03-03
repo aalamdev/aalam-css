@@ -58,6 +58,7 @@ textarea, select {
         background-color: $clr-bg;
     }
 }
+input[type=search]::-webkit-search-cancel-button {display: none;}
 *:focus {outline: none;}
 .fc-lbl {
     margin-bottom: $m-blk;
