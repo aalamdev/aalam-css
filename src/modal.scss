@@ -58,6 +58,7 @@ aalam-modal::part(modal-dialog) {
         top:0;
         bottom:0;
         align-items:center;
+        cursor: pointer;
 
         & svg {
             height: calc(1em + 2px) !important;
