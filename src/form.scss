@@ -59,6 +59,13 @@ textarea, select {
     }
 }
 input[type="search"]::-webkit-search-cancel-button {display: none;}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+input[type=number] {
+    -moz-appearance: textfield
+}
 *:focus {outline: none;}
 .fc-lbl {
     margin-bottom: $m-blk;
@@ -115,10 +122,12 @@ input[type="checkbox"], input[type="radio"] {
     place-content: center;
 }
 input[type="checkbox"] {border-radius: 4px;}
+input[type="checkbox"]::checked {
+    background: $clr-txt-py;
+}
 input[type="checkbox"]:checked,input[type="radio"]:checked {
     color:$clr-txt-py;
     transform: scale(1) translate(0);
-    background: $clr-txt-py;
 }
 input[type="checkbox"]:checked::before {
     content: " ";
