@@ -12,12 +12,23 @@
 aalam-switch {
     &::part(switch-container) {
         box-shadow: inset 0 0 0 2px $clr-txt;
+        background: $clr-bg;
     }
     &[status='on']::part(switch-container) {
         box-shadow: inset 0 0 0 2px $clr-txt-py;
+        background: $clr-bg;
     }
 }
 
 aalam-switch.active::part(switch-container) {
     box-shadow: inset 0 0 0 2px $clr-txt-py;
+}
+
+aalam-switch {
+    &::part(switch-dial) {
+        fill: var(--clr-txt);
+    }
+    &[status='on']::part(switch-dial) {
+        fill: var(--clr-txt-py);
+    }
 }
