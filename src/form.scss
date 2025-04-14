@@ -122,7 +122,7 @@ input[type="checkbox"], input[type="radio"] {
     place-content: center;
 }
 input[type="checkbox"] {border-radius: 4px;}
-input[type="checkbox"]::checked {
+input[type="checkbox"]:checked {
     background: $clr-txt-py;
 }
 input[type="checkbox"]:checked,input[type="radio"]:checked {
