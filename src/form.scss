@@ -57,6 +57,11 @@ textarea, select {
         border:1px solid $clr-txt-py;
         background-color: $clr-bg;
     }
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+
 }
 input[type="search"]::-webkit-search-cancel-button {display: none;}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
