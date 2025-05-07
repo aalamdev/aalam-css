@@ -1,0 +1,74 @@
+@use './variables/color' as *;
+@use './variables/margin' as *;
+
+.stpr-h {
+    display:flex;
+    position:relative;
+    flex-wrap: wrap;
+    list-style:none;
+    padding-left:0;
+}
+.stpr-h > *{
+    flex: 1 0;
+    text-align:center;
+    position:relative;
+}
+.stpr-h > *::after {
+    position:absolute;
+    content: "";
+    top: calc((1em + 10px)/2);
+    border-top:1px solid $clr-bg-l2;
+    left:0;right:0;
+    z-index:-1;
+}
+.stpr-h > *:first-child::after {left:50%;}
+.stpr-h > *:last-child::after {right:50%;}
+.stpr-h > .active:not(:first-child)::before {
+    position:absolute;
+    content: "";
+    top: calc((1em + 10px)/2);
+    border-top:1px solid $clr-bg-l2;
+    left:0;right:50%;
+    z-index: -1;
+}
+.stpr-h > .active::after {
+    left:50%;
+}
+.stpr-h.stpr-fill > .active ~ *::after, .stpr-h.stpr-fill > .active::after {
+    border-color:$clr-bg-l2;
+}
+.stpr-h.stpr-fill > *::after, .stpr-h.stpr-fill > .active::before {
+    border-top:1px solid $clr-txt-py;
+}
+
+.stpr-h .stpr-num {
+    border:1px solid $clr-bg-l2;
+    width:calc(1em + 10px);height:calc(1em + 10px);
+    text-align:center;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    line-height:1em;
+    align-items:center;
+    margin-bottom:$m-blk;
+    background:$clr-bg;
+}
+.stpr-h.stpr-fill .stpr-num {
+    background:$clr-txt-py;
+    color:$clr-bg;
+}
+.stpr-h > .active > .stpr-num {
+    background: $clr-bg;
+    border-color: $clr-txt-py;
+    color: $clr-txt;
+}
+.stpr-h > .active ~ * > .stpr-num {
+    background: $clr-bg;
+    color:$clr-txt;
+}
+.stpr-h > .active > .stpr-desc, .stpr-h.stpr-fill .stpr-desc {
+    color:$clr-txt-py;
+}
+.stpr-h.stpr-fill > .active ~ * > .stpr-desc {
+    color:$clr-txt;
+}
