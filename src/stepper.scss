@@ -1,74 +1,191 @@
 @use './variables/color' as *;
 @use './variables/margin' as *;
 
+$stpr-num-size: calc(1em + 10px);
+
 .stpr-h {
-    display:flex;
-    position:relative;
+    display: flex;
+    position: relative;
     flex-wrap: wrap;
-    list-style:none;
-    padding-left:0;
-}
-.stpr-h > *{
-    flex: 1 0;
-    text-align:center;
-    position:relative;
-}
-.stpr-h > *::after {
-    position:absolute;
-    content: "";
-    top: calc((1em + 10px)/2);
-    border-top:1px solid $clr-bg-l2;
-    left:0;right:0;
-    z-index:-1;
-}
-.stpr-h > *:first-child::after {left:50%;}
-.stpr-h > *:last-child::after {right:50%;}
-.stpr-h > .active:not(:first-child)::before {
-    position:absolute;
-    content: "";
-    top: calc((1em + 10px)/2);
-    border-top:1px solid $clr-bg-l2;
-    left:0;right:50%;
-    z-index: -1;
-}
-.stpr-h > .active::after {
-    left:50%;
-}
-.stpr-h.stpr-fill > .active ~ *::after, .stpr-h.stpr-fill > .active::after {
-    border-color:$clr-bg-l2;
-}
-.stpr-h.stpr-fill > *::after, .stpr-h.stpr-fill > .active::before {
-    border-top:1px solid $clr-txt-py;
+    list-style: none;
+    padding-left: 0;
+
+    > * {
+        flex: 1 0;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: calc(#{$stpr-num-size} / 2);
+            border-top: 1px solid $clr-bg-l2;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        &:first-child::after {
+            left: 50%;
+        }
+
+        &:last-child::after {
+            right: 50%;
+        }
+
+        &.active:not(:first-child)::before {
+            position: absolute;
+            content: "";
+            top: calc(#{$stpr-num-size} / 2);
+            border-top: 1px solid $clr-bg-l2;
+            left: 0;
+            right: 50%;
+            z-index: -1;
+        }
+
+        &.active::after {
+            left: 50%;
+        }
+
+        & > .stpr-num {
+            border: 1px solid $clr-bg-l2;
+            width: $stpr-num-size;
+            height: $stpr-num-size;
+            text-align: center;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            line-height: 1em;
+            align-items: center;
+            margin-bottom: $m-blk;
+            background: $clr-bg;
+        }
+
+        & > .stpr-desc {
+            color: $clr-txt;
+        }
+
+        &.active > .stpr-num {
+            background: $clr-bg;
+            border-color: $clr-txt-py;
+            color: $clr-txt;
+        }
+
+        &.active > .stpr-desc {
+            color: $clr-txt-py;
+        }
+
+        &.active ~ * > .stpr-num {
+            background: $clr-bg;
+            color: $clr-txt;
+        }
+
+        &.active ~ * > .stpr-desc {
+            color: $clr-txt;
+        }
+    }
+
+    &.stpr-fill {
+        > .active ~ *::after,
+        > .active::after {
+            border-color: $clr-bg-l2;
+        }
+
+        > *::after,
+        > .active::before {
+            border-top: 1px solid $clr-txt-py;
+        }
+
+        .stpr-num {
+            background: $clr-txt-py;
+            color: $clr-bg;
+        }
+
+        .stpr-desc {
+            color: $clr-txt-py;
+        }
+
+        > .active ~ * > .stpr-desc {
+            color: $clr-txt;
+        }
+    }
 }
 
-.stpr-h .stpr-num {
-    border:1px solid $clr-bg-l2;
-    width:calc(1em + 10px);height:calc(1em + 10px);
-    text-align:center;
-    border-radius:50%;
-    display:inline-flex;
-    justify-content:center;
-    line-height:1em;
-    align-items:center;
-    margin-bottom:$m-blk;
-    background:$clr-bg;
+.stpr-v {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        padding-bottom: 10px;
+        background: transparent;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 34px;
+            left: 15px;
+            width: 2px;
+            height: calc(100% - 34px);
+            background: var(--clr-bg-l2);
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+
+        &.active {
+            background: transparent !important;
+
+            .stpr-num {
+                background: var(--clr-txt-py);
+                border-color: var(--clr-txt-py);
+                color: var(--clr-bg);
+            }
+
+            .stpr-desc {
+                color: var(--clr-txt-py);
+            }
+        }
+
+        &:not(.active):hover .stpr-num {
+            border-color: var(--clr-txt-py);
+        }
+    }
+
+    .stpr-num {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid var(--clr-bg-l2);
+        background: var(--clr-bg);
+        color: var(--clr-txt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+
+    .stpr-desc {
+        flex: 1;
+    }
+
+    .stpr-img {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
-.stpr-h.stpr-fill .stpr-num {
-    background:$clr-txt-py;
-    color:$clr-bg;
-}
-.stpr-h > .active > .stpr-num {
-    background: $clr-bg;
-    border-color: $clr-txt-py;
-    color: $clr-txt;
-}
-.stpr-h > .active ~ * > .stpr-num {
-    background: $clr-bg;
-    color:$clr-txt;
-}
-.stpr-h > .active > .stpr-desc, .stpr-h.stpr-fill .stpr-desc {
-    color:$clr-txt-py;
-}
-.stpr-h.stpr-fill > .active ~ * > .stpr-desc {
-    color:$clr-txt;
-}
+
