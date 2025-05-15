@@ -1,7 +1,10 @@
 @use './variables/color' as *;
 @use './variables/margin' as *;
+@use './variables/padding' as *;
 
 $stpr-num-size: calc(1em + 10px);
+$stpr-line-thickness: 2px;
+$stpr-img-size: 16px;
 
 .stpr-h {
     display: flex;
@@ -10,6 +13,25 @@ $stpr-num-size: calc(1em + 10px);
     list-style: none;
     padding-left: 0;
 
+    &.stpr-fill {
+        > .active ~ *::after,
+        > .active::after {
+            border-color: $clr-bg-l2;
+        }
+
+        .stpr-num {
+            background: $clr-txt-py;
+            color: $clr-bg;
+        }
+
+        .stpr-desc {
+            color: $clr-txt-py;
+        }
+
+        > .active ~ * > .stpr-desc {
+            color: $clr-txt;
+        }
+    }
     > * {
         flex: 1 0;
         text-align: center;
@@ -18,8 +40,8 @@ $stpr-num-size: calc(1em + 10px);
         &::after {
             position: absolute;
             content: "";
-            top: calc(#{$stpr-num-size} / 2);
-            border-top: 1px solid $clr-bg-l2;
+            top: calc((#{$stpr-num-size} + 2 * #{$stpr-line-thickness}) / 2);
+            border-top: $stpr-line-thickness solid $clr-bg-l2;
             left: 0;
             right: 0;
             z-index: -1;
@@ -36,8 +58,8 @@ $stpr-num-size: calc(1em + 10px);
         &.active:not(:first-child)::before {
             position: absolute;
             content: "";
-            top: calc(#{$stpr-num-size} / 2);
-            border-top: 1px solid $clr-bg-l2;
+            top: calc((#{$stpr-num-size} + 2 * #{$stpr-line-thickness}) / 2);
+            border-top: $stpr-line-thickness solid $clr-bg-l2;
             left: 0;
             right: 50%;
             z-index: -1;
@@ -48,7 +70,7 @@ $stpr-num-size: calc(1em + 10px);
         }
 
         & > .stpr-num {
-            border: 1px solid $clr-bg-l2;
+            border: $stpr-line-thickness solid $clr-bg-l2;
             width: $stpr-num-size;
             height: $stpr-num-size;
             text-align: center;
@@ -59,10 +81,12 @@ $stpr-num-size: calc(1em + 10px);
             align-items: center;
             margin-bottom: $m-blk;
             background: $clr-bg;
+            cursor: pointer;
         }
 
         & > .stpr-desc {
             color: $clr-txt;
+            cursor: pointer;
         }
 
         &.active > .stpr-num {
@@ -83,30 +107,24 @@ $stpr-num-size: calc(1em + 10px);
         &.active ~ * > .stpr-desc {
             color: $clr-txt;
         }
+
+        &:not(.active):hover .stpr-num {
+            border-color: var(--clr-txt-py);
+        }
     }
 
     &.stpr-fill {
-        > .active ~ *::after,
-        > .active::after {
-            border-color: $clr-bg-l2;
+        & > *::after,
+        & > .active::before {
+            border-top: $stpr-line-thickness solid $clr-txt-py;
         }
+    }
 
-        > *::after,
-        > .active::before {
-            border-top: 1px solid $clr-txt-py;
-        }
-
-        .stpr-num {
+    &:not(.stpr-fill) > * {
+        &.active > .stpr-num {
+            border-color: $clr-txt-py;
             background: $clr-txt-py;
             color: $clr-bg;
-        }
-
-        .stpr-desc {
-            color: $clr-txt-py;
-        }
-
-        > .active ~ * > .stpr-desc {
-            color: $clr-txt;
         }
     }
 }
@@ -118,19 +136,18 @@ $stpr-num-size: calc(1em + 10px);
     > * {
         display: flex;
         align-items: flex-start;
-        gap: 10px;
+        gap: $m-s;
         position: relative;
-        padding-bottom: 10px;
+        padding-bottom: $pad-m;
         background: transparent;
-        cursor: pointer;
 
         &::after {
             content: '';
             position: absolute;
-            top: 34px;
-            left: 15px;
-            width: 2px;
-            height: calc(100% - 34px);
+            top: 0;
+            left: calc((#{$stpr-num-size} + 2 * #{$stpr-line-thickness}) / 2);
+            width: $stpr-line-thickness;
+            bottom: 0;
             background: var(--clr-bg-l2);
         }
 
@@ -162,10 +179,10 @@ $stpr-num-size: calc(1em + 10px);
     }
 
     .stpr-num {
-        width: 30px;
-        height: 30px;
+        width: $stpr-num-size;
+        height: $stpr-num-size;
         border-radius: 50%;
-        border: 2px solid var(--clr-bg-l2);
+        border: $stpr-line-thickness solid var(--clr-bg-l2);
         background: var(--clr-bg);
         color: var(--clr-txt);
         display: flex;
@@ -173,16 +190,18 @@ $stpr-num-size: calc(1em + 10px);
         justify-content: center;
         flex-shrink: 0;
         z-index: 1;
+        cursor: pointer;
     }
 
     .stpr-desc {
         flex: 1;
+        cursor: pointer;
     }
 
     .stpr-img {
-        width: 16px;
-        height: 16px;
-        margin-right: 6px;
+        width: $stpr-img-size;
+        height: $stpr-img-size;
+        margin-right: $m-blk;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
