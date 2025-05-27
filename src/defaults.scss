@@ -75,3 +75,17 @@ button {
     page-break-after: avoid;
   }
 }
+
+::-webkit-scrollbar {
+   width: 12px;
+}
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-bg-l2);
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  background-clip: padding-box;
+}
