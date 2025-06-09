@@ -2,7 +2,7 @@
   "name": "aalam-css",
   "description": "aalam-css is a scss based css library for user interface.",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "keywords": [
     "aalam-css",
     "aalam cascading style sheet"
