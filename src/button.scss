@@ -72,6 +72,22 @@
     }
 }
 
+.bt-ic {
+    padding: $bt-m-v $bt-l-v;
+
+    @media (hover: hover) {
+        &:hover {
+            background: $clr-bg-l1;
+            border-radius: $bdr-r-s;
+        }
+    }
+
+    &:active {
+        background: $clr-bg-l1;
+        border-radius: $bdr-r-s;
+    }
+}
+
 .bt-txt {
     color:$clr-txt;
     border:1px solid transparent;
