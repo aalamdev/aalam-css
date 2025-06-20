@@ -44,9 +44,11 @@ aalam-modal::part(modal-dialog) {
     padding: $pad-m
 }
 .mdl-ftr {
+    box-shadow: 0px -2px 10px 0 var(--clr-shdw);
     padding: $pad-l $pad-xl;
 }
 .mdl-hdr {
+    box-shadow: 0px 2px 10px 0 var(--clr-shdw);
     border-bottom:1px solid $clr-bg-l2;
     padding:$pad-l $pad-xl;
     font-size: $t-sz-l;
