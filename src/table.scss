@@ -22,6 +22,10 @@
             &:not([class^="t-al-"]) {
                 text-align: left;
             }
+
+            @include media-bp-max(l) {
+                padding: $pad-m $pad-m;
+            }
         }
     }
     tbody {
@@ -46,4 +50,3 @@
         }
     }
 }
-
