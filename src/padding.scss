@@ -23,43 +23,44 @@
  *
  */
 
-.p-0  {padding:$pad-0;}
+.p-0  {padding:$pad-0 !important;}
 .p-s  {padding:$pad-s;}
 .p-m  {padding:$pad-m;}
 .p-l  {padding:$pad-l;}
 .p-xl {padding:$pad-xl;}
 
-.p-0-v  {@include pad-vert($pad-0);}
+
+.p-0-v  {@include pad-vert($pad-0, true);}
 .p-s-v  {@include pad-vert($pad-s);}
 .p-m-v  {@include pad-vert($pad-m);}
 .p-l-v  {@include pad-vert($pad-l);}
 .p-xl-v {@include pad-vert($pad-xl);}
 
-.p-0-h  {@include pad-horz($pad-0);}
+.p-0-h  {@include pad-horz($pad-0, true);}
 .p-s-h  {@include pad-horz($pad-s);}
 .p-m-h  {@include pad-horz($pad-m);}
 .p-l-h  {@include pad-horz($pad-l);}
 .p-xl-h {@include pad-horz($pad-xl);}
 
-.p-0-t  {padding-top:$pad-0;}
+.p-0-t  {padding-top:$pad-0 !important;}
 .p-s-t  {padding-top:$pad-s;}
 .p-m-t  {padding-top:$pad-m;}
 .p-l-t  {padding-top:$pad-l;}
 .p-xl-t {padding-top:$pad-xl;}
 
-.p-0-b  {padding-bottom:$pad-0;}
+.p-0-b  {padding-bottom:$pad-0 !important;}
 .p-s-b  {padding-bottom:$pad-s;}
 .p-m-b  {padding-bottom:$pad-m;}
 .p-l-b  {padding-bottom:$pad-l;}
 .p-xl-b {padding-bottom:$pad-xl;}
 
-.p-0-l  {padding-left:$pad-0;}
+.p-0-l  {padding-left:$pad-0 !important;}
 .p-s-l  {padding-left:$pad-s;}
 .p-m-l  {padding-left:$pad-m;}
 .p-l-l  {padding-left:$pad-l;}
 .p-xl-l {padding-left:$pad-xl;}
 
-.p-0-r  {padding-right:$pad-0;}
+.p-0-r  {padding-right:$pad-0 !important;}
 .p-s-r  {padding-right:$pad-s;}
 .p-m-r  {padding-right:$pad-m;}
 .p-l-r  {padding-right:$pad-l;}
