@@ -30,15 +30,53 @@ aalam-md-input[mode=outline],aalam-md-input[mode=filled] {
     }
 }
 aalam-md-input[mode=outline] {
-    &::part(label) {background-color:$clr-bg;}
+    &::part(label) {
+        background-color: $clr-bg;
+        color: $clr-txt;
+    }
+
     &::part(container) {
-        border-radius:$bdr-r-s;
+        border-radius: $bdr-r-s;
+
         &:focus-within {
-            color:$clr-txt-py;
-            border:1px solid $clr-txt-py;
+            color: $clr-txt-py;
+            border: 1px solid $clr-txt-py;
         }
     }
+
+    &::part(container):hover {
+        border: 1px solid $clr-txt-meta;
+    }
+
+    &::part(container):focus-within:hover {
+        border: 1px solid $clr-txt-py;
+    }
+
+    > [slot=input] {
+        color: $clr-txt-meta;
+
+        &:focus {
+            color: $clr-txt;
+        }
+    }
+
+    &[value]:not([value=""]) > [slot=input] {
+        color: $clr-txt;
+    }
+
+    &[value]:not([value=""])::part(label) {
+        color: $clr-txt-meta;
+    }
+
+    &:hover::part(label) {
+        color: $clr-txt-meta;
+    }
+
+    &:focus-within::part(label) {
+        color: $clr-txt-py;
+    }
 }
+
 aalam-md-input[mode=normal] {
     & > input, & > textarea {
         border:0;
