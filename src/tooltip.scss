@@ -1,7 +1,12 @@
 @use "./variables/color" as *;
 @use "./variables/border" as *;
-@use "./variables/padding" as *;
+@use "./variables/text" as *;
 @use "./variables/zindex" as *;
+
+$body-pad-v: 3px;
+$body-pad-h: 6px;
+
+$arrow-size: 8px;
 
 aalam-tooltip::part(tt-body) {
     background-color: $clr-txt;
@@ -10,6 +15,14 @@ aalam-tooltip::part(tt-body) {
     border-radius:$bdr-r-s;
     z-index:$z-ix-dd;
     border: 0;
-    padding: 3px 6px;
-    white-space:nowrap;
+    padding: $body-pad-v $body-pad-h;
+    white-space:normal;
+    width: max-content;
+    max-width:200px;
+    font-size: $t-sz-s;
+}
+aalam-tooltip::part(tt-arrow) {
+    background-color: $clr-txt;
+    width: $arrow-size;height:$arrow-size;
+    transform:rotate(45deg);
 }
