@@ -27,6 +27,13 @@
     cursor:pointer;
     white-space:nowrap;
 }
+.bt-c {
+    border-radius:50%;
+    padding: $bt-m-v;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 .bt-s {
     padding:$bt-s;
     font-size:$t-sz-s;
