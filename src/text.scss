@@ -131,6 +131,10 @@ html, body {
     display: inline-block;
     border-radius: 4px;
 }
+.t-lbl-wrn {
+    background-color:$clr-bg-wrn;
+    color:$clr-wrn;
+}
 .t-lbl-suc {
     background-color:$clr-bg-suc;
     color:$clr-suc;
