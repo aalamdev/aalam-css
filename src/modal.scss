@@ -88,6 +88,7 @@ aalam-modal.mdl-cmn > [slot=modal-dialog] {
     }
     aalam-modal.mdl-cmn > [slot=modal-dialog] {
         height:100%;
+        max-height: calc(100vh - 20px);
     }
 }
 @include media-bp-min(l) {
