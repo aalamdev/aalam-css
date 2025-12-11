@@ -17,6 +17,11 @@
  *                  gy  ( grey button )
  *                  dis ( disable button )
  *                  full ( Full width button )
+ *                  act ( active button )
+ *                  sh ( shape )
+ *
+ * Modifier 2     : o  ( circle button )
+ *
  */
 
 
@@ -27,7 +32,7 @@
     cursor:pointer;
     white-space:nowrap;
 }
-.bt-c {
+.bt-sh-o {
     border-radius:50%;
     padding: $bt-m-v;
     display: inline-flex;
@@ -51,6 +56,11 @@
     color:$clr-bg;
     background-color:$clr-txt;
     border:1px solid $clr-txt;
+}
+
+.bt-act {
+    color: $clr-txt-py;
+    border:1px solid $clr-txt-py;
 }
 
 .bt-dng {
