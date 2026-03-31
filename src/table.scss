@@ -19,7 +19,7 @@
 
         th {
             padding: $pad-m  $pad-l;
-            &:not([class^="t-al-"]) {
+            &:not([class*="t-al-"]) {
                 text-align: left;
             }
 

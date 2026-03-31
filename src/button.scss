@@ -91,6 +91,7 @@
 
 .bt-ic {
     padding: $bt-m-v $bt-l-v;
+    cursor:pointer;
 
     @media (hover: hover) {
         &:hover {

@@ -30,6 +30,7 @@ aalam-modal::part(modal-dialog) {
     position:relative;
     padding:$pad-m;
     display:block;
+    cursor:pointer;
     &::after {
         content:'';
         position:absolute;
