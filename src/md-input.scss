@@ -98,6 +98,12 @@ aalam-md-input[mode=normal] {
         border: 1px solid $clr-txt-py;
     }
 }
-aalam-md-input[disabled]::part(container) {
-    background-color: var(--clr-bg-l1);
+aalam-md-input[disabled] {
+    &::part(container) {
+        background-color: var(--clr-bg-l1);
+    }
+    &::part(label) {
+        background: transparent;
+        color: $clr-txt-meta;
+    }
 }
